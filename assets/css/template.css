@@ -1,0 +1,38 @@
+/* global variables */
+:root {
+    /* colors for elements */
+    --primary-color: #3F51B5;
+    --light-primary-color: #C5CAE9;
+    --dark-primary-color: #303F9F;
+    --accent-color: #E040FB;
+
+    /* background colors */
+    --bg-color-dark: #212132;
+    --bg-color-light: #eee;
+
+    /* text colors */
+    --primary-text: #212121;
+    --primary-text-light: #fff;
+    --secondary-text: #757575;
+
+    /* current colors based on the dark/light mode */
+    --current-bg-color: #212132;
+    --current-text-color: #fff;
+}
+
+/* global styling */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+html, body { min-height: 100vh; }
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--current-bg-color);
+    color: var(--current-text-color)
+}
