@@ -8,7 +8,7 @@ Ademais, o PONG possui um sistema de streaming, no qual usuários podem fazer li
 
 --------
 
-# For Developers </>
+# Dev Guide </>
 
 ## Starting a screen development
 
@@ -25,8 +25,8 @@ As variáveis citadas nesta seção são encontradas no './assets/css/template.c
 As cores de 'bg' são usadas para dar cor ao fundo geral. Portanto, dependendo do tema que usuário escolher, a cor de fundo se torna dark ou light. Dessa maneira, temos as duas cores:
 
 ```css
---bg-dark: #000; /* A definir */
---bg-light: #000; /* A definir */
+--bg-dark: #1b2838;
+--bg-light: #c7d5e0;
 ```
 
 Para definir o plano de fundo, usamos a variável de tema escolhido, o qual é **dark by default**, sendo ela:
@@ -39,10 +39,10 @@ Para definir o plano de fundo, usamos a variável de tema escolhido, o qual é *
 Os textos podem ter cores diferentes, dependendo do grau de destaque que quer atribuir. Outrossim a cor também muda de acordo com o tema. Desse modo, temos as seguintes cores definidas:
 
 ```css
---text-dark-first: #000; /* A definir */
---text-dark-second: #000; /* A definir */
---text-light-first: #000; /* A definir */
---text-light-second: #000; /* A definir */
+--text-dark-first: #c7d5e0;
+--text-dark-second: #aab6be;
+--text-light-first: #1b2838;
+--text-light-second: #3d4a5a;
 ```
 
 Os com sufixo 'first' dão mais destaque ao texto em relação ao 'second'.
@@ -61,10 +61,10 @@ Para definir as cores, usamos apenas as variáveis de cor principais, que contê
 Nos componentes gerais, seguindo a lógica do text-color, também se escolhe a cor de acordo com o destaque que quer ser atribuído. Assim, há as seguintes cores:
 
 ```css
---accent: #000; /* A definir */
---first: #000; /* A definir */
---second: #000; /* A definir */
---third: #000; /* A definir */
+--accent: #66c0f4;
+--first: #2a475e;
+--second: #1b2838;
+--third: #171a21;
 ```
 
 Do first ao third, a cor fica cada vez mais escura. Enquanto o accent é a cor de contraste, que daria o maior destaque.
