@@ -68,3 +68,7 @@ Nos componentes gerais, seguindo a lógica do text-color, também se escolhe a c
 ```
 
 Do first ao third, a cor fica cada vez mais escura. Enquanto o accent é a cor de contraste, que daria o maior destaque.
+
+## Text Font
+A definir...
+
