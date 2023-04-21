@@ -16,18 +16,20 @@
 
         <div class="search-container">
             <button class="search-btn">
-                <i class="fas fa-user"></i>
+                <i class="fas fa-search"></i>
             </button>
             
-            <input type="text" class="search-input">
+            <input type="text" class="search-input" placeholder="Pesquisar">
             
             <button class="search-filter-btn">
-                <i class="fas fa-filter"></i> Filtro
+                <i class="fas fa-filter"></i>
+                <span>Filtro</span>
                 <!-- select option goes here -->
             </button>
         </div>
 
         <ul class="nav-list">
+            <span class="nav-list-title">Menu</span>
             <li class="nav-list-item">Jogos</li>
             <li class="nav-list-item">Minha Conta</li>
             <li class="nav-list-item">Streaming</li>
@@ -37,7 +39,11 @@
             <li class="nav-list-item">Premium</li>
         </ul>
         
-        <div class="toggle-btn"></div>
+        <div class="toggle-btn" onclick='toggleNavList()'>
+            <i class="fa fa-bars"></i>
+        </div>
     </div>
+
+    <script src="/assets/js/template.js"></script>
 </body>
 </html>

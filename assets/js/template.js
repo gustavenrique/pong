@@ -1,0 +1,1 @@
+const toggleNavList = () => document.querySelector('.nav-list').classList.toggle('nav-list-show')
