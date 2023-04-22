@@ -14,6 +14,8 @@ Ademais, o PONG possui um sistema de streaming, no qual usuários podem fazer li
 
 Dentro do diretório 'pages', há o arquivo 'template.html'. Tal arquivo é usado como base para o desenvolvimento das telas, pois ele possui a navbar e footer padrão.
 
+Caso seja necessário criar arquivos .js ou .css com o estilo da página em desenvolvimento, a criação deve ser feita na devida **pasta de css e javascript encontrada em './assets'**. Além disso, também é recomendado **usar o mesmo nome para todos os arquivos**, de modo que não haja confusão posteriormente. Portanto, caso, por exemplo, o nome do arquivo da página seja 'pagina.html', o .js e .css são, respectivamente, 'pagina.js' e 'pagina.css'.
+
 A estilização dos componentes das telas deve seguir o padrão da PONG. Os components são majoritaritamente arredondados. A seção 'Color system' tem o detalhamento de como usar as cores certas em cada situação.
 
 De maneira geral, os principais componentes – como buttons, inputs, divs e texts – , possuem/possuirão estilos padronizados por classes usadas em todo o projeto.
