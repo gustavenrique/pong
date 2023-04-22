@@ -191,28 +191,154 @@ body {
 
 /* ########## FOOTER ########## */
 .footer {
-    position: fixed;
-    bottom: 0;
+    background-color: var(--second);
+    width: 100%;
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 10px 0 10px black;
+}
+
+.footer-top {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+@media (min-width: 600px) {
+    .footer-top {
+        flex-direction: row;
+    }
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
     background-color: var(--third);
     width: 100%;
-    padding: 10px;
-    display: flex;
 }
 
 /* ########## GENERIC CLASSES ########## */
+/* display and position */
 .d-flex { display: flex !important; }
 .d-none { display: none !important; }
 .d-block { display: block !important; }
 .d-hidden { display: hidden !important; }
 
+.column { 
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.justify-content-center { justify-content: center !important; }
+.align-items-center { align-items: center !important; }
+
+/* background */
 .color-first { background-color: var(--first) !important; }
 .color-second { background-color: var(--second) !important; }
 .color-third { background-color: var(--third) !important; }
 
+/* text */
 .text-first { color: var(--text-first) !important; }
 .text-second { color: var(--text-second) !important; }
 
+.text-bold { font-weight: bold !important; }
+
+.text-center { text-align: center !important; }
+
+/* size */
+.w-100 { width: 100% !important; }
+.w-50 { width: 50% !important; }
+.w-25 { width: 25% !important; }
+
+@media (max-width: 767px) { /* small screen */
+    .w-sm-100 { width: 100% !important; }
+    .w-sm-50 { width: 50% !important; }
+    .w-sm-25 { width: 25% !important; }
+}
+
+@media (min-width: 768px) and (max-width: 991px) { /* medium screen */
+    .w-md-100 { width: 100% !important; }
+    .w-md-50 { width: 50% !important; }
+    .w-md-25 { width: 25% !important; }
+}
+
+@media (min-width: 992px) and (max-width: 1999px) { /* large screen */
+    .w-lg-100 { width: 100% !important; }
+    .w-lg-50 { width: 50% !important; }
+    .w-lg-25 { width: 25% !important; }
+}
+
+/* spacing */
+.p-10 { padding: 10px !important; }
+
+.mb-10 { margin-bottom: 10px !important; }
+
+/* button */
+.btn:hover { opacity: .75 !important; }
 .btn {
     border-radius: 100px !important;
-    padding: .5rem;
+    padding: 14px !important;
+    border: none !important;
+    color: var(--text-first) !important;
+    cursor: pointer !important;
 }
+
+.btn-first { background-color: var(--first) !important; }
+.btn-second { background-color: var(--second) !important; }
+.btn-third { background-color: var(--third) !important; }
+
+/* form */
+.form-container {
+    display: flex !important;
+    flex-direction: column !important;
+    padding: 10px !important;
+    background-color: var(--first) !important;
+    border-radius: 10px !important;
+    width: clamp(250px, 100%, 500px);
+    position: relative !important;
+}
+
+.form-label {
+    text-align: center !important;
+    /* font-weight: bold; */
+    width: 100% !important;
+    padding: 10px !important;
+    border-bottom: 2px solid var(--second) !important;
+}
+
+.form-container > form { 
+    padding: 10px 0px !important; 
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+}
+
+.form-input::placeholder { color: var(--text-first) !important; }
+.form-input:focus { outline: none !important; }
+.form-input {
+    border-radius: 100px !important;
+    border: none !important;
+    padding: 14px !important;
+    background-color: var(--second) !important;
+    color: var(--text-first) !important;
+    width: 100% !important;
+}
+
+/* others */
+.u-list {
+    list-style: none !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+.u-list-item { padding: 10px !important; }
+
+.link {
+    color: var(--text-first) !important;
+    text-decoration: none !important;
+    cursor: pointer !important;
+}
+.link:hover { border-bottom: 1px solid var(--accent) !important; }

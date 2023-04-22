@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../assets/css/template.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
+<body class="column">
     <!-- navbar -->
     <div class="navbar">
         <div class="logo">Pong</div>
@@ -62,50 +62,54 @@
 
     <!-- footer -->
     <div class="footer">
-        <div class='footer-begin'>
-            <div class="logo">Pong</div>
-    
-            <div class="form-container">
-                <div class="form-label">Newsletter</div>
-    
-                <form class="newsletter-form">
-                    <input class='form-input' type="text" placeholder="E-mail">
-                    <button class="btn color-second">Inscrever-se</button>
-                </form>
+        <div class='footer-top'>
+            <div class="column w-100 align-items-center">
+                <div class="logo text-center w-100 mb-10">Pong</div>
+        
+                <div class="form-container">
+                    <div class="form-label">Newsletter: Pong News</div>
+        
+                    <form>
+                        <input class='form-input' type="email" placeholder="E-mail">
+                        <button class="btn btn-second w-100 text-bold">Inscrever-se</button>
+                    </form>
+                </div>
             </div>
     
-            <div class="row">
-                <div>
-                    <span class="footer-subtitle">Siga-nos!</span>
-                    <ul class="column">
-                        <li class="link">
+            <div class="d-flex w-100">
+                <div class="column w-50">
+                    <span class="text-second p-10">Siga-nos!</span>
+                    <ul class="u-list">
+                        <li class="u-list-item link">
                            <i class="fa-brands fa-youtube"></i> PongTV
                         </li>
-                        <li class="link">
+                        <li class="u-list-item link">
                            <i class="fa-brands fa-facebook"></i> Pong
                         </li>
-                        <li class="link">
+                        <li class="u-list-item link">
                            <i class="fa-brands fa-twitter"></i> @pong
                         </li>
-                        <li class="link">
+                        <li class="u-list-item link">
                            <i class="fa-brands fa-instagram"></i> @pong
                         </li>
                     </ul>
                 </div>
-                <div>
-                    <span class="footer-subtitle">Companhia</span>
-                    <ul class="column">
-                        <li class="link"></li>
-                        <li class="link"></li>
-                        <li class="link"></li>
-                        <li class="link"></li>
+                <div class="column w-50">
+                    <span class="text-second p-10">Companhia</span>
+                    <ul class="u-list">
+                        <li class="u-list-item link">Sobre nós</li>
+                        <li class="u-list-item link">Carreiras</li>
+                        <li class="u-list-item link">Contato</li>
+                        <li class="u-list-item link">FAQ</li>
                     </ul>
                 </div>
             </div>
         </div>
-        <div class="footer-end">
-            <span>@ PONG 2023 - All right reserved</span>
-            btn.
+        <div class="footer-bottom">
+            <span> &copy; Pong 2023 - All rights reserved</span>
+            <button class="btn btn-first">
+                <i class="fa fa-arrow-up"></i>
+            </button>
         </div>
     </div>
 
