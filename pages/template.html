@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../assets/css/template.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="column">
+<body class="col">
     <!-- navbar -->
     <div class="navbar">
         <div class="logo">Pong</div>
@@ -28,27 +28,24 @@
             </button>
         </div>
 
-        <!-- gambiarra para nav-list-items aparecerem na navbar conforme tela for enlargecendo -->
-        <ul class="nav-list-large">
-            <li class="nav-list-large-item">Jogos</li>
-            <li class="nav-list-large-item">Minha Conta</li>
-            <li class="nav-list-large-item">Streaming</li>
-            <li class="nav-list-large-item">Carteira</li>
-            <li class="nav-list-large-item">Biblioteca</li>
-            <li class="nav-list-large-item">Configurações</li>
-            <li class="nav-list-large-item">Premium</li>
-        </ul>
-    
+        <!-- gambiarra p/ sidebar-items aparecerem na navbar conforme tela alarga -->
         <ul class="nav-list">
-            <span class="nav-list-title">Menu</span>
-
             <li class="nav-list-item">Jogos</li>
             <li class="nav-list-item">Minha Conta</li>
-            <li class="nav-list-item">Streaming</li>
-            <li class="nav-list-item">Carteira</li>
+            <li class="nav-list-item">Carrinho</li>
             <li class="nav-list-item">Biblioteca</li>
             <li class="nav-list-item">Configurações</li>
-            <li class="nav-list-item">Premium</li>
+        </ul>
+        
+        <div class="sidebar-overlay"></div>
+        <ul class="sidebar">
+            <span class="sidebar-title">Menu</span>
+
+            <li class="sidebar-item">Jogos</li>
+            <li class="sidebar-item">Minha Conta</li>
+            <li class="sidebar-item">Carrinho</li>
+            <li class="sidebar-item">Biblioteca</li>
+            <li class="sidebar-item">Configurações</li>
         </ul>
         
         <div class="toggle-btn" onclick='toggleNavList()'>
@@ -62,39 +59,55 @@
 
     <!-- footer -->
     <div class="footer">
-        <div class='footer-top'>
-            <div class="column w-100 align-items-center">
-                <div class="logo text-center w-100 mb-10">Pong</div>
-        
-                <div class="form-container">
-                    <div class="form-label">Newsletter: Pong News</div>
-        
-                    <form>
-                        <input class='form-input' type="email" placeholder="E-mail">
-                        <button class="btn btn-second w-100 text-bold">Inscrever-se</button>
-                    </form>
-                </div>
-            </div>
-    
-            <div class="d-flex w-100">
-                <div class="column w-50">
+        <div class="footer-top">
+            <div class="row">
+                <div class="footer-col">
                     <span class="text-second p-10">Siga-nos!</span>
                     <ul class="u-list">
-                        <li class="u-list-item link">
-                           <i class="fa-brands fa-youtube"></i> PongTV
+                        <li class="u-list-item">
+                            <button class="btn btn-first">
+                                <i class="fa-brands fa-youtube"></i>
+                            </button>
                         </li>
-                        <li class="u-list-item link">
-                           <i class="fa-brands fa-facebook"></i> Pong
+                        <li class="u-list-item">
+                            <button class="btn btn-first">
+                                <i class="fa-brands fa-facebook"></i>
+                            </button>
                         </li>
-                        <li class="u-list-item link">
-                           <i class="fa-brands fa-twitter"></i> @pong
+                        <li class="u-list-item">
+                            <button class="btn btn-first">
+                                <i class="fa-brands fa-twitter"></i>
+                            </button>
                         </li>
-                        <li class="u-list-item link">
-                           <i class="fa-brands fa-instagram"></i> @pong
+                        <li class="u-list-item">
+                            <button class="btn btn-first">
+                                <i class="fa-brands fa-instagram"></i>
+                            </button>
                         </li>
                     </ul>
                 </div>
-                <div class="column w-50">
+                
+                <div class="footer-col">
+                    <span class="text-second p-10">Companhia</span>
+                    <ul class="u-list">
+                        <li class="u-list-item link">Sobre nós</li>
+                        <li class="u-list-item link">Carreiras</li>
+                        <li class="u-list-item link">Contato</li>
+                        <li class="u-list-item link">FAQ</li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <span class="text-second p-10">Companhia</span>
+                    <ul class="u-list">
+                        <li class="u-list-item link">Sobre nós</li>
+                        <li class="u-list-item link">Carreiras</li>
+                        <li class="u-list-item link">Contato</li>
+                        <li class="u-list-item link">FAQ</li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
                     <span class="text-second p-10">Companhia</span>
                     <ul class="u-list">
                         <li class="u-list-item link">Sobre nós</li>
@@ -105,9 +118,10 @@
                 </div>
             </div>
         </div>
+
         <div class="footer-bottom">
-            <span> &copy; Pong 2023 - All rights reserved</span>
-            <button class="btn btn-first">
+            <span> &copy; Pong Inc. 2023 - All rights reserved</span>
+            <button class="btn btn-first" onclick="scrollToTop()">
                 <i class="fa fa-arrow-up"></i>
             </button>
         </div>
