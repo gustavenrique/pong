@@ -70,27 +70,40 @@ body {
     align-items: center;
 }
 
-.search-input, .search-filter-btn, .search-btn {
+.search-input, .search-filter-select, .search-btn, .fa-filter {
     border: none;
-    padding: .5rem;
+    padding: 10px;
     color: var(--text-second);
     background-color: var(--second);
+}
+
+.fa-filter { padding: 10px 0; }
+
+.search-filter-select { 
+    padding: 10px 10px 10px 5px; 
+    border-right: 10px solid transparent;
+}
+
+.search-filter-select:focus-visible { 
+    border: none !important; 
+    outline: none !important; 
+    border-right: 10px solid transparent !important;
 }
 
 .search-input { width: 100%; }
 .search-input:focus { outline: none; }
 ::placeholder { color: var(--text-second)}
 
-.search-filter-btn, .search-btn { cursor: pointer; }
+.search-filter-select, .search-btn { cursor: pointer; }
 
 .search-btn { border-radius: 50px 0 0 50px; }
 
-.search-filter-btn {
+.search-filter-select {
     border-radius: 0 50px 50px 0;
     display: flex;
 }
 
-.search-filter-btn > span { padding-left: 5px; }
+.search-filter-select > span { padding-left: 5px; }
 
 .nav-list, .nav-list-item { display: none; }
 

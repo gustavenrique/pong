@@ -20,12 +20,14 @@
             </button>
             
             <input type="text" class="search-input" placeholder="Pesquisar">
+
+            <i class="fa fa-filter styling"></i>
             
-            <button class="search-filter-btn">
-                <i class="fas fa-filter"></i>
-                <span>Filtro</span>
-                <!-- select option goes here -->
-            </button>
+            <select class="search-filter-select">
+                <option disabled selected>Filtro</option>
+                <option>Usuários</option>
+                <option>Jogos</option>
+            </select>
         </div>
 
         <!-- gambiarra p/ sidebar-items aparecerem na navbar conforme tela alarga -->
@@ -63,6 +65,7 @@
             <div class="footer-col p-10">
                 <div class="logo">Pong</div>
             </div>
+
             <div class="footer-col">
                 <span class="footer-col-label text-second">Siga-nos!</span>
                 <ul class="u-list">
@@ -88,7 +91,18 @@
                     </li>
                 </ul>
             </div>
-
+            
+            <div class="footer-col">
+                <span class="footer-col-label text-second">Menu</span>
+                <ul class="u-list">
+                    <li class="u-list-item link">Jogos</li>
+                    <li class="u-list-item link">Minha Conta</li>
+                    <li class="u-list-item link">Carrinho</li>
+                    <li class="u-list-item link">Biblioteca</li>
+                    <li class="u-list-item link">Configurações</li>
+                </ul>
+            </div>
+            
             <div class="footer-col">
                 <span class="footer-col-label text-second">Companhia</span>
                 <ul class="u-list">
@@ -99,15 +113,6 @@
                 </ul>
             </div>
 
-            <div class="footer-col">
-                <span class="footer-col-label text-second">Companhia</span>
-                <ul class="u-list">
-                    <li class="u-list-item link">Sobre nós</li>
-                    <li class="u-list-item link">Carreiras</li>
-                    <li class="u-list-item link">Contato</li>
-                    <li class="u-list-item link">FAQ</li>
-                </ul>
-            </div>
         </div>
         <div class="footer-bottom">
             <span> &copy; 2023 Pong Inc. - All rights reserved</span>
