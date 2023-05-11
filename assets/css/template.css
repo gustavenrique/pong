@@ -64,13 +64,13 @@ body {
     cursor: default;
 }
 
-.search-container { 
-    display: flex; 
+.search-container {
+    display: flex;
     width: clamp(0px, 70%, 400px) !important;
     align-items: center;
 }
 
-.search-input, .search-filter-btn, .search-btn { 
+.search-input, .search-filter-btn, .search-btn {
     border: none;
     padding: .5rem;
     color: var(--text-second);
@@ -85,8 +85,8 @@ body {
 
 .search-btn { border-radius: 50px 0 0 50px; }
 
-.search-filter-btn { 
-    border-radius: 0 50px 50px 0; 
+.search-filter-btn {
+    border-radius: 0 50px 50px 0;
     display: flex;
 }
 
@@ -126,13 +126,14 @@ body {
 .sidebar-title {
     margin-top: 10px;
     margin-bottom: 10px;
-    font-size: 1.25rem;    
+    font-size: 1.25rem;
     color: var(--text-second);
     cursor: default;
 }
 
 .sidebar-item, .sidebar-title {
     padding: 10px 100px 10px 10px;
+    white-space: nowrap;
 }
 
 .sidebar-item:hover, .nav-list-item:hover {
@@ -154,13 +155,13 @@ body {
 }
 
 @media (min-width: 640px) {
-    .nav-list { 
-        display: flex; 
+    .nav-list {
+        display: flex;
         padding-left: 10px;
         margin-left: auto;
     }
-    .nav-list-item { 
-        padding: 10px; 
+    .nav-list-item {
+        padding: 10px;
         white-space: nowrap;
     }
 
@@ -171,8 +172,8 @@ body {
 @media (min-width: 740px) { .nav-list-item:nth-child(2) { display: block; } }
 @media (min-width: 840px) { .nav-list-item:nth-child(3) { display: block; } }
 @media (min-width: 940px) { .nav-list-item:nth-child(4) { display: block; } }
-@media (min-width: 1040px) { 
-    .nav-list-item:nth-child(5) { display: block; } 
+@media (min-width: 1040px) {
+    .nav-list-item:nth-child(5) { display: block; }
     .toggle-btn, .sidebar { display: none; }
 }
 
@@ -181,23 +182,34 @@ body {
     background-color: var(--second);
     margin-top: auto;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 10px 0 10px black;
-    justify-content: center;
-    align-items: center;
 }
 
 .footer-top {
     padding: 15px;
-    display: flex;
-    flex-direction: column;
     max-width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
 }
 
-.footer-col { 
-    width: clamp(200px, 10%, 500px);
-    margin-bottom: 1rem;
+.footer-col {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 10px;
+    width: 50% !important;
+}
+
+@media (min-width: 600px) {
+    .footer-col { width: 25% ; }
+    .footer-top { flex-wrap: nowrap; }
+}
+
+.footer-col-label {
+    padding: 10px;
+    margin-bottom: 15px !important;
+    border-bottom: 3px solid var(--first);
+    width: 95%;
 }
 
 .footer-bottom {
@@ -209,6 +221,22 @@ body {
     width: 100%;
 }
 
+/* ########## SCROLLBAR ########## */
+::-webkit-scrollbar {width: .7rem;}
+
+::-webkit-scrollbar-track {
+    margin-block: .1rem;
+    border-radius: 1rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--third);
+    border-radius: 1rem;
+    border: 1px solid #E1E2E1;
+}
+
+::-webkit-scrollbar-thumb:hover {background-color: var(--second);}
+
 /* ########## GENERIC CLASSES ########## */
 /* display and position */
 .d-flex { display: flex !important; }
@@ -216,12 +244,12 @@ body {
 .d-block { display: block !important; }
 .d-hidden { display: hidden !important; }
 
-.col { 
+.col {
     display: flex !important;
     flex-direction: column !important;
 }
 
-.row { 
+.row {
     display: flex !important;
     flex-wrap: wrap !important;
     flex-direction: row !important;
@@ -304,8 +332,8 @@ body {
     border-bottom: 2px solid var(--second) !important;
 }
 
-.form-container > form { 
-    padding: 10px 0px !important; 
+.form-container > form {
+    padding: 10px 0px !important;
     display: flex !important;
     flex-direction: column !important;
     gap: 10px !important;
