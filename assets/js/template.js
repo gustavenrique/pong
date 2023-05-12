@@ -1,6 +1,15 @@
 const toggleNavList = () => {
     document.querySelector('.sidebar').classList.toggle('sidebar-show')
     document.querySelector('.sidebar-overlay').classList.toggle('sidebar-overlay-show')
-}
 
-const scrollToTop = () => scroll(0, 0)
+    var toggleButton = document.querySelector('.fa-bars')
+
+    if (toggleButton) {
+        toggleButton.classList.remove('fa-bars')
+        toggleButton.classList.add('fa-x')
+    } else {
+        toggleButton = document.querySelector('.fa-x')
+        toggleButton.classList.remove('fa-x')
+        toggleButton.classList.add('fa-bars')
+    }
+}

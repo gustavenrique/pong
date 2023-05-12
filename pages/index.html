@@ -4,13 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Home</title>
 
-    <link rel="stylesheet" href="../assets/css/template.css">
+    <link rel="icon" href="/assets/img/joystick-icon.png">
     <link rel="stylesheet" href="../assets/css/index.css">
+    <link rel="stylesheet" href="../assets/css/template.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="column">
+<body class="col" id="top">
+    <!-- TODO:
+    - ADICIONAR SEÇÃO DE ANÚNCIOS
+    - ADICIONAR 4ª SEÇÃO -->
+
     <!-- navbar -->
     <div class="navbar">
         <div class="logo">Pong</div>
@@ -21,35 +27,34 @@
             </button>
             
             <input type="text" class="search-input" placeholder="Pesquisar">
+
+            <i class="fa fa-filter styling"></i>
             
-            <button class="search-filter-btn">
-                <i class="fas fa-filter"></i>
-                <span>Filtro</span>
-                <!-- select option goes here -->
-            </button>
+            <select class="search-filter-select">
+                <option disabled selected>Filtro</option>
+                <option>Usuários</option>
+                <option>Jogos</option>
+            </select>
         </div>
 
-        <!-- gambiarra para nav-list-items aparecerem na navbar conforme tela for enlargecendo -->
-        <ul class="nav-list-large">
-            <li class="nav-list-large-item">Jogos</li>
-            <li class="nav-list-large-item">Minha Conta</li>
-            <li class="nav-list-large-item">Streaming</li>
-            <li class="nav-list-large-item">Carteira</li>
-            <li class="nav-list-large-item">Biblioteca</li>
-            <li class="nav-list-large-item">Configurações</li>
-            <li class="nav-list-large-item">Premium</li>
-        </ul>
-    
+        <!-- gambiarra p/ sidebar-items aparecerem na navbar conforme tela alarga -->
         <ul class="nav-list">
-            <span class="nav-list-title">Menu</span>
-
             <li class="nav-list-item">Jogos</li>
             <li class="nav-list-item">Minha Conta</li>
-            <li class="nav-list-item">Streaming</li>
-            <li class="nav-list-item">Carteira</li>
+            <li class="nav-list-item">Carrinho</li>
             <li class="nav-list-item">Biblioteca</li>
             <li class="nav-list-item">Configurações</li>
-            <li class="nav-list-item">Premium</li>
+        </ul>
+        
+        <!-- <div class="sidebar-overlay"></div> -->
+        <ul class="sidebar">
+            <span class="sidebar-title">Menu</span>
+
+            <li class="sidebar-item">Jogos</li>
+            <li class="sidebar-item">Minha Conta</li>
+            <li class="sidebar-item">Carrinho</li>
+            <li class="sidebar-item">Biblioteca</li>
+            <li class="sidebar-item">Configurações</li>
         </ul>
         
         <div class="toggle-btn" onclick='toggleNavList()'>
@@ -57,105 +62,454 @@
         </div>
     </div>
 
+    <!-- content -->
     <section class="main-content">
-        <div class="carousel-container">
-            <!-- REFERENCIA CAROUSEL: https://codepen.io/supah/pen/VweRLrQ -->
-            <div class="carousel">
-                <div class="carousel--wrap">
-                <div class="carousel--item">
-                    <figure><img src="https://blog.br.playstation.com/tachyon/sites/4/2022/07/eb49426b79917b624920ba5188cd8eaa52321c76.png?resize=1088,612&crop_strategy=smart" alt="" /></figure>
-                    <h2>Game1</h2>
-                </div>
-            
-                <div class="carousel--item">
-                    <figure><img src="https://image.api.playstation.com/vulcan/img/rnd/202010/2217/LsaRVLF2IU2L1FNtu9d3MKLq.jpg" alt="" /></figure>
-                    <h2>Game2</h2>
-                </div>
-            
-                <div class="carousel--item">
-                    <figure><img src="data:image/jpeg;base64,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" alt="" /></figure>
-                    <h2>Game3</h2>
-                </div>
-            
-                <div class="carousel--item">
-                    <figure><img src="https://cdn.akamai.steamstatic.com/steam/apps/319630/capsule_616x353.jpg?t=1662395426" alt="" /></figure>
-                    <h2>Game4</h2>
-                </div>
-            
-                <div class="carousel--item">
-                    <figure><img src="https://c4.wallpaperflare.com/wallpaper/469/317/242/call-of-duty-4-modern-warfare-call-of-duty-soldier-weapon-wallpaper-preview.jpg" alt="" /></figure>
-                    <h2>Game5</h2>
-                </div>
-            
-                <div class="carousel--item">
-                    <figure><img src="https://cdn.akamai.steamstatic.com/steam/apps/1677740/capsule_616x353.jpg?t=1650527635" alt="" /></figure>
-                    <h2>Game6</h2>
-                </div>
-                
-                <div class="carousel--item">
-                    <figure><img src="https://www.91-cdn.com/hub/wp-content/uploads/2021/07/Free-Fire-wallpaper.png" alt="" /></figure>
-                    <h2>Game7</h2>
-                </div>
-            
-                </div>
-                <div class="carousel--progress">
-                <div class="carousel--progress-bar"></div>
-                </div>
-            </div>
-        </div>
+        <h3 class="text-first p-10">Recomendados</h3>
+        <div class="carousel"> 
+            <section id="section1">
+              <a href="#section3" class="arrow__btn left-arrow">‹</a>
+
+              <div class="item">
+                <a>
+                  <img src="https://images8.alphacoders.com/710/thumbbig-710329.webp" alt="God of War 4">
         
+                  <h1 class="heading">God of War 4</h1>
+                </a>
+              </div>
+
+              <div class="item">
+                <a>
+                  <img src="https://images5.alphacoders.com/394/thumbbig-394511.webp" alt="The Last of Us">
+                  
+                  <h1 class="heading">The Last of Us</h1>
+                </a>
+              </div>
+              <div class="item">
+                <a>
+                  <img src="https://images7.alphacoders.com/532/thumbbig-532406.webp" alt="Life is Strange">
+
+                  <h1 class="heading">Life is Strange</h1>
+                </a>
+              </div>
+              <div class="item">
+                <a>
+                  <img src="https://images2.alphacoders.com/127/thumbbig-1276415.webp" alt="Fifa 23">
+                  
+                  <h1 class="heading">FIFA 23</h1>
+                </a>
+              </div>
+              <div class="item">
+                <a>
+                  <img src="https://images7.alphacoders.com/439/thumbbig-439636.webp" alt="GTA V">
+                  
+                  <h1 class="heading">GTA V</h1>
+                  </a>
+              </div>
+              <a href="#section2" class="arrow__btn right-arrow">›</a>
+            </section>
+          
+            <section id="section2">
+              <a href="#section1" class="arrow__btn left-arrow">‹</a>
+
+              <div class="item">
+                <a>
+                  <img src="https://images7.alphacoders.com/486/thumbbig-486990.webp" alt="Super Mario 3D Land">
+                  <h1 class="heading">Super Mario 3D Land</h1>
+                </a>
+              </div>
+
+              <div class="item">
+                <a>
+                  <img src="https://images5.alphacoders.com/423/thumbbig-423747.webp" alt="Sonic">
+                  <h1 class="heading">Sonic</h1>
+                </a>
+              </div>
+
+              <div class="item">
+                <a>
+                  <img src="https://images.alphacoders.com/789/thumbbig-789452.webp" alt="Zelda">
+                  <h1 class="heading">Zelda</h1>
+                </a>
+              </div>
+
+              <div class="item">
+                <a>
+                  <img src="https://images3.alphacoders.com/885/thumbbig-885750.webp" alt="Roblox">
+                  <h1 class="heading">Roblox</h1>
+                </a>
+              </div>
+
+              <div class="item">
+                <a>
+                  <img src="https://images.alphacoders.com/109/thumbbig-1091086.webp" alt="Free Fire">
+                  <h1 class="heading">Free Fire</h1>
+                </a>
+              </div>
+
+              <a href="#section3" class="arrow__btn right-arrow">›</a>
+            </section>
+          
+            <section id="section3">
+              <a href="#section2" class="arrow__btn left-arrow">‹</a>
+
+              <div class="item">
+                <a>
+                  <img src="https://i.insider.com/58c17d116e20041b008b5023?width=800&format=jpeg&auto=webp" alt="Halo 2">
+                  <h1 class="heading">Halo 2</h1>
+                </a>
+              </div>
+
+              <div class="item">
+                <a>
+                  <img src="https://i.insider.com/577ebda7dd0895fd028b4af3?width=800&format=jpeg&auto=webp" alt="Read Dead Redemption">
+                  <h1 class="heading">Read Dead Redemption</h1>
+                </a>
+              </div>
+
+              <div class="item">
+                <a>
+                  <img src="https://images7.alphacoders.com/431/thumbbig-431220.webp" alt="Diablo III">
+                  <h1 class="heading">Diablo III</h1>
+                </a>
+              </div>
+
+              <div class="item">
+                <a>
+                  <img src="https://images3.alphacoders.com/663/thumbbig-663756.webp" alt="Gran Turismo">
+                  <h1 class="heading">Gran Turismo</h1>
+                </a>
+              </div>
+
+              <div class="item">
+                <a>
+                  <img src="https://i.stack.imgur.com/dqVlX.png" alt="Minecraft">
+                  <h1 class="heading">Minecraft</h1>
+                </a>
+              </div>
+          
+              <a href="#section1" class="arrow__btn right-arrow">›</a>
+            </section>
+        </div>
+
+        <h3 class="text-first p-10">Hype do Momento</h3>
+        <div class="carousel"> 
+          <section id="section4">
+            <a href="#section6" class="arrow__btn left-arrow">‹</a>
+
+            <div class="item">
+              <a>
+                <img src="https://i.insider.com/58c17d116e20041b008b5023?width=800&format=jpeg&auto=webp" alt="Halo 2">
+                <h1 class="heading">Halo 2</h1>
+              </a>
+            </div>
+
+            <div class="item">
+              <a>
+                <img src="https://i.insider.com/577ebda7dd0895fd028b4af3?width=800&format=jpeg&auto=webp" alt="Read Dead Redemption">
+                <h1 class="heading">Read Dead Redemption</h1>
+              </a>
+            </div>
+
+            <div class="item">
+              <a>
+                <img src="https://images7.alphacoders.com/431/thumbbig-431220.webp" alt="Diablo III">
+                <h1 class="heading">Diablo III</h1>
+              </a>
+            </div>
+
+            <div class="item">
+              <a>
+                <img src="https://images3.alphacoders.com/663/thumbbig-663756.webp" alt="Gran Turismo">
+                <h1 class="heading">Gran Turismo</h1>
+              </a>
+            </div>
+
+            <div class="item">
+              <a>
+                <img src="https://i.stack.imgur.com/dqVlX.png" alt="Minecraft">
+                <h1 class="heading">Minecraft</h1>
+              </a>
+            </div>
+            
+            <a href="#section5" class="arrow__btn right-arrow">›</a>
+          </section>
+        
+          <section id="section5">
+            <a href="#section4" class="arrow__btn left-arrow">‹</a>
+
+            <div class="item">
+              <a>
+                <img src="https://images7.alphacoders.com/486/thumbbig-486990.webp" alt="Super Mario 3D Land">
+                <h1 class="heading">Super Mario 3D Land</h1>
+              </a>
+            </div>
+
+            <div class="item">
+              <a>
+                <img src="https://images5.alphacoders.com/423/thumbbig-423747.webp" alt="Sonic">
+                <h1 class="heading">Sonic</h1>
+              </a>
+            </div>
+
+            <div class="item">
+              <a>
+                <img src="https://images.alphacoders.com/789/thumbbig-789452.webp" alt="Zelda">
+                <h1 class="heading">Zelda</h1>
+              </a>
+            </div>
+
+            <div class="item">
+              <a>
+                <img src="https://images3.alphacoders.com/885/thumbbig-885750.webp" alt="Roblox">
+                <h1 class="heading">Roblox</h1>
+              </a>
+            </div>
+
+            <div class="item">
+              <a>
+                <img src="https://images.alphacoders.com/109/thumbbig-1091086.webp" alt="Free Fire">
+                <h1 class="heading">Free Fire</h1>
+              </a>
+            </div>
+
+            <a href="#section6" class="arrow__btn right-arrow">›</a>
+          </section>
+        
+          <section id="section6">
+            <a href="#section5" class="arrow__btn left-arrow">‹</a>
+
+            <div class="item">
+              <a>
+                <img src="https://images8.alphacoders.com/710/thumbbig-710329.webp" alt="God of War 4">
+      
+                <h1 class="heading">God of War 4</h1>
+              </a>
+            </div>
+
+            <div class="item">
+              <a>
+                <img src="https://images5.alphacoders.com/394/thumbbig-394511.webp" alt="The Last of Us">
+                
+                <h1 class="heading">The Last of Us</h1>
+              </a>
+            </div>
+            <div class="item">
+              <a>
+                <img src="https://images7.alphacoders.com/532/thumbbig-532406.webp" alt="Life is Strange">
+
+                <h1 class="heading">Life is Strange</h1>
+              </a>
+            </div>
+            <div class="item">
+              <a>
+                <img src="https://images2.alphacoders.com/127/thumbbig-1276415.webp" alt="Fifa 23">
+                
+                <h1 class="heading">FIFA 23</h1>
+              </a>
+            </div>
+            <div class="item">
+              <a>
+                <img src="https://images7.alphacoders.com/439/thumbbig-439636.webp" alt="GTA V">
+                
+                <h1 class="heading">GTA V</h1>
+                </a>
+            </div>
+        
+            <a href="#section4" class="arrow__btn right-arrow">›</a>
+          </section>
+        </div>
+
+        <h3 class="text-first p-10">Populares</h3>
+        <div class="carousel"> 
+          <section id="section7">
+            <a href="#section9" class="arrow__btn left-arrow">‹</a>
+
+            <div class="item">
+              <a>
+                <img src="https://images7.alphacoders.com/486/thumbbig-486990.webp" alt="Super Mario 3D Land">
+                <h1 class="heading">Super Mario 3D Land</h1>
+              </a>
+            </div>
+
+            <div class="item">
+              <a>
+                <img src="https://images5.alphacoders.com/423/thumbbig-423747.webp" alt="Sonic">
+                <h1 class="heading">Sonic</h1>
+              </a>
+            </div>
+
+            <div class="item">
+              <a>
+                <img src="https://images.alphacoders.com/789/thumbbig-789452.webp" alt="Zelda">
+                <h1 class="heading">Zelda</h1>
+              </a>
+            </div>
+
+            <div class="item">
+              <a>
+                <img src="https://images3.alphacoders.com/885/thumbbig-885750.webp" alt="Roblox">
+                <h1 class="heading">Roblox</h1>
+              </a>
+            </div>
+
+            <div class="item">
+              <a>
+                <img src="https://images.alphacoders.com/109/thumbbig-1091086.webp" alt="Free Fire">
+                <h1 class="heading">Free Fire</h1>
+              </a>
+            </div>
+
+            <a href="#section8" class="arrow__btn right-arrow">›</a>
+          </section>
+        
+          <section id="section8">
+            <a href="#section7" class="arrow__btn left-arrow">‹</a>
+
+            <div class="item">
+              <a>
+                <img src="https://images8.alphacoders.com/710/thumbbig-710329.webp" alt="God of War 4">
+      
+                <h1 class="heading">God of War 4</h1>
+              </a>
+            </div>
+
+            <div class="item">
+              <a>
+                <img src="https://images5.alphacoders.com/394/thumbbig-394511.webp" alt="The Last of Us">
+                
+                <h1 class="heading">The Last of Us</h1>
+              </a>
+            </div>
+            <div class="item">
+              <a>
+                <img src="https://images7.alphacoders.com/532/thumbbig-532406.webp" alt="Life is Strange">
+
+                <h1 class="heading">Life is Strange</h1>
+              </a>
+            </div>
+            <div class="item">
+              <a>
+                <img src="https://images2.alphacoders.com/127/thumbbig-1276415.webp" alt="Fifa 23">
+                
+                <h1 class="heading">FIFA 23</h1>
+              </a>
+            </div>
+            <div class="item">
+              <a>
+                <img src="https://images7.alphacoders.com/439/thumbbig-439636.webp" alt="GTA V">
+                
+                <h1 class="heading">GTA V</h1>
+                </a>
+            </div>
+
+            <a href="#section9" class="arrow__btn right-arrow">›</a>
+          </section>
+        
+          <section id="section9">
+            <a href="#section8" class="arrow__btn left-arrow">‹</a>
+
+            <div class="item">
+              <a>
+                <img src="https://i.insider.com/58c17d116e20041b008b5023?width=800&format=jpeg&auto=webp" alt="Halo 2">
+                <h1 class="heading">Halo 2</h1>
+              </a>
+            </div>
+
+            <div class="item">
+              <a>
+                <img src="https://i.insider.com/577ebda7dd0895fd028b4af3?width=800&format=jpeg&auto=webp" alt="Read Dead Redemption">
+                <h1 class="heading">Read Dead Redemption</h1>
+              </a>
+            </div>
+
+            <div class="item">
+              <a>
+                <img src="https://images7.alphacoders.com/431/thumbbig-431220.webp" alt="Diablo III">
+                <h1 class="heading">Diablo III</h1>
+              </a>
+            </div>
+
+            <div class="item">
+              <a>
+                <img src="https://images3.alphacoders.com/663/thumbbig-663756.webp" alt="Gran Turismo">
+                <h1 class="heading">Gran Turismo</h1>
+              </a>
+            </div>
+
+            <div class="item">
+              <a>
+                <img src="https://i.stack.imgur.com/dqVlX.png" alt="Minecraft">
+                <h1 class="heading">Minecraft</h1>
+              </a>
+            </div>
+        
+            <a href="#section7" class="arrow__btn right-arrow">›</a>
+          </section>
+        </div>
     </section>
 
     <!-- footer -->
     <div class="footer">
-        <div class='footer-top'>
-            <div class="column w-100 align-items-center">
-                <div class="logo text-center w-100 mb-10">Pong</div>
-        
-                <div class="form-container">
-                    <div class="form-label">Newsletter: Pong News</div>
-        
-                    <form>
-                        <input class='form-input' type="email" placeholder="E-mail">
-                        <button class="btn btn-second w-100 text-bold">Inscrever-se</button>
-                    </form>
-                </div>
+        <div class="footer-top">
+            <div class="footer-col p-10">
+                <div class="logo">Pong</div>
             </div>
-    
-            <div class="d-flex w-100">
-                <div class="column w-50">
-                    <span class="text-second p-10">Siga-nos!</span>
-                    <ul class="u-list">
-                        <li class="u-list-item link">
-                           <i class="fa-brands fa-youtube"></i> PongTV
-                        </li>
-                        <li class="u-list-item link">
-                           <i class="fa-brands fa-facebook"></i> Pong
-                        </li>
-                        <li class="u-list-item link">
-                           <i class="fa-brands fa-twitter"></i> @pong
-                        </li>
-                        <li class="u-list-item link">
-                           <i class="fa-brands fa-instagram"></i> @pong
-                        </li>
-                    </ul>
-                </div>
-                <div class="column w-50">
-                    <span class="text-second p-10">Companhia</span>
-                    <ul class="u-list">
-                        <li class="u-list-item link">Sobre nós</li>
-                        <li class="u-list-item link">Carreiras</li>
-                        <li class="u-list-item link">Contato</li>
-                        <li class="u-list-item link">FAQ</li>
-                    </ul>
-                </div>
+
+            <div class="footer-col">
+                <span class="footer-col-label text-second">Siga-nos!</span>
+                <ul class="u-list">
+                    <li class="u-list-item">
+                        <button class="btn btn-first">
+                            <i class="fa-brands fa-youtube"></i>
+                        </button>
+                    </li>
+                    <li class="u-list-item">
+                        <button class="btn btn-first">
+                            <i class="fa-brands fa-facebook"></i>
+                        </button>
+                    </li>
+                    <li class="u-list-item">
+                        <button class="btn btn-first">
+                            <i class="fa-brands fa-twitter"></i>
+                        </button>
+                    </li>
+                    <li class="u-list-item">
+                        <button class="btn btn-first">
+                            <i class="fa-brands fa-instagram"></i>
+                        </button>
+                    </li>
+                </ul>
             </div>
+            
+            <div class="footer-col">
+                <span class="footer-col-label text-second">Menu</span>
+                <ul class="u-list">
+                    <li class="u-list-item link">Jogos</li>
+                    <li class="u-list-item link">Minha Conta</li>
+                    <li class="u-list-item link">Carrinho</li>
+                    <li class="u-list-item link">Biblioteca</li>
+                    <li class="u-list-item link">Configurações</li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <span class="footer-col-label text-second">Companhia</span>
+                <ul class="u-list">
+                    <li class="u-list-item link">Sobre nós</li>
+                    <li class="u-list-item link">Carreiras</li>
+                    <li class="u-list-item link">Contato</li>
+                    <li class="u-list-item link">FAQ</li>
+                </ul>
+            </div>
+
         </div>
         <div class="footer-bottom">
-            <span> &copy; Pong 2023 - All rights reserved</span>
-            <button class="btn btn-first">
-                <i class="fa fa-arrow-up"></i>
-            </button>
+            <span> &copy; 2023 Pong Inc. - All rights reserved</span>
+            <a href="#top" class="link">
+                <button class="btn btn-first">
+                    <i class="fa fa-arrow-up"></i>
+                </button>
+            </a>
         </div>
     </div>
 
