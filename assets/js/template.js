@@ -1,6 +1,5 @@
 const toggleNavList = () => {
     document.querySelector('.sidebar').classList.toggle('sidebar-show')
-    document.querySelector('.sidebar-overlay').classList.toggle('sidebar-overlay-show')
 
     var toggleButton = document.querySelector('.fa-bars')
 

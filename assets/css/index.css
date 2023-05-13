@@ -25,11 +25,16 @@
     height: 192px;
     object-fit: cover;
 }
-
+.carousel section .ad:hover {
+    transform: translate(10px, -10px);
+    box-shadow: -10px 10px black;
+}
 .carousel section .ad img {
-    width: 87vw;
-    min-height: 200px;
+    width: 90vw;
+    height: 350px;
     object-fit: cover;
+    cursor: pointer;
+    transition: all .25s ease;
 }
 
 .carousel section .item:hover {
@@ -37,7 +42,8 @@
     transform: scale(1.2);
 }
 
-.carousel section .item .heading { 
+.carousel section .item .heading,
+.carousel section .ad .heading { 
     position: absolute;
     bottom: 0px;
     left: 10px;
@@ -52,7 +58,13 @@
     text-overflow: ellipsis;
 }
 
-.carousel section .item:hover .heading { opacity: 1;}
+.carousel section .ad .heading {
+    font-size: 2rem;
+    width: 98.6%;
+}
+
+.carousel section .item:hover .heading,
+.carousel section .ad:hover .heading { opacity: 1;}
 
 .carousel section .item .duration {
     position: absolute;
