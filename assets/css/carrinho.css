@@ -1,0 +1,25 @@
+.cart-item {
+    height: 150px;
+    border: 1px solid var(--first);
+    border-radius: 10px;
+    margin: 10px;
+    background-color: var(--third);
+}
+
+.cart-item > * {
+    height: 100%;
+    width: 33.33%;
+    overflow: hidden;
+}
+
+.cart-img {
+    object-fit: cover;
+    height: 100%;
+}
+
+.item-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 100%;
+}
