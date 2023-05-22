@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pong - Carrinho</title>
+
+    <!-- font-family: Arvo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="../assets/img/joystick-icon.png">
+    <link rel="stylesheet" href="../assets/css/cart.css">
+    <link rel="stylesheet" href="../assets/css/template.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="col" id='top'>
+    <!-- navbar -->
+    <div class="navbar">
+        <div class="logo">Pong</div>
+
+        <div class="search-container">
+            <button class="search-btn">
+                <i class="fas fa-search"></i>
+            </button>
+            
+            <input type="text" class="search-input" placeholder="Pesquisar">
+
+            <i class="fa fa-filter styling"></i>
+            
+            <select class="search-filter-select">
+                <option disabled selected>Filtro</option>
+                <option>Usuários</option>
+                <option>Jogos</option>
+            </select>
+        </div>
+
+        <!-- gambiarra p/ sidebar-items aparecerem na navbar conforme tela alarga -->
+        <ul class="nav-list">
+            <li class="nav-list-item">Jogos</li>
+            <li class="nav-list-item">Minha Conta</li>
+            <li class="nav-list-item">Carrinho</li>
+            <li class="nav-list-item">Biblioteca</li>
+            <li class="nav-list-item">Configurações</li>
+        </ul>
+        
+        <div class="sidebar-overlay"></div>
+        <ul class="sidebar">
+            <span class="sidebar-title">Menu</span>
+
+            <li class="sidebar-item">Jogos</li>
+            <li class="sidebar-item">Minha Conta</li>
+            <li class="sidebar-item">Carrinho</li>
+            <li class="sidebar-item">Biblioteca</li>
+            <li class="sidebar-item">Configurações</li>
+        </ul>
+        
+        <div class="toggle-btn" onclick='toggleNavList()'>
+            <i class="fa fa-bars"></i>
+        </div>
+    </div>
+
+    <section class="main-content">
+        <h2 class="text-center p-10">
+            Carrinho
+        </h2>
+
+        <div class="column p-10" style='max-width: 750px; margin: auto;'>
+            <div class="cart-item row align-items-center p-10">
+                <div class="flex-center color-second" style='border-radius: 10px;'>
+                    <img class='cart-img' src="https://cdn-cosmos.bluesoft.com.br/products/4250795845508" alt="The Last of Us">
+                </div>
+    
+                <div class="col flex-center p-10" style='gap: 10px;'>
+                    <div class="item-title" title="The Last of Us">The Last of Us</div>
+                    <div class="item-price">R$ 134,90</div>
+                </div>
+    
+                <div class="col flex-center" style='gap: 10px;'>
+                    <div class="row" style='gap: 10px;'>
+                        <i class="fa-brands fa-windows"></i>
+                        <i class="fa-brands fa-apple"></i>
+                        <i class="fa-brands fa-android"></i>
+                        <i class="fa-brands fa-xbox"></i>
+                        <i class="fa-brands fa-playstation"></i>
+                    </div>
+                    <button class="btn btn-second">Remover</button>
+                </div>
+            </div>
+    
+            <div class="cart-item row align-items-center p-10">
+                <div class="flex-center color-second" style='border-radius: 10px;'>
+                    <img class='cart-img' src="https://m.media-amazon.com/images/M/MV5BOTI4MzI3MzYtNjhmNi00NzFmLTkwNGItNDVmZGViNjE2YzY5XkEyXkFqcGdeQXVyMTA0MTM5NjI2._V1_.jpg" alt="God of War: Chains of Olympus">
+                </div>
+    
+                <div class="col flex-center p-10" style='gap: 10px;'>
+                    <div class="item-title" title="God of War: Chains of Olympus">God of War: Chains of Olympus</div>
+                    <div class="item-price">R$ 9,99</div>
+                </div>
+    
+                <div class="col flex-center" style='gap: 10px;'>
+                    <div class="row" style='gap: 10px;'>
+                        <i class="fa-brands fa-windows"></i>
+                        <i class="fa-brands fa-apple"></i>
+                        <i class="fa-brands fa-android"></i>
+                        <i class="fa-brands fa-playstation"></i>
+                    </div>
+                    <button class="btn btn-second">Remover</button>
+                </div>
+            </div>
+    
+            <div class="cart-item row align-items-center p-10">
+                <div class="flex-center color-second" style='border-radius: 10px;'>
+                    <img class='cart-img' src="https://m.media-amazon.com/images/M/MV5BMmQxNTVhZGUtY2UxMy00NzY2LWJjYzctYzc2ZjQ3ZGU5N2E2XkEyXkFqcGdeQXVyMTA0MTM5NjI2._V1_.jpg" alt="God of War: Ascension">
+                </div>
+    
+                <div class="col flex-center p-10" style='gap: 10px;'>
+                    <div class="item-title" title="God of War: Ascension">God of War: Ascension</div>
+                    <div class="item-price">R$ 109,99</div>
+                </div>
+    
+                <div class="col flex-center" style='gap: 10px;'>
+                    <div class="row" style='gap: 10px;'>
+                        <i class="fa-brands fa-windows"></i>
+                        <i class="fa-brands fa-playstation"></i>
+                    </div>
+                    <button class="btn btn-second">Remover</button>
+                </div>
+            </div>
+    
+            <div class="cart-item row align-items-center p-10">
+                <div class="flex-center color-second" style='border-radius: 10px;'>
+                    <img class='cart-img' src="https://image.api.playstation.com/vulcan/ap/rnd/202207/1210/4xJ8XB3bi888QTLZYdl7Oi0s.png" alt="God of War: Ragnarok">
+                </div>
+    
+                <div class="col flex-center p-10" style='gap: 10px;'>
+                    <div class="item-title" title='God of War: Ragnarok'>God of War: Ragnarok</div>
+                    <div class="item-price">R$ 229,90</div>
+                </div>
+    
+                <div class="col flex-center" style='gap: 10px;'>
+                    <div class="row" style='gap: 10px;'>
+                        <i class="fa-brands fa-windows"></i>
+                        <i class="fa-brands fa-playstation"></i>
+                    </div>
+                    <button class="btn btn-second">Remover</button>
+                </div>
+            </div>
+    
+            <div class="cart-item row align-items-center p-10">
+                <div class="flex-center color-second" style='border-radius: 10px;'>
+                    <img class='cart-img' src="https://m.media-amazon.com/images/M/MV5BNzNiYTFhZjEtYzU5Mi00YzRkLTg3YWEtMWFhZGVkYmY3ZDRlXkEyXkFqcGdeQXVyMTI3NjAwMTA1._V1_.jpg" alt="God of War: Ghost of Sparta">
+                </div>
+    
+                <div class="col flex-center p-10" style='gap: 10px;'>
+                    <div class="item-title" title="God of War: Ghost of Sparta">God of War: Ghost of Sparta</div>
+                    <div class="item-price">R$ 9,90</div>
+                </div>
+    
+                <div class="col flex-center" style='gap: 10px;'>
+                    <div class="row" style='gap: 10px;'>
+                        <i class="fa-brands fa-windows"></i>
+                        <i class="fa-brands fa-apple"></i>
+                        <i class="fa-brands fa-android"></i>
+                        <i class="fa-brands fa-playstation"></i>
+                    </div>
+                    <button class="btn btn-second">Remover</button>
+                </div>
+            </div>
+    
+            <div class="total-wrapper color-second">
+                <div class="total-content">
+                    <div class="row align-items-center" style='gap: 10px'>
+                        <h3>Sub-total: </h3> <span class="currency">R$ 494,68</span>
+                    </div>
+        
+                    <button class="btn btn-first">
+                        Checkout
+        
+                        <i class="fa fa-dollar-sign" style='margin-left: 10px;'></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <script src="../assets/js/template.js"></script>
+</body>
+</html>

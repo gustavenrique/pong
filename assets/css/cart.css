@@ -23,3 +23,21 @@
     white-space: nowrap;
     max-width: 100%;
 }
+
+.total-wrapper {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 100%;
+}
+
+.total-content {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    width: clamp(200px, 95%, 700px);
+    margin: auto;
+}

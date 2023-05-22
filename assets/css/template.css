@@ -147,7 +147,7 @@ body {
 
     100% {
         opacity: .5;
-        width: calc(100vw - 250px);
+        width: calc(100vw - 260px);
     }
 }
 
