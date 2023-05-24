@@ -1,0 +1,39 @@
+.caixa {
+    background-color: var(--bg-light);
+    border: var(--accent-light);
+    color: var(--text-first);
+    padding: 15px 32px;
+    height: 20px;
+    width: 80%;
+    border-radius: 5px;    
+}
+
+.botao {
+    background-color: var(--first);
+    border: none;
+    color: var(--text-first);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 10px;
+    transition-duration: 0.4s;
+    width: 40%;
+    float: center;
+}
+
+.botao:hover {
+    background-color: var(--text-first);
+    color: var(--first);
+    border: var(--first);
+
+}
+
+.login-form {
+    display: flex;
+    height: 500px;
+    justify-content: center;
+    align-items:  center;
+    gap: 10px;  
+}
