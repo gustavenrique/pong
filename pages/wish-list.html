@@ -1,104 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <div id="header"></div>
+    
     <title>Pong - Lista de Desejos</title>
 
-    <!-- font-family: Arvo -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
-
-    <link rel="icon" href="../assets/img/joystick-icon.png">
     <link rel="stylesheet" href="../assets/css/wish-list.css">
-    <link rel="stylesheet" href="../assets/css/template.css">
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> -->
-
-    <script src="https://kit.fontawesome.com/951d3b2049.js" crossorigin="anonymous"></script>
 </head>
 <body class="col" id='top'>
-    <!-- navbar -->
-    <div class="navbar">
-        <a class="link" href="/pages/">
-            <div class="logo">Pong</div>
-        </a>
-
-        <div class="search-container">
-            <button class="search-btn">
-                <i class="fas fa-search"></i>
-            </button>
-            
-            <input type="text" class="search-input" placeholder="Pesquisar">
-
-            <i class="fa fa-filter styling"></i>
-            
-            <select class="search-filter-select">
-                <option disabled selected>Filtro</option>
-                <option>Usuários</option>
-                <option>Jogos</option>
-            </select>
-        </div>
-
-        <ul class="nav-list">
-            <li class="nav-list-item">Jogos</li>
-            <li class="nav-list-item">Minha Conta</li>
-            
-            <li class="nav-list-item">
-                <a href="/pages/cart.html" target="_blank" class="link">
-                    Carrinho
-                </a>
-            </li>
-
-            <li class="nav-list-item">Biblioteca</li>
-            <li class="nav-list-item">
-                <a href="/pages/wish-list.html" target="_blank" class="link">
-                    Lista de Desejos
-                </a>
-            </li>
-            <li class="nav-list-item">Configurações</li>
-        </ul>
-        
-        <ul class="sidebar">
-            <span class="sidebar-title">Menu</span>
-
-            <li class="sidebar-item">
-                <i class="fa fa-gamepad p-10"></i>
-                Jogos
-            </li>
-            <li class="sidebar-item">
-                <i class="fa fa-user p-10"></i>
-                Minha Conta
-            </li>
-            
-            <a href="/pages/cart.html" target="_blank" class="link">
-                <li class="sidebar-item">
-                    <i class="fa fa-shopping-cart p-10"></i>
-                    Carrinho
-                </li>
-            </a>
-            <li class="sidebar-item">
-                <i class="fa fa-book-open p-10"></i>
-                Biblioteca
-            </li>
-            <a href="/pages/wish-list.html" target="_blank" class="link">
-                <li class="sidebar-item">
-                    <i class="fa fa-bookmark p-10"></i>
-                    Lista de Desejos
-                </li>
-            </a>
-            <li class="sidebar-item">
-                <i class="fa fa-gear p-10"></i>
-                Configurações
-            </li>
-        </ul>
-        
-        <div class="toggle-btn" onclick='toggleNavList()'>
-            <i class="fa fa-bars"></i>
-        </div>
-    </div>
+    <div id="navbar"></div>
 
     <section class="main-content">
         <div class="col p-10">
@@ -308,73 +218,8 @@
         </div>
     </section>
 
-    <!-- footer -->
-    <div class="footer">
-        <div class="footer-top">
-            <div class="footer-col p-10">
-                <a class="link" href="/pages/">
-            <div class="logo">Pong</div>
-        </a>
-            </div>
+    <div id="footer"></div>
 
-            <div class="footer-col">
-                <span class="footer-col-label text-second">Siga-nos!</span>
-                <ul class="u-list">
-                    <li class="u-list-item">
-                        <button class="btn btn-first">
-                            <i class="fa-brands fa-youtube"></i>
-                        </button>
-                    </li>
-                    <li class="u-list-item">
-                        <button class="btn btn-first">
-                            <i class="fa-brands fa-facebook"></i>
-                        </button>
-                    </li>
-                    <li class="u-list-item">
-                        <button class="btn btn-first">
-                            <i class="fa-brands fa-twitter"></i>
-                        </button>
-                    </li>
-                    <li class="u-list-item">
-                        <button class="btn btn-first">
-                            <i class="fa-brands fa-instagram"></i>
-                        </button>
-                    </li>
-                </ul>
-            </div>
-            
-            <div class="footer-col">
-                <span class="footer-col-label text-second">Menu</span>
-                <ul class="u-list">
-                    <li class="u-list-item link">Jogos</li>
-                    <li class="u-list-item link">Minha Conta</li>
-                    <li class="u-list-item link">Carrinho</li>
-                    <li class="u-list-item link">Biblioteca</li>
-                    <li class="u-list-item link">Configurações</li>
-                </ul>
-            </div>
-            
-            <div class="footer-col">
-                <span class="footer-col-label text-second">Companhia</span>
-                <ul class="u-list">
-                    <li class="u-list-item link">Sobre nós</li>
-                    <li class="u-list-item link">Carreiras</li>
-                    <li class="u-list-item link">Contato</li>
-                    <li class="u-list-item link">FAQ</li>
-                </ul>
-            </div>
-
-        </div>
-        <div class="footer-bottom">
-            <span> &copy; 2023 Pong Inc. - All rights reserved</span>
-            <a href="#top" class="link">
-                <button class="btn btn-first">
-                    <i class="fa fa-arrow-up"></i>
-                </button>
-            </a>
-        </div>
-    </div>
-
-    <script src="../assets/js/template.js"></script>
+    <script src="../assets/js/main.js"></script>
 </body>
 </html>

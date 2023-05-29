@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "name": "The Last of Us",
+        "description": "",
+        "genres": [ 
+            "Action", 
+            "Adventure" 
+        ],
+        "image_url": "https://image.api.playstation.com/vulcan/ap/rnd/202206/0720/eEczyEMDd2BLa3dtkGJVE9Id.png",
+        "developer": "Naughty Dog",
+        "sales": 37000000,
+        "release_date": "",
+        "platforms": [ 
+            "PlayStation 3", 
+            "PlayStation 4", 
+            "PC"
+        ]
+    }
+]

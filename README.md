@@ -7,12 +7,12 @@ A plataforma possui games para mobile e PC, tanto gratuitos quanto pagos.
 Ademais, o PONG possui um sistema de streaming, no qual usuários podem fazer live de gameplay e, obviamente, assistir.
 
 Responsáveis:
-- Monique
-- Thayane
-- Thiago
-- Adriano Padovesi
-- Gustavo Henrique
-- Gustavo Formagio
+- [Monique](https://github.com/MonRaes)
+- [Thayane](https://github.com/Thayane25)
+- [Thiago](https://github.com/Ghitado)
+- [Adriano Padovesi](https://github.com/Padovesi)
+- [Gustavo Henrique](https://github.com/gustavenrique)
+- [Gustavo Formagio]()
 
 --------
 ## Table of Contents
