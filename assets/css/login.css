@@ -39,6 +39,15 @@
     gap: 10px;  
 }
 
+.form-par {
+    position: absolute;
+	width: 10px;
+	height: 500px;
+	transform: skew(20deg);
+	background-image: black !important;
+    z-index: 1;    
+}
+
 .img-bck {
     background-image: linear-gradient(to right,rgba(0, 0, 0, 0.5) 60%, #2E0C79), url("../img/login_bg_PONG.png");
     height: 100%;
@@ -50,14 +59,7 @@
 
 }
 
-.form-par {
-    position: absolute;
-	width: 10px;
-	height: 500px;
-	transform: skew(20deg);
-	background-image: linear-gradient (black,black);
-    z-index: 1;    
-}
+
 
 .form-cont {
     display: flex !important;
@@ -92,6 +94,7 @@ input[type=text] {
 
 .form-inp::placeholder { color: var(--text-first) !important; }
 .form-inp:focus { outline: none !important; }
+.form-inp::selection { outline: none !important; }
 .form-inp:hover { 
     border: 2px solid var(--accent-dark) !important;
     border-radius: 0px !important;
@@ -108,4 +111,10 @@ input[type=text] {
     background-color: transparent !important;
     color: var(--text-first) !important;
     width: 100% !important;
+}
+
+.quad {
+    width: 20px;
+	height: 20px;
+    background-color: var(--first);     
 }

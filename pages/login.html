@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="../assets/css/template.css">
     <link rel="stylesheet" href="../assets/css/login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
 </head>
  
 <!-- Cadastro/Login -->
@@ -29,12 +30,30 @@
                 <br>
                 <div>
                     Usuário ou Email:
-                    <input class="form-inp mb-10" type="text" value="" size="40" maxlength="60" required><br>
-                    <br>Senha:<br>
-                    <input class="form-inp mb-10" type="password" name="senha" size="40" maxlength="10" required><p>
+                    <input class="form-inp mb-10 text-first" type="text" value="" size="40" maxlength="60" required><br>
+                    <br>
+                    Senha:
+                    <br>
+                    <input class="form-inp mb-10 text-first" type="password" name="senha" size="40" maxlength="10" id="Input" required><p>
+                    <br>
+                    <input class="quad" type="checkbox" onclick="myFunction()"> Mostrar senha
+                    <br>
                     <br>
                     <input class="botao" style="margin: auto" type="submit" value="Enviar" >
-                    <input class="botao" style="margin: auto" type="reset" value="Limpar" >        
+                    <input class="botao" style="margin: auto" type="reset" value="Limpar">        
+                    <br>
+                    
+
+                    <script>
+                    function myFunction() {
+                      var x = document.getElementById("Input");
+                      if (x.type === "password") {
+                        x.type = "text";
+                      } else {
+                        x.type = "password";
+                      }
+                    }
+                    </script>
                 </div>
             </form>               
         </div>
