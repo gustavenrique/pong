@@ -379,12 +379,11 @@ opacity: 0.5;
 }
 
 .form-label {
-    text-align: center !important;
     /* font-weight: bold; */
     width: 100% !important;
     padding: 10px !important;
     font-weight: bold;
-    font-size: 30px !important;
+    font-size: 25px !important;
 }
 
 .form-container > form {
