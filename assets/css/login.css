@@ -5,6 +5,13 @@
     z-index: 2; 
     font-size: 2.5rem !important;
 }
+.logo2 {
+    position: fixed; 
+    top: 300px; 
+    right: 800px; 
+    z-index: 2; 
+    font-size: 3rem !important;
+}
 
 .caixa {
     background-color: var(--bg-light);
@@ -47,7 +54,7 @@
 }
 
 body {
-    background-image: linear-gradient(to right,rgba(0, 0, 0, 0.5) 60%, #2E0C79), url("../img/login_bg_PONG.png");
+    background-image: linear-gradient(to right,rgba(0, 0, 0, 0.5) 0.5%, #2E0C79), url("../img/login_bg_PONG.png");
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -57,15 +64,15 @@ body {
 }
 
 .form-cont {
-    padding: 25px 25px 25px 75px;
-    width: clamp(250px, 100%, 500px) !important;
-    margin-left: auto; 
+    padding: 60px 45px 25px 150px;
+    width: clamp(250px, 100%, 700px) !important;
+    margin-left: auto;
     height: 100vh !important;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: var(--second);
-    clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
+    background-image: linear-gradient(#2E0C79, black);
+    clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
 }
 
 /* .form-inp::placeholder { color: var(--text-first) !important; } */
