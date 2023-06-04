@@ -1,0 +1,191 @@
+.content {
+    z-index: 1;
+    opacity: 0.95;
+    background-color: var(--second);
+    margin: 35px 90px 0 90px;
+    padding: 30px;
+}
+.separator {
+    background: var(--accent);
+    border: none;
+    height: 1px;
+    width: 100%;
+    margin: 10px 0 0 0;
+}
+
+/* ########## TOPO RESULTADO DE PESQUISA ########## */
+.top-box {
+    margin: 35px 0 0 0;
+    display: flex;
+    justify-content: space-between;
+}
+.top-box i {
+    color: var(--third);
+}
+.top-box .search-container {
+    width: clamp(0px, 45%, 700px) !important;
+    border-radius: 100px;
+    outline: 2px solid var(--third);
+}
+.top-box .search-btn {
+    background-color: var(--first);
+}
+.top-box .search-input {
+    background-color: var(--first);
+}
+.search-btn .fas-fa-search {
+    color: var(--third);
+}
+.search-cancel-btn {
+    border-radius: 0 50px 50px 0;
+    cursor: pointer;
+    border: none;
+    padding: 10px;
+    color: var(--text-second);
+    background-color: var(--first);
+    height: 40px !important;
+}
+
+/* ########## FILTRO DE JOGOS ########## */
+
+
+/* ########## TOPO CATALOGO DE JOGOS ########## */
+.catalog__content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 15px 0 0 0;
+}
+.catalog__filter {
+    display: block;
+    width: 37%;
+}
+.catalog__display {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.catalog__navegation-wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin: 0 0 30px 0;
+}
+.catalog__small-navigation {
+    display: flex;
+    justify-content: space-between;
+}
+.small-navigation {
+    display: flex;
+    gap: 10px;
+}
+.small-navigation button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: var(--accent);
+}
+.pagination-input {
+    background-color: transparent;
+    outline: 2px solid var(--accent);
+    color: var(--third);
+    width: 20px;
+    border-radius: 3px;
+    border: none;
+    padding: 2px 3px;
+    text-align: center;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.small-navigation_end span{
+    color: var(--accent)
+}
+
+.catalog__sort-component {
+    display: flex;
+}
+
+/* ########## JOGOS ########## */
+.paginated-games-grid {
+    display: grid;
+    margin-bottom: 32px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+.game-tile {
+    width: 100%;
+    border-radius: 6px;
+    background-color: var(--accent);
+    box-shadow: 0 2px 4px 0 var(--third);
+    cursor: pointer;
+}
+.game-tile-grid .game-tile__image-wrapper {
+    width: 100%;
+}
+.game-tile__image-wrapper img {
+    border-radius: 5px 5px 0 0 ;
+    width: 100%;
+    max-height: 18vh;
+    object-fit: cover;
+}
+.game-tile-grid {
+    display: block;
+    cursor: pointer;
+}
+.game-tile-grid .game-tile__info {
+    align-items: flex-start;
+    height: 129px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+}
+.game-tile__info {
+    max-height: 18vh;
+    background-color: black;/*coloquei preto so pra visualizar, pq n ta juntando img e o game-info*/
+    display: flex;
+    flex-direction: column;
+    padding: 12px 16px 16px;
+    border-radius: 0 0 5px 5px;
+}
+.game-tile__title {
+    display: flex;
+    font-size: 1.2rem;
+    padding: 0 0 20px 0;
+    color: var(--text-first);
+}
+
+.game-tile__footer {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    gap: 10px;
+}
+.discount-game-price {
+    font-size: 1.2rem;
+    font-weight: 700;
+    display: flex;
+    border-radius: 3px;
+    padding: 7px;
+    line-height: 24px;
+    background-color: var(--accent);
+    color: var(--text-first);
+}
+.prices {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 30px;
+}
+.base-value {
+    font-size: 12px;
+    font-weight: 400;
+    text-decoration: line-through;
+}
+.final-value {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 16px;
+}

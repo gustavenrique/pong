@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pong</title>
+
+    <link rel="icon" href="../assets/img/joystick-icon.png">
+    <link rel="stylesheet" href="../assets/css/template.css">
+    <link rel="stylesheet" href="../assets/css/gsearch.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="col" id='top'>
+      <!-- navbar -->
+      <div class="navbar">
+        <div class="logo">Pong</div>
+
+        <div class="search-container">
+            <button class="search-btn">
+                <i class="fas fa-search"></i>
+            </button>
+
+            <input type="text" class="search-input" placeholder="Pesquisar">
+
+            <i class="fa fa-filter styling"></i>
+
+            <select class="search-filter-select">
+                <option disabled selected>Filtro</option>
+                <option>Usuários</option>
+                <option>Jogos</option>
+            </select>
+        </div>
+
+        <!-- gambiarra p/ sidebar-items aparecerem na navbar conforme tela alarga -->
+        <ul class="nav-list">
+            <li class="nav-list-item">Jogos</li>
+            <li class="nav-list-item">Minha Conta</li>
+            <li class="nav-list-item">Carrinho</li>
+            <li class="nav-list-item">Biblioteca</li>
+            <li class="nav-list-item">Configurações</li>
+        </ul>
+
+        <div class="sidebar-overlay"></div>
+        <ul class="sidebar">
+            <span class="sidebar-title">Menu</span>
+
+            <li class="sidebar-item">Jogos</li>
+            <li class="sidebar-item">Minha Conta</li>
+            <li class="sidebar-item">Carrinho</li>
+            <li class="sidebar-item">Biblioteca</li>
+            <li class="sidebar-item">Configurações</li>
+        </ul>
+
+        <div class="toggle-btn" onclick='toggleNavList()'>
+            <i class="fa fa-bars"></i>
+        </div>
+    </div>
+
+    <section class="content">
+        <div class="top-box">
+            <h1>Mostrando 10 jogos</h1>
+
+            <div class="search-container">
+                <button class="search-btn">
+                    <i class="fas fa-search"></i>
+                </button>
+    
+                <input type="text" class="search-input" placeholder="Pesquisar">
+                
+                <button class="search-cancel-btn">
+                    <i class="fa fa-circle-xmark"></i>
+                </button>
+            </div>
+        </div>
+
+        <hr class="separator">
+
+        <catalog-content id="Catalog">
+            <div class="catalog__content">
+                <div class="catalog__filter">
+
+ <!-- FAZER DIV QUE FAZ A FILTRAGEM COM DROPDOWN POR CATEGORIA E INPUT QUANDO SELECIONADO (TUDO EM HIDDEN-Y, TENDO UM SCROLL PROPRIO) -->
+
+                </div>
+
+                <div class="catalog__display">
+                    <div class="catalog__navegation-wrapper">
+                        <small-pagination class="catalog__small-navigation">
+                            <div class="small-navigation">
+                                <button class="small-navigation_previous">
+                                    <span class="fa fa-angle-left"></span>
+                                </button>
+                                
+                                <paginiation-input>
+                                    <input type="number" class="pagination-input" placeholder="1">
+                                </paginiation-input>
+
+                                <span>de</span>
+
+                                <button class="small-navigation_end">
+                                    <span>20</span>
+                                </button>
+
+                                <button class="small-navigation_next">
+                                    <span class="fa fa-angle-right"></span>
+                                </button>
+                            </div>
+                        </small-pagination>
+
+                        <div class="catalog__sort-component">
+                            <sort>
+
+<!-- FAZER TEXTO COM DROPDOWN PARA ORDENAR OS JOGOS E FILTRO LAYOUT (GRID OU LISTA) -->
+                            
+                            </sort>
+
+                            <div class="display-switch">
+                                <button class="display-switch_grid">
+                                    <i class="fa-solid fa-grid"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <paginated-games-grid>
+                        <div class="paginated-games-grid">
+                            <game-tile>
+                                <div class="game-tile">
+                                    <div class="game-tile__image-wrapper">
+                                        <img src="https://cdn.akamai.steamstatic.com/steam/apps/367520/capsule_616x353.jpg?t=1667006028">
+                                    </div>
+
+                                    <div class="game-tile__info">
+                                        <div class="game-tile__title">
+                                            <game-title>
+                                                <span>Hollow Knight</span>
+                                            </game-title>
+                                        </div>
+                                        <div class="game-tile__footer">
+                                            <price-discount class="discount-game-price" class="discount-game-price">50%</price-discount class="discount-game-price">
+                                            <price-value class="prices">
+                                                <span class="base-value">R$ 62.50</span>
+
+                                                <span class="final-value">R$ 31.25</span>
+                                            </price-value>
+                                        </div>
+                                    </div>
+                                </div>
+                            </game-tile>
+
+                            <game-tile>
+                                <div class="game-tile game-tile__grid">
+                                    <div class="game-tile__image-wrapper">
+                                        <img src="https://cdn.akamai.steamstatic.com/steam/apps/367520/capsule_616x353.jpg?t=1667006028">
+                                    </div>
+
+                                    <div class="game-tile__info">
+                                        <div class="game-tile__title">
+                                            <game-title>
+                                                <span>Hollow Knight</span>
+                                            </game-title>
+                                        </div>
+                                        <div class="game-tile__footer">
+                                            <price-discount class="discount-game-price">50%</price-discount class="discount-game-price">
+                                            <price-value class="prices">
+                                                <span class="base-value">R$ 62.50</span>
+
+                                                <span class="final-value">R$ 31.25</span>
+                                            </price-value>
+                                        </div>
+                                    </div>
+                                </div>
+                            </game-tile>
+
+                            <game-tile>
+                                <div class="game-tile game-tile__grid">
+                                    <div class="game-tile__image-wrapper">
+                                        <img src="https://cdn.akamai.steamstatic.com/steam/apps/367520/capsule_616x353.jpg?t=1667006028">
+                                    </div>
+
+                                    <div class="game-tile__info">
+                                        <div class="game-tile__title">
+                                            <game-title>
+                                                <span>Hollow Knight</span>
+                                            </game-title>
+                                        </div>
+                                        <div class="game-tile__footer">
+                                            <price-discount class="discount-game-price">50%</price-discount class="discount-game-price">
+                                            <price-value class="prices">
+                                                <span class="base-value">R$ 62.50</span>
+
+                                                <span class="final-value">R$ 31.25</span>
+                                            </price-value>
+                                        </div>
+                                    </div>
+                                </div>
+                            </game-tile>
+                        </div>
+                    </paginated-games-grid>
+                </div>
+            </div>
+        </catalog-content>
+    </section>
+
+    <script src="../assets/js/template.js"></script>
+    
+</body>
+</html>
