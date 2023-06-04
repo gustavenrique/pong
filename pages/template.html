@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pong</title>
+
+    <link rel="icon" href="../assets/img/joystick-icon.png">
+    <link rel="stylesheet" href="../assets/css/template.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="col" id='top'>
+    <!-- navbar -->
+    <div class="navbar">
+        <div class="logo">Pong</div>
+
+        <div class="search-container">
+            <button class="search-btn">
+                <i class="fas fa-search"></i>
+            </button>
+            
+            <input type="text" class="search-input" placeholder="Pesquisar">
+
+            <i class="fa fa-filter styling"></i>
+            
+            <select class="search-filter-select">
+                <option disabled selected>Filtro</option>
+                <option>Usuários</option>
+                <option>Jogos</option>
+            </select>
+        </div>
+
+        <!-- gambiarra p/ sidebar-items aparecerem na navbar conforme tela alarga -->
+        <ul class="nav-list">
+            <li class="nav-list-item">Jogos</li>
+            <li class="nav-list-item">Minha Conta</li>
+            <li class="nav-list-item">Carrinho</li>
+            <li class="nav-list-item">Biblioteca</li>
+            <li class="nav-list-item">Configurações</li>
+        </ul>
+        
+        <div class="sidebar-overlay"></div>
+        <ul class="sidebar">
+            <span class="sidebar-title">Menu</span>
+
+            <li class="sidebar-item">Jogos</li>
+            <li class="sidebar-item">Minha Conta</li>
+            <li class="sidebar-item">Carrinho</li>
+            <li class="sidebar-item">Biblioteca</li>
+            <li class="sidebar-item">Configurações</li>
+        </ul>
+        
+        <div class="toggle-btn" onclick='toggleNavList()'>
+            <i class="fa fa-bars"></i>
+        </div>
+    </div>
+
+    <section class="main-content">
+
+    </section>
+
+    <!-- footer -->
+    <div class="footer">
+        <div class="footer-top">
+            <div class="footer-col p-10">
+                <div class="logo">Pong</div>
+            </div>
+
+            <div class="footer-col">
+                <span class="footer-col-label text-second">Siga-nos!</span>
+                <ul class="u-list">
+                    <li class="u-list-item">
+                        <button class="btn btn-first">
+                            <i class="fa-brands fa-youtube"></i>
+                        </button>
+                    </li>
+                    <li class="u-list-item">
+                        <button class="btn btn-first">
+                            <i class="fa-brands fa-facebook"></i>
+                        </button>
+                    </li>
+                    <li class="u-list-item">
+                        <button class="btn btn-first">
+                            <i class="fa-brands fa-twitter"></i>
+                        </button>
+                    </li>
+                    <li class="u-list-item">
+                        <button class="btn btn-first">
+                            <i class="fa-brands fa-instagram"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <span class="footer-col-label text-second">Menu</span>
+                <ul class="u-list">
+                    <li class="u-list-item link">Jogos</li>
+                    <li class="u-list-item link">Minha Conta</li>
+                    <li class="u-list-item link">Carrinho</li>
+                    <li class="u-list-item link">Biblioteca</li>
+                    <li class="u-list-item link">Configurações</li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <span class="footer-col-label text-second">Companhia</span>
+                <ul class="u-list">
+                    <li class="u-list-item link">Sobre nós</li>
+                    <li class="u-list-item link">Carreiras</li>
+                    <li class="u-list-item link">Contato</li>
+                    <li class="u-list-item link">FAQ</li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="footer-bottom">
+            <span> &copy; 2023 Pong Inc. - All rights reserved</span>
+            <a href="#top" class="link">
+                <button class="btn btn-first">
+                    <i class="fa fa-arrow-up"></i>
+                </button>
+            </a>
+        </div>
+    </div>
+
+    <script src="../assets/js/template.js"></script>
+</body>
+</html>
