@@ -94,6 +94,7 @@ body {
 .game-price {
     width: 100%;
     font-size: 2rem;
+    font-weight: 600;
     color: var(--third);
 }
 .game-edition, .game-edition > option {background-color: var(--second);}

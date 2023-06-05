@@ -80,9 +80,431 @@
         <catalog-content id="Catalog">
             <div class="catalog__content">
                 <div class="catalog__filter">
+                    <div class="filters_item-single">
+                        <div class="checkout__label">
+                            <input type="checkbox" class="checkbox__input"></input>
+                            <a href="#">Exibir somente com descontos</a>
+                        </div>
+                        
+                        <div class="checkout__label">
+                            <input type="checkbox" class="checkbox__input"></input>
+                            <a href="#">Mostrar todos os contéudos</a>
+                        </div>
+                        
+                        <div class="checkout__label">
+                            <input type="checkbox" class="checkbox__input"></input>
+                            <a href="#">Apenas os jogos da lista de desejos</a>
+                        </div>
+                    </div>
+                
+                    <ul class="dropdown" id="menu">
+        
+                        <li class="dropdown__list">
+                            <a href="#" class="dropdown__link">
+                                <i class="fa fa-angle-right fa-2xs dropdown__arrow"></i>
+                                <span class="dropdown__span">DLCs</span>
+                                        
+                                <input type="checkbox" class="dropdown__check">
+                            </a>
+        
+                            <div class="dropdown__content">
+        
+                                <ul class="dropdown__sub">
+        
+                                    <li class="dropdown__li">
+                                        <a href="#" class="dropdown__anchor"><input type="checkbox" class="checkbox__input"></input>
+                                            <span>Esconder DLCs e Extras</span></a>
+                                    </li>
+                                    <li class="dropdown__li">
+                                        <a href="#" class="dropdown__anchor"><input type="checkbox" class="checkbox__input"></input>
+                                            <span>Mostrar só DLCs dos meus jogos</span></a>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                        </li>
+        
+                        <li class="dropdown__list">
+                            <a href="#" class="dropdown__link">
+                                <i class="fa fa-angle-right fa-2xs dropdown__arrow"></i>
+                                <span class="dropdown__span">Faixa de Preço</span>
+                                        
+                                <input type="checkbox" class="dropdown__check">
+                            </a>
+        
+                            <div class="dropdown__content">
+        
+                                <ul class="dropdown__sub">
+        
+                                    <li class="dropdown__li">
+                                        <a href="#" class="dropdown__anchor">
+                                        <hr class="separator"></a>                                 
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                        </li>
 
- <!-- FAZER DIV QUE FAZ A FILTRAGEM COM DROPDOWN POR CATEGORIA E INPUT QUANDO SELECIONADO (TUDO EM HIDDEN-Y, TENDO UM SCROLL PROPRIO) -->
+                        <li class="dropdown__list">
+                            <a href="#" class="dropdown__link">
+                                <i class="fa fa-angle-right fa-2xs dropdown__arrow"></i>
+                                <span class="dropdown__span">Lançamentos</span>
+                                        
+                                <input type="checkbox" class="dropdown__check">
+                            </a>
+        
+                            <div class="dropdown__content">
+        
+                                <ul class="dropdown__sub">
+        
+                                    <li class="dropdown__li">
+                                        <a href="#" class="dropdown__anchor"><input type="checkbox" class="checkbox__input"></input>
+                                            <span>Novos jogos</span></a>
+                                    </li>
+                                    <li class="dropdown__li">
+                                        <a href="#" class="dropdown__anchor"><input type="checkbox" class="checkbox__input"></input>
+                                            <span>Mais aguardados </span></a>
+                                    </li>
+                                    <li class="dropdown__li">
+                                        <a href="#" class="dropdown__anchor"><input type="checkbox" class="checkbox__input"></input>
+                                            <span>Acesso antecipado</span></a>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                        </li>
 
+                        <li class="dropdown__list">
+                            <a href="#" class="dropdown__link">
+                                <i class="fa fa-angle-right fa-2xs dropdown__arrow"></i>
+                                <span class="dropdown__span">Gêneros</span>
+                                        
+                                <input type="checkbox" class="dropdown__check">
+                            </a>
+        
+                            <div class="dropdown__content">
+        
+                                <ul class="dropdown__sub">
+        
+                                    <li class="dropdown__li">
+                                        <a href="#" class="dropdown__anchor"><input type="checkbox" class="checkbox__input"></input>
+                                            <span>Ação</span></a>
+                                    </li>
+                                    <li class="dropdown__li">
+                                        <a href="#" class="dropdown__anchor"><input type="checkbox" class="checkbox__input"></input>
+                                            <span>Aventura</span></a>
+                                    </li>
+                                    <li class="dropdown__li">
+                                        <a href="#" class="dropdown__anchor"><input type="checkbox" class="checkbox__input"></input>
+                                            <span>Corrida</span></a>
+                                    </li>
+                                    <li class="dropdown__li">
+                                        <a href="#" class="dropdown__anchor"><input type="checkbox" class="checkbox__input"></input>
+                                            <span>Role-playing</span></a>
+                                    </li>
+                                    <li class="dropdown__li">
+                                        <a href="#" class="dropdown__anchor"><input type="checkbox" class="checkbox__input"></input>
+                                            <span>Tiro</span></a>
+                                    </li>
+                                    <li class="dropdown__li">
+                                        <a href="#" class="dropdown__anchor"><input type="checkbox" class="checkbox__input"></input>
+                                            <span>Simulação</span></a>
+                                    </li>
+                                    <li class="dropdown__li">
+                                        <a href="#" class="dropdown__anchor"><input type="checkbox" class="checkbox__input"></input>
+                                            <span>Esportes</span></a>
+                                    </li>
+                                    <li class="dropdown__li">
+                                        <a href="#" class="dropdown__anchor"><input type="checkbox" class="checkbox__input"></input>
+                                            <span>Estratégia</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="dropdown__list">
+                            <a href="#" class="dropdown__link">
+                                <i class="fa fa-angle-right fa-2xs dropdown__arrow"></i>
+                                <span class="dropdown__span">Tags</span>
+                                        
+                                <input type="checkbox" class="dropdown__check">
+                            </a>
+        
+                            <div class="dropdown__content">
+
+                                <ul class="dropdown__sub">
+                                    <div class="search-container">
+                                        <button class="search-btn">
+                                            <i class="fas fa-search"></i>
+                                        </button>
+                            
+                                        <input type="text" class="search-input" placeholder="Pesquisar por Tag">
+                                        
+                                        <button class="search-cancel-btn">
+                                            <i class="fa fa-circle-xmark"></i>
+                                        </button>
+                                    </div>
+                                    
+                                    <li class="dropdown__li">
+                                        <a href="#" class="dropdown__anchor"><input type="checkbox" class="checkbox__input"></input>
+                                            <span>Indie</span></a>
+                                    </li>
+                                    <li class="dropdown__li">
+                                        <a href="#" class="dropdown__anchor"><input type="checkbox" class="checkbox__input"></input>
+                                            <span>Fantasia</span></a>
+                                    </li>
+                                    <li class="dropdown__li">
+                                        <a href="#" class="dropdown__anchor"><input type="checkbox" class="checkbox__input"></input>
+                                            <span>Rico em história</span></a>
+                                    </li>
+                                    <li class="dropdown__li">
+                                        <a href="#" class="dropdown__anchor"><input type="checkbox" class="checkbox__input"></input>
+                                            <span>Atmoférico</span></a>
+                                    </li>
+                                    <li class="dropdown__li">
+                                        <a href="#" class="dropdown__anchor"><input type="checkbox" class="checkbox__input"></input>
+                                            <span>2D</span></a>
+                                    </li>
+                                    <li class="dropdown__li">
+                                        <a href="#" class="dropdown__anchor"><input type="checkbox" class="checkbox__input"></input>
+                                            <span>Ficção científica</span></a>
+                                    </li>
+                                    <li class="dropdown__li">
+                                        <a href="#" class="dropdown__anchor"><input type="checkbox" class="checkbox__input"></input>
+                                            <span>Clássico</span></a>
+                                    </li>
+                                    <li class="dropdown__li">
+                                        <a href="#" class="dropdown__anchor"><input type="checkbox" class="checkbox__input"></input>
+                                            <span>Baseado em turnos</span></a>
+                                    </li>
+                                    <li class="dropdown__li">
+                                        <a href="#" class="dropdown__anchor"><input type="checkbox" class="checkbox__input"></input>
+                                            <span>Puzzle</span></a>
+                                    </li>
+                                    <li class="dropdown__li">
+                                        <a href="#" class="dropdown__anchor"><input type="checkbox" class="checkbox__input"></input>
+                                            <span>Ótima trilha sonora</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="dropdown__list">
+                            <a href="#" class="dropdown__link">
+                                <i class="fa fa-angle-right fa-2xs dropdown__arrow"></i>
+                                <span class="dropdown__span">Sistema Operacional</span>
+                                        
+                                <input type="checkbox" class="dropdown__check">
+                            </a>
+        
+                            <div class="dropdown__content">
+        
+                                <ul class="dropdown__sub">
+        
+                                    <li class="dropdown__li">
+                                        <a href="#" class="dropdown__anchor"><input type="checkbox" class="checkbox__input"></input>
+                                            <span>Windows</span></a>
+                                    </li>
+                                    <li class="dropdown__li">
+                                        <a href="#" class="dropdown__anchor"><input type="checkbox" class="checkbox__input"></input>
+                                            <span>macOS</span></a>
+                                    </li>
+                                    <li class="dropdown__li">
+                                        <a href="#" class="dropdown__anchor"><input type="checkbox" class="checkbox__input"></input>
+                                            <span>Linux</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="dropdown__list">
+                            <a href="#" class="dropdown__link">
+                                <i class="fa fa-angle-right fa-2xs dropdown__arrow"></i>
+                                <span class="dropdown__span">Características</span>
+                                        
+                                <input type="checkbox" class="dropdown__check">
+                            </a>
+        
+                            <div class="dropdown__content">
+        
+                                <ul class="dropdown__sub">
+        
+                                    <li class="dropdown__li">
+                                        <a href="#" class="dropdown__anchor"><input type="checkbox" class="checkbox__input"></input>
+                                            <span>Um jogador</span></a>
+                                    </li>
+                                    <li class="dropdown__li">
+                                        <a href="#" class="dropdown__anchor"><input type="checkbox" class="checkbox__input"></input>
+                                            <span>Multijogadores</span></a>
+                                    </li>
+                                    <li class="dropdown__li">
+                                        <a href="#" class="dropdown__anchor"><input type="checkbox" class="checkbox__input"></input>
+                                            <span>Co-op</span></a>
+                                    </li>
+                                    <li class="dropdown__li">
+                                        <a href="#" class="dropdown__anchor"><input type="checkbox" class="checkbox__input"></input>
+                                            <span>Conquista</span></a>
+                                    </li>
+                                    <li class="dropdown__li">
+                                        <a href="#" class="dropdown__anchor"><input type="checkbox" class="checkbox__input"></input>
+                                            <span>Tabela de liderança</span></a>
+                                    </li>
+                                    <li class="dropdown__li">
+                                        <a href="#" class="dropdown__anchor"><input type="checkbox" class="checkbox__input"></input>
+                                            <span>Suporte a controle</span></a>
+                                    </li>
+                                    <li class="dropdown__li">
+                                        <a href="#" class="dropdown__anchor"><input type="checkbox" class="checkbox__input"></input>
+                                            <span>Sobreposição</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="dropdown__list">
+                            <a href="#" class="dropdown__link">
+                                <i class="fa fa-angle-right fa-2xs dropdown__arrow"></i>
+                                <span class="dropdown__span">Data de Lançamento</span>
+                                        
+                                <input type="checkbox" class="dropdown__check">
+                            </a>
+        
+                            <div class="dropdown__content">
+        
+                                <ul class="dropdown__sub">
+        
+                                    <li class="dropdown__li">
+                                        <a href="#" class="dropdown__anchor">
+                                            <hr class="separator"></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="dropdown__list">
+                            <a href="#" class="dropdown__link">
+                                <i class="fa fa-angle-right fa-2xs dropdown__arrow"></i>
+                                <span class="dropdown__span">Idioma</span>
+                                        
+                                <input type="checkbox" class="dropdown__check">
+                            </a>
+        
+                            <div class="dropdown__content">
+        
+                                <ul class="dropdown__sub">
+        
+                                    <li class="dropdown__li">
+                                        <a href="#" class="dropdown__anchor"><input type="checkbox" class="checkbox__input"></input>
+                                            <span>العربية</span></a>
+                                    </li>
+                                    <li class="dropdown__li">
+                                        <a href="#" class="dropdown__anchor"><input type="checkbox" class="checkbox__input"></input>
+                                            <span>Português do Brasil</span></a>
+                                    </li>
+                                    <li class="dropdown__li">
+                                        <a href="#" class="dropdown__anchor"><input type="checkbox" class="checkbox__input"></input>
+                                            <span>中文(简体)</span></a>
+                                    </li>
+                                    <li class="dropdown__li">
+                                        <a href="#" class="dropdown__anchor"><input type="checkbox" class="checkbox__input"></input>
+                                            <span>český</span></a>
+                                    </li>
+                                    <li class="dropdown__li">
+                                        <a href="#" class="dropdown__anchor"><input type="checkbox" class="checkbox__input"></input>
+                                            <span>Dansk</span></a>
+                                    </li>
+                                    <li class="dropdown__li">
+                                        <a href="#" class="dropdown__anchor"><input type="checkbox" class="checkbox__input"></input>
+                                            <span>Deutsch</span></a>
+                                    </li>
+                                    <li class="dropdown__li">
+                                        <a href="#" class="dropdown__anchor"><input type="checkbox" class="checkbox__input"></input>
+                                            <span>English</span></a>
+                                    </li>
+                                    <li class="dropdown__li">
+                                        <a href="#" class="dropdown__anchor"><input type="checkbox" class="checkbox__input"></input>
+                                            <span>español</span></a>
+                                    </li>
+                                    <li class="dropdown__li">
+                                        <a href="#" class="dropdown__anchor"><input type="checkbox" class="checkbox__input"></input>
+                                            <span>Español (AL)</span></a>
+                                    </li>
+                                    <li class="dropdown__li">
+                                        <a href="#" class="dropdown__anchor"><input type="checkbox" class="checkbox__input"></input>
+                                            <span>Suomi</span></a>
+                                    </li>
+                                    <li class="dropdown__li">
+                                        <a href="#" class="dropdown__anchor"><input type="checkbox" class="checkbox__input"></input>
+                                            <span>français</span></a>
+                                    </li>
+                                    <li class="dropdown__li">
+                                        <a href="#" class="dropdown__anchor"><input type="checkbox" class="checkbox__input"></input>
+                                            <span>Ελληνικά</span></a>
+                                    </li>
+                                    <li class="dropdown__li">
+                                        <a href="#" class="dropdown__anchor"><input type="checkbox" class="checkbox__input"></input>
+                                            <span>magyar</span></a>
+                                    </li>
+                                    <li class="dropdown__li">
+                                        <a href="#" class="dropdown__anchor"><input type="checkbox" class="checkbox__input"></input>
+                                            <span>italiano</span></a>
+                                    </li>
+                                    <li class="dropdown__li">
+                                        <a href="#" class="dropdown__anchor"><input type="checkbox" class="checkbox__input"></input>
+                                            <span>日本語</span></a>
+                                    </li>
+                                    <li class="dropdown__li">
+                                        <a href="#" class="dropdown__anchor"><input type="checkbox" class="checkbox__input"></input>
+                                            <span>한국어</span></a>
+                                    </li>
+                                    <li class="dropdown__li">
+                                        <a href="#" class="dropdown__anchor"><input type="checkbox" class="checkbox__input"></input>
+                                            <span>nederlands</span></a>
+                                    </li>
+                                    <li class="dropdown__li">
+                                        <a href="#" class="dropdown__anchor"><input type="checkbox" class="checkbox__input"></input>
+                                            <span>norsk</span></a>
+                                    </li>
+                                    <li class="dropdown__li">
+                                        <a href="#" class="dropdown__anchor"><input type="checkbox" class="checkbox__input"></input>
+                                            <span>polski</span></a>
+                                    </li>
+                                    <li class="dropdown__li">
+                                        <a href="#" class="dropdown__anchor"><input type="checkbox" class="checkbox__input"></input>
+                                            <span>português</span></a>
+                                    </li>
+                                    <li class="dropdown__li">
+                                        <a href="#" class="dropdown__anchor"><input type="checkbox" class="checkbox__input"></input>
+                                            <span>română</span></a>
+                                    </li>
+                                    <li class="dropdown__li">
+                                        <a href="#" class="dropdown__anchor"><input type="checkbox" class="checkbox__input"></input>
+                                            <span>русский</span></a>
+                                    </li>
+                                    <li class="dropdown__li">
+                                        <a href="#" class="dropdown__anchor"><input type="checkbox" class="checkbox__input"></input>
+                                            <span>svenska</span></a>
+                                    </li>
+                                    <li class="dropdown__li">
+                                        <a href="#" class="dropdown__anchor"><input type="checkbox" class="checkbox__input"></input>
+                                            <span>ไทย</span></a>
+                                    </li>
+                                    <li class="dropdown__li">
+                                        <a href="#" class="dropdown__anchor"><input type="checkbox" class="checkbox__input"></input>
+                                            <span>Türkçe</span></a>
+                                    </li>
+                                    <li class="dropdown__li">
+                                        <a href="#" class="dropdown__anchor"><input type="checkbox" class="checkbox__input"></input>
+                                            <span>Українська</span></a>
+                                    </li>
+                                    <li class="dropdown__li">
+                                        <a href="#" class="dropdown__anchor"><input type="checkbox" class="checkbox__input"></input>
+                                            <span>中文(繁體)</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
 
                 <div class="catalog__display">
@@ -93,9 +515,9 @@
                                     <span class="fa fa-angle-left"></span>
                                 </button>
                                 
-                                <paginiation-input>
+                                <pagination-input>
                                     <input type="number" class="pagination-input" placeholder="1">
-                                </paginiation-input>
+                                </pagination-input>
 
                                 <span>de</span>
 
@@ -104,21 +526,29 @@
                                 </button>
 
                                 <button class="small-navigation_next">
-                                    <span class="fa fa-angle-right"></span>
+                                    <span class="fa fa-angle-right fa-2xs"></span>
                                 </button>
                             </div>
                         </small-pagination>
 
-                        <div class="catalog__sort-component">
-                            <sort>
+                        <div class="catalog__sort">
+                            <div class="sort__component">
+                                <span>Ordenar por:</span>
 
-<!-- FAZER TEXTO COM DROPDOWN PARA ORDENAR OS JOGOS E FILTRO LAYOUT (GRID OU LISTA) -->
+                                <a class="select-sort">
+                                    <span class="sBtn-text">Mais vendidos (recentemente)</span>
+                                </a>
+
+                                <i class="fa fa-angle-down fa-xs dropdown__arrow"></i>
+                            </div>
                             
-                            </sort>
-
                             <div class="display-switch">
                                 <button class="display-switch_grid">
-                                    <i class="fa-solid fa-grid"></i>
+                                    <i class="fa-solid fa-grip" style="font-size: 1.25rem;"></i>
+                                </button>
+
+                                <button class="display-switch_list">
+                                    <i class="fa-solid fa-list" style="font-size: 1rem;"></i>
                                 </button>
                             </div>
                         </div>
@@ -129,21 +559,18 @@
                             <game-tile>
                                 <div class="game-tile">
                                     <div class="game-tile__image-wrapper">
-                                        <img src="https://cdn.akamai.steamstatic.com/steam/apps/367520/capsule_616x353.jpg?t=1667006028">
+                                        <img src="https://cdn.akamai.steamstatic.com/steam/apps/1364780/capsule_616x353.jpg?t=1685680525">
                                     </div>
 
                                     <div class="game-tile__info">
                                         <div class="game-tile__title">
                                             <game-title>
-                                                <span>Hollow Knight</span>
+                                                <span>Street Fighter 6</span>
                                             </game-title>
                                         </div>
                                         <div class="game-tile__footer">
-                                            <price-discount class="discount-game-price" class="discount-game-price">50%</price-discount class="discount-game-price">
                                             <price-value class="prices">
-                                                <span class="base-value">R$ 62.50</span>
-
-                                                <span class="final-value">R$ 31.25</span>
+                                                <span class="final-value">R$ 249.00</span>
                                             </price-value>
                                         </div>
                                     </div>
@@ -151,7 +578,8 @@
                             </game-tile>
 
                             <game-tile>
-                                <div class="game-tile game-tile__grid">
+                                <div class="game-tile">
+                                    <a href="./gpages.html" style="text-decoration: none; color: var(--text-first);">
                                     <div class="game-tile__image-wrapper">
                                         <img src="https://cdn.akamai.steamstatic.com/steam/apps/367520/capsule_616x353.jpg?t=1667006028">
                                     </div>
@@ -163,7 +591,7 @@
                                             </game-title>
                                         </div>
                                         <div class="game-tile__footer">
-                                            <price-discount class="discount-game-price">50%</price-discount class="discount-game-price">
+                                            <price-discount class="discount-game-price">-50%</price-discount>
                                             <price-value class="prices">
                                                 <span class="base-value">R$ 62.50</span>
 
@@ -171,27 +599,179 @@
                                             </price-value>
                                         </div>
                                     </div>
+                                    </a>
                                 </div>
                             </game-tile>
 
                             <game-tile>
-                                <div class="game-tile game-tile__grid">
+                                <div class="game-tile">
                                     <div class="game-tile__image-wrapper">
-                                        <img src="https://cdn.akamai.steamstatic.com/steam/apps/367520/capsule_616x353.jpg?t=1667006028">
+                                        <img src="https://cdn.akamai.steamstatic.com/steam/apps/271590/capsule_616x353.jpg?t=1678296348">
                                     </div>
 
                                     <div class="game-tile__info">
                                         <div class="game-tile__title">
                                             <game-title>
-                                                <span>Hollow Knight</span>
+                                                <span>Grand Theft Auto V</span>
                                             </game-title>
                                         </div>
                                         <div class="game-tile__footer">
-                                            <price-discount class="discount-game-price">50%</price-discount class="discount-game-price">
+                                            <price-discount class="discount-game-price">-65%</price-discount>
                                             <price-value class="prices">
-                                                <span class="base-value">R$ 62.50</span>
+                                                <span class="base-value">R$ 109.89</span>
 
-                                                <span class="final-value">R$ 31.25</span>
+                                                <span class="final-value">R$ 38.63</span>
+                                            </price-value>
+                                        </div>
+                                    </div>
+                                </div>
+                            </game-tile>
+
+                            <game-tile>
+                                <div class="game-tile">
+                                    <div class="game-tile__image-wrapper">
+                                        <img src="https://cdn1.epicgames.com/offer/f5deacee017b4b109476933f7dd2edbd/EGS_EASPORTSFIFA23StandardEdition_EACanada_S1_2560x1440-aaf9c5273c27a485f2cce8cb7e804f5c">
+                                    </div>
+
+                                    <div class="game-tile__info">
+                                        <div class="game-tile__title">
+                                            <game-title>
+                                                <span>FIFA 23</span>
+                                            </game-title>
+                                        </div>
+                                        <div class="game-tile__footer">
+                                            <price-value class="prices">
+                                                <span class="final-value">R$ 299.00</span>
+                                            </price-value>
+                                        </div>
+                                    </div>
+                                </div>
+                            </game-tile>
+
+                            <game-tile>
+                                <div class="game-tile">
+                                    <div class="game-tile__image-wrapper">
+                                        <img src="https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/pt_BR/games/switch/m/mortal-kombat-11-switch/hero">
+                                    </div>
+
+                                    <div class="game-tile__info">
+                                        <div class="game-tile__title">
+                                            <game-title>
+                                                <span>Mortal Kombat 11</span>
+                                            </game-title>
+                                        </div>
+                                        <div class="game-tile__footer">
+                                            <price-value class="prices">
+                                                <span class="final-value">R$ 229.99</span>
+                                            </price-value>
+                                        </div>
+                                    </div>
+                                </div>
+                            </game-tile>
+
+                            <game-tile>
+                                <div class="game-tile">
+                                    <div class="game-tile__image-wrapper">
+                                        <img src="https://cdn.akamai.steamstatic.com/steam/apps/1245620/capsule_616x353.jpg?t=1683618443">
+                                    </div>
+
+                                    <div class="game-tile__info">
+                                        <div class="game-tile__title">
+                                            <game-title>
+                                                <span>Elden Ring</span>
+                                            </game-title>
+                                        </div>
+                                        <div class="game-tile__footer">
+                                            <price-value class="prices">
+                                                <span class="final-value">R$ 249.90</span>
+                                            </price-value>
+                                        </div>
+                                    </div>
+                                </div>
+                            </game-tile>
+
+                            <game-tile>
+                                <div class="game-tile">
+                                    <div class="game-tile__image-wrapper">
+                                        <img src="https://cdn.akamai.steamstatic.com/steam/apps/359550/capsule_616x353.jpg?t=1685724234">
+                                    </div>
+
+                                    <div class="game-tile__info">
+                                        <div class="game-tile__title">
+                                            <game-title>
+                                                <span>Tom Clancy's Rainbow Six® Siege</span>
+                                            </game-title>
+                                        </div>
+                                        <div class="game-tile__footer">
+                                            <price-value class="prices">
+                                                <span class="final-value">R$ 59.99</span>
+                                            </price-value>
+                                        </div>
+                                    </div>
+                                </div>
+                            </game-tile>
+
+                            <game-tile>
+                                <div class="game-tile">
+                                    <div class="game-tile__image-wrapper">
+                                        <img src="https://cdn.akamai.steamstatic.com/steam/apps/292030/header.jpg?t=1675178392">
+                                    </div>
+
+                                    <div class="game-tile__info">
+                                        <div class="game-tile__title">
+                                            <game-title>
+                                                <span>The Witcher 3: Wild Hunt</span>
+                                            </game-title>
+                                        </div>
+                                        <div class="game-tile__footer">
+                                            <price-value class="prices">
+                                                <span class="final-value">R$ 79.99</span>
+                                            </price-value>
+                                        </div>
+                                    </div>
+                                </div>
+                            </game-tile>
+
+                            <game-tile>
+                                <div class="game-tile">
+                                    <div class="game-tile__image-wrapper">
+                                        <img src="https://assets.nuuvem.com/image/upload/t_product_sharing_banner/v1/products/5fbd76bbc883e62934046c52/sharing_images/cmgmrtz9ajyluyqnrwkb.jpg">
+                                    </div>
+
+                                    <div class="game-tile__info">
+                                        <div class="game-tile__title">
+                                            <game-title>
+                                                <span>Red Dead Redemption 2</span>
+                                            </game-title>
+                                        </div>
+                                        <div class="game-tile__footer">
+                                            <price-discount class="discount-game-price">-67%</price-discount>
+                                            <price-value class="prices">
+                                                <span class="base-value">R$ 299.90</span>
+
+                                                <span class="final-value">R$ 98.96</span>
+                                            </price-value>
+                                        </div>
+                                    </div>
+                                </div>
+                            </game-tile>
+
+                            <game-tile>
+                                <div class="game-tile">
+                                    <div class="game-tile__image-wrapper">
+                                        <img src="https://s2.glbimg.com/buDXBoiBgwOoVoo99Y03lASVLfg=/1200x/smart/filters:cover():strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2019/z/u/gV3imtTGS0uwj4o9clCw/pubg.jpg">
+                                    </div>
+
+                                    <div class="game-tile__info">
+                                        <div class="game-tile__title">
+                                            <game-title>
+                                                <span>PUBG Battlegrounds</span>
+                                            </game-title>
+                                        </div>
+
+                                        <div class="game-tile__footer">
+                                            <price-value class="prices">
+                                                <span class="final-value">Gratuito</span>
                                             </price-value>
                                         </div>
                                     </div>
@@ -205,6 +785,7 @@
     </section>
 
     <script src="../assets/js/template.js"></script>
+    <script src="../assets/js/gsearch.js"></script>
     
 </body>
 </html>
