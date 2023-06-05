@@ -1,0 +1,95 @@
+.login-logo {
+    position: fixed; 
+    top: 5rem;
+    right: 170px;
+    z-index: 2; 
+    font-size: 2.5rem !important;
+    font-weight: bold;
+}
+
+.welcome-title {
+    position: fixed;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    text-transform: uppercase;
+    font-size: 2.5rem !important;
+    white-space: nowrap;
+    opacity: 0;
+    transition: all .25s;
+}
+
+@media (min-width: 850px) {
+    .welcome-title {
+        opacity: 1;
+    }
+}
+
+@media (min-width: 1500px) {
+    .welcome-title {
+        left: 40%;
+        transform: translateX(-40%);
+    }
+}
+
+.form-par {
+    position: absolute;
+	width: 10px;
+	height: 500px;
+	transform: skew(20deg);
+	background-image: black !important;
+}
+
+body {
+    background-image: linear-gradient(to right,rgba(0, 0, 0, 0.5) 0.5%, #2E0C79), url("../img/login_bg_PONG.png");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    background-attachment: fixed;
+}
+
+.login-form-container {
+    padding: 60px 45px 25px 100px;
+    width: clamp(250px, 100%, 550px) !important;
+    margin-left: auto;
+    height: 100vh !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: linear-gradient(var(--first), black);
+    clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+/* .login-input::placeholder { color: var(--text-first) !important; } */
+.login-input:focus { outline: none !important; }
+.login-input::selection { outline: none !important; }
+
+.login-input {
+    border: none !important;
+    font-size: 16px;
+    padding: 10px !important;
+    background-color: transparent !important;
+    color: var(--text-first) !important;
+    width: 100%;
+    transition: all 0.4s ease-in-out;
+}
+
+.input-wrapper {
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #888;
+    transition: all .25s;
+}
+
+.input-wrapper:focus-within { 
+    border-bottom: 2px solid var(--accent) !important;
+}
+
+.eye-btn-wrapper {
+    height: 100%;
+    width: 10%;
+    cursor: pointer;
+    padding: 10px;
+}
