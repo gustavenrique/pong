@@ -1,6 +1,6 @@
 :root {
     /* body background */
-    --bg-dark: #2E0C79;
+    --bg-dark: #1a2935;
     --bg-light: #c7d5e0;
     --bg: var(--bg-dark);
 
@@ -13,10 +13,10 @@
     --text-second: var(--text-second-dark);
 
     /* components background */
-    --accent-dark: #A070FF;
-    --first-dark: #5f2b9e;
-    --second-dark: #401988;
-    --third-dark: #1A0645;
+    --accent-dark: #E1E2E1;
+    --first-dark: #4f5b62;
+    --second-dark: #374349;
+    --third-dark: #111b23;
 
     --accent-light: #2a475e;
     --first-light: #c1c1c1;
@@ -44,7 +44,7 @@ html, body {
 }
 
 body {
-    background: linear-gradient(45deg, black, var(--bg));
+    background: linear-gradient(45deg, rgba(0, 0, 0, .9), var(--bg));
     color: var(--text-first);
 }
 

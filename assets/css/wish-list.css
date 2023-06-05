@@ -22,7 +22,6 @@
     grid-template-columns: repeat(var(--col-repeat), var(--col-width));
     grid-gap: 15px;
     justify-content: center;
-    margin: auto;
     transition: all 1s;
 }
 
@@ -47,10 +46,15 @@
     justify-content: center;
     background-color: var(--second);
     width: 100%;
+    overflow: hidden;
+    position: relative;
 }
 
 .img-wrapper > img {
-    height: 100%;
+    width: clamp(100px, 100%, 300px);
+    object-fit: cover;
+    position: absolute;
+    top: 0;
 }
 
 .info {

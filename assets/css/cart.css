@@ -4,6 +4,13 @@
     border-radius: 10px;
     margin: 10px;
     background-color: var(--third);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
+    transition: all .25s;
+}
+
+.cart-item:hover {
+    transform: translate(10px, -10px);
+    box-shadow: -10px 10px 0 black;
 }
 
 .cart-item > * {
@@ -13,8 +20,11 @@
 }
 
 .cart-img {
-    object-fit: cover;
+    width: clamp(100px, 100%, 200px);
     height: 100%;
+    object-fit: cover;
+    object-position: 50% 10%;
+    cursor: pointer;
 }
 
 .item-title {
@@ -40,4 +50,5 @@
     gap: 10px;
     width: clamp(200px, 95%, 700px);
     margin: auto;
+    box-shadow: 10px 0px 10px black;
 }

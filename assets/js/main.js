@@ -7,6 +7,11 @@ const renderComponent = (componentUrl, elementId) => {
         .catch(error => console.error('Error:', error));
 }
 
-renderComponent('../components/header.html', 'header')
-renderComponent('../components/navbar.html', 'navbar')
-renderComponent('../components/footer.html', 'footer')
+if (document.querySelector('#head'))
+    renderComponent('../components/header.html', 'head')
+
+if (document.querySelector('body > #navbar'))
+    renderComponent('../components/navbar.html', 'navbar')
+
+if (document.querySelector('body > #footer'))
+    renderComponent('../components/footer.html', 'footer')

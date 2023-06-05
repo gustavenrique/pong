@@ -11,7 +11,7 @@
     display: grid;
     grid-template-columns: repeat(5, auto);
     margin: 20px 0;
-    background: linear-gradient(45deg, black, var(--bg)); /* bg do body */
+    background: linear-gradient(-180deg, black, var(--bg)); /* bg do body */
 }
 
 .carousel section .item, .carousel section .ad {
