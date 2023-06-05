@@ -17,29 +17,31 @@
 </head>
 <html>
 <body>
-
   <div class="main">
-    <div class="logo">PONG</div>
-    <div class="logo2"><strong>SEJA BEM VINDO!</strong></div>
-    
-    <div class="form-cont">
-      <label class="form-label" style="align-self: start !important">INICIAR SESSÃO</label>
-      <br>
+    <div class="welcome-title">Seja Bem Vindo!</div>
+
+    <div class="login-form-container">
       <form class="col" style="gap: 15px;">
+        <div class="text-center login-logo">PONG</div>
+
+        <label class="form-label text-center">INICIAR SESSÃO</label>
+
         <div class="input-wrapper">
-          <input class="form-inp text-first" placeholder="Usuário ou Email" type="text" maxlength="60" required>
+          <input class="login-input text-first" placeholder="Usuário ou Email" type="text" maxlength="60" required>
         </div>
         
         <div class="input-wrapper">
-          <input id="password-input" class="form-inp text-first" placeholder='Senha' type="password" maxlength="10" required>
+          <input id="password-input" class="login-input text-first" placeholder='Senha' type="password" maxlength="10" required>
           <div class="eye-btn-wrapper" onclick="toggleSenha()">
             <i class="fa fa-eye"></i>
           </div>
         </div>
         <br>
         <div class="row" style="gap: 10px;">
-          <button class="btn btn-white" style="flex: 1">CADASTRAR</button>
-          <button class="btn btn-white" style="flex: 1">ENTRAR</button>
+          <button class="btn btn-second" style="flex: 1"> 
+            <a href="/pages/signup.html" class="link">CADASTRAR</a>
+          </button>
+          <button class="btn btn-first" onclick="login()" style="flex: 1">ENTRAR</button>
         </div>
       </form>               
     </div>

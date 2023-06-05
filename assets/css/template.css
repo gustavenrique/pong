@@ -2,6 +2,7 @@
     /* body background */
     --bg-dark: #1b2838;
     --bg-light: #c7d5e0;
+
     --bg: var(--bg-dark);
 
     /* text */
@@ -9,6 +10,7 @@
     --text-second-dark: #aab6be;
     --text-first-light: #1b2838;
     --text-second-light: #3d4a5a;
+
     --text-first: var(--text-first-dark);
     --text-second: var(--text-second-dark);
 
@@ -346,23 +348,18 @@ body {
 .mb-10 { margin-bottom: 10px !important; }
 
 /* button */
-.btn:hover { 
-    opacity: .75 !important;
-    color: #000000 !important;
-    background-color: var(--accent-dark) !important;
-    transition: all .25s;
- }
+.btn:hover { opacity: .75 !important; }
+
 .btn {
     border-radius: 30px !important;
-    padding: 20px !important;
+    padding: 15px !important;
     border: none !important;
-    color: var(--text-first-light) !important;
+    color: var(--text-first) !important;
     font-weight: bold !important;
-    font-size: 17px !important;
+    transition: all .25s;
     cursor: pointer !important;
 }
 
-.btn-white { background-color: var(--second-light) !important; }
 .btn-first { background-color: var(--first) !important; }
 .btn-second { background-color: var(--second) !important; }
 .btn-third { background-color: var(--third) !important; }
@@ -393,7 +390,7 @@ opacity: 0.5;
     font-weight: bold;
     font-size: 25px !important;
     letter-spacing: 1px;
-    color: var(--accent-dark)
+    color: var(--text-first)
 }
 
 .form-container > form {
