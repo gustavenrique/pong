@@ -71,6 +71,10 @@ if (document.querySelector('body > #navbar'))
 
             navbar.insertAdjacentHTML('beforeend', navbarContent)
             sidebar.insertAdjacentHTML('beforeend', sidebarContent)
+
+            document.querySelector('.search-btn').addEventListener('click', () => {
+                window.location.href = './search.html'
+            })
         })
 
 if (document.querySelector('body > #footer'))

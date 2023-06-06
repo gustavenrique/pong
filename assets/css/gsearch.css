@@ -1,0 +1,373 @@
+.content {
+    z-index: 1;
+    opacity: 0.95;
+    background-color: var(--second);
+    margin: 35px 90px 0 90px;
+    padding: 30px 50px 30px 50px;
+}
+.separator {
+    background: var(--accent);
+    border: none;
+    height: 1px;
+    width: 100%;
+    margin: 10px 0 0 0;
+}
+
+/* ########## TOPO RESULTADO DE PESQUISA ########## */
+.top-box {
+    margin: 35px 0 0 0;
+    display: flex;
+    justify-content: space-between;
+}
+.top-box i {
+    color: var(--third);
+}
+.top-box .search-container {
+    width: clamp(0px, 45%, 700px) !important;
+    border-radius: 100px;
+    outline: 2px solid var(--third);
+}
+.top-box .search-btn {
+    background-color: var(--first);
+}
+.top-box .search-input {
+    background-color: var(--first);
+}
+.search-btn .fas-fa-search {
+    color: var(--third);
+}
+.search-cancel-btn {
+    border-radius: 0 50px 50px 0;
+    cursor: pointer;
+    border: none;
+    padding: 10px;
+    color: var(--text-second);
+    background-color: var(--first);
+    height: 40px !important;
+}
+
+/* ########## DIVISÃO DO CATALOGO ########## */
+.catalog__content {
+    display: grid;
+    grid-template-columns: 4fr 10fr;
+    width: 100%;
+    margin: 15px 0 0 0;
+    gap: 1%
+}
+
+/* ########## FILTRO DE JOGOS ########## */
+.catalog__filter {
+    display: grid;
+    overflow: hidden;
+    overflow-y: scroll;
+    grid-column: 1;
+    width: 100%;
+    max-height: 150vh;
+    align-content: start;
+    font-size: 0.82rem;
+}
+.catalog__filter a {
+    text-decoration: none;
+    color: var(--text-first);
+}
+.filters__item-single {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 16px 0;
+    border: none;
+    padding-left: 8px;
+}
+.checkbox__label {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 12px 4px 10px 0;
+    cursor: pointer;
+    line-height: 21px;
+    color: var(--first);
+}
+.checkbox__input:hover {
+    border-color: var(--accent);
+}
+.checkbox__input[type=checkbox] {
+    margin: 3px 6px 0 10px;
+    border-radius: 2px;
+    width: 16px;
+    height: 16px;
+    appearance: none;
+}
+.checkbox__input {
+    border: 1px solid var(--third);
+    cursor: pointer;
+}
+
+
+.dropdown{
+    width: 100%;
+    padding: 1em 1em 1em 0;
+    display: grid;
+    gap: 1rem;
+    align-self: self-start;
+}
+.dropdown__list{
+    list-style: none;
+}
+.dropdown__link{
+    padding: 1em .7em;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+    position: relative;
+    background-color: var(--bg);
+    border-radius: 6px;
+}
+.dropdown__list:has( :checked ){
+    --rows: 1fr;
+    --rotate: rotate(90deg);
+}
+.dropdown__check{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+.dropdown__arrow{
+    padding-top: 3%;
+    transform: var(--rotate, 0);
+    transition: .2s transform;
+}
+.dropdown__content{
+    display: grid;
+    grid-template-rows: var(--rows, 0fr);
+    transition: .3s grid-template-rows;
+}
+.dropdown__sub{
+    overflow: hidden;
+}
+.dropdown__li{
+    width: 85%;
+    list-style: none;
+    margin: 0 0 0 10px;
+}
+.dropdown__anchor{
+    padding: 0.2em 0;
+    display: block;
+    color: var(--text-first);
+    text-decoration: none;
+}
+
+.dropdown__list .search-container {
+    margin: 15px;
+    width: clamp(0px, 90%, 700px) !important;
+    border-radius: 100px;
+    outline: 2px solid var(--third);
+}
+.dropdown__list .search-btn {
+    background-color: var(--first);
+    color: var(--third);
+}
+.dropdown__list .search-input {
+    background-color: var(--first);
+}
+.dropdown__list .fas-fa-search {
+    color: var(--third);
+}
+.dropdown__list .search-cancel-btn {
+    border-radius: 0 50px 50px 0;
+    cursor: pointer;
+    border: none;
+    padding: 10px;
+    color: var(--third);
+    background-color: var(--first);
+    height: 40px !important;
+}
+
+/* ########## TOPO CATALOGO DE JOGOS ########## */
+.catalog__display {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.catalog__navegation-wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin: 0 0 30px 0;
+}
+.catalog__small-navigation {
+    display: flex;
+    justify-content: space-between;
+}
+.small-navigation {
+    display: flex;
+    gap: 10px;
+}
+.small-navigation button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: var(--accent);
+}
+.pagination-input {
+    background-color: transparent;
+    outline: 2px solid var(--accent);
+    color: var(--third);
+    width: 20px;
+    border-radius: 3px;
+    border: none;
+    padding: 2px 3px;
+    text-align: center;
+    color: inherit;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.small-navigation_end span{
+    color: var(--accent)
+}
+
+
+.catalog__sort {
+    display: flex;
+    gap: 15px;
+}
+.sort__component {
+    display: flex;
+    cursor: pointer;
+    font-size: 0.82rem;
+    gap: 4px;
+}
+.span-sort {
+    display: flex;
+}
+.sort-option {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+@media (max-width: 1250px) {
+    .span-sort {
+        display: none;
+    } 
+    .catalog__content {
+        grid-template-columns: 7fr 13fr;
+    }
+    .paginated-games-grid {
+        grid-template-columns: repeat(2, 1fr)!important;
+    }
+}
+
+@media (max-width: 1000px) {
+    .game-tile {
+        max-height: 40vh;
+    }
+}
+.select-sort {
+    color: var(--accent);
+}
+
+@media (max-width: 800px) {
+    .paginated-games-grid {
+        grid-template-columns: 1fr!important;
+    }
+}
+
+
+.display-switch {
+    display: flex;
+    gap: 6px;
+}
+.display-switch button {
+    background-color: transparent;
+    color: var(--accent);
+    border: none;
+    margin: 0 3px 0 0;
+}
+
+
+
+/* ########## JOGOS ########## */
+.paginated-games-grid {
+    display: grid;
+    margin-bottom: 32px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+.game-tile {
+    width: 100%;
+    border-radius: 6px;
+    background-color: var(--accent);
+    box-shadow: 0 2px 4px 0 var(--third);
+    cursor: pointer;
+}
+.game-tile-grid .game-tile__image-wrapper {
+    width: 100%;
+}
+.game-tile__image-wrapper img {
+    border-radius: 5px 5px 0 0 ;
+    width: 100%;
+    min-height: 140px;
+}
+
+.game-tile-grid .game-tile__info {
+    align-items: flex-start;
+    height: 129px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+}
+.game-tile__info {
+    min-height: 17vh;
+    background-color: black;/*coloquei preto so pra visualizar, pq n ta juntando img e o game-info*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 12px 16px;
+    border-radius: 0 0 5px 5px;
+}
+.game-tile__title {
+    display: flex;
+    font-size: 1.2rem;
+    color: var(--text-first);
+}
+.game-tile__title span {
+    font-size: 1rem;
+}
+
+.game-tile__footer {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    gap: 10px;
+}
+.discount-game-price {
+    font-size: 1rem;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    border-radius: 3px;
+    padding: 8px;
+    background-color: var(--accent);
+    color: var(--third);
+}
+.prices {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+}
+
+.base-value {
+    font-size: 0.78rem;
+    font-weight: 400;
+    text-decoration: line-through;
+}
+.final-value {
+    font-size: 1.1rem;
+    font-weight: 700;
+    line-height: 16px;
+}

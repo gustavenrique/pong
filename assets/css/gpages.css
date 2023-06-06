@@ -1,0 +1,249 @@
+body {
+    background: url('https://images5.alphacoders.com/985/985300.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    backdrop-filter: brightness(50%);
+    background-attachment: fixed;
+    background-color: var(--bg);
+}
+
+/* ########## CONTEÚDO PÁGINA ########## */
+.content {
+    z-index: 1;
+    opacity: 0.95;
+    background-color: var(--second);
+    margin: 35px 90px 0 90px;
+    padding: 30px;
+}
+.content-game {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    margin: 0 0 2% 0;
+}
+.separator {
+    background: var(--accent);
+    border: none;
+    height: 1px;
+    width: 100%;
+}
+
+/* ########## INFORMAÇÕES DO JOGO ########## */
+.info-game {
+    display: grid;
+    width: 100%;
+    height: auto;
+}
+.img-game {
+    display: grid;
+    margin: 10px 0 0 0;
+    width: 100%;
+}
+
+/* ########## INFO JOGO ########## */
+.game-name {
+    font-size: 60px;
+    white-space: nowrap;
+}
+.game-dev {
+    left: 0;
+    font-size: 35px;
+    margin: 10px 0 0 0;
+    white-space: nowrap;
+}
+.categories {
+    display: flex;
+    flex-direction: row;
+}
+.game-cat{
+    font-size: 15px;
+    margin: 10px 0 0 23px;
+    border-radius: 25px;
+    border-color: var(--text);
+    padding: 6px;
+    background-color: var(--first);
+    color: var(--text);
+    right: 0;
+}
+.game-description-title {
+    font-size: 30px;
+    margin: 35px 0 0 0;
+}
+.game-description {
+    font-size: 20px;
+    margin: 10px 0 0 0;
+    text-align: justify;
+}
+.box-buy {
+    margin: 12px 0 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box-buy-actions {
+    position: relative;
+    padding: 16px 20px 24px;
+    background-color: var(--accent);
+    width: 100%;
+    box-shadow: 0 0 4px 1px var(--bg);
+    border-radius: 3px;
+    border-color: var(--bg);
+}
+.game-price {
+    width: 100%;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--third);
+}
+.game-edition, .game-edition > option {background-color: var(--second);}
+
+.game-edition {
+    margin: 10px 0 0 0;
+    width: 100%;
+    border-radius: 4px;
+    border: none;
+    padding: 10px;
+    color: var(--text);
+    height: 3rem;
+    font-size: 1.2rem;
+}
+.add-cart {
+    margin: 16px 0 0 0;
+    width: 100%;
+    font-size: 1.8rem;
+    height: 3rem;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    color: var(--text-first-dark);
+    background-color: var(--first);
+}
+.add-wishlist {
+    margin: 16px 0 0 0;
+    width: 100%;
+    font-size: 1.2rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+/* ########## TRANSMISSÕES ########## */
+.stream-game {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 20px;
+    padding: 30px 0 0 0;
+}
+
+/* ########## CARROSEIS ########## */
+.carousel {
+    display: grid;
+    grid-template-columns: repeat(5, 100%);
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+.carousel section {
+    width: 100%;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    margin: 20px 0;
+    background: linear-gradient(black, var(--bg), black); /* bg do body */
+}
+
+.carousel section .item, .carousel section .lives {
+    position: relative;
+    padding: 0 10px;
+    transition: 250ms all;
+}
+
+.carousel section iframe {
+    width: 83vw;
+    height: 100%;
+    object-fit: cover;
+}
+.carousel section img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.carousel section .lives:hover {
+    transform: translate(10px, -10px);
+}
+
+.carousel section .lives img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: all .25s ease;
+}
+
+.carousel section .item:hover {
+    margin: 0 40px;
+    transform: scale(1.2);
+}
+
+.carousel section .item .heading,
+.carousel section .lives .heading { 
+    position: absolute;
+    bottom: 0px;
+    left: 10px;
+    width: 95%;
+    color: var(--text-first);
+    padding: 10px;
+    background-color: rgba(0, 0, 0, .5);
+    transition: opacity .5s;
+    opacity: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.carousel section .lives .heading {
+    font-size: 1rem;
+    width: 98.6%;
+}
+
+.carousel section .item:hover .heading,
+.carousel section .lives:hover .heading { opacity: 1;}
+
+.carousel section .item .duration {
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    color: #fff;
+}
+.carousel section .arrow__btn:hover { opacity: 1; }
+.carousel section .arrow__btn {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    color: #fff;
+    text-decoration: none;
+    font-size: 6em;
+    background: black;
+    width: 80px;
+    padding: 20px;
+    z-index: 1;
+    opacity: .5;
+    transition: opacity .5s;
+}
+
+.carousel section .left-arrow {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, black 100%);
+}
+
+.carousel section .right-arrow {
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, black 100%);
+}

@@ -4,7 +4,7 @@ const routes = [
     { path: ['/index', '/'], requireLogin: false },
     { path: '/cart', requireLogin: true },
     { path: '/wish-list', requireLogin: true },
-    { path: '/privacy', requireLogin: true },
+    { path: '/privacy', requireLogin: false },
 ]
 
 let route = (/(\/[^/]+)\.html$/.exec(window.location.pathname))
