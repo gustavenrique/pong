@@ -1,6 +1,10 @@
 // general functions
 const toggleNavList = () => document.querySelector('.sidebar').classList.toggle('sidebar-show')
 
+const loading = isLoading => {
+    document.querySelector(".spinner-wrapper").classList[isLoading ? "add" : "remove"]("show")
+}
+
 const logOut = async () => {
     let res = await signout()
 
@@ -40,11 +44,11 @@ if (document.querySelector('#head'))
 
 if (document.querySelector('body > #navbar'))
     renderComponent('../components/navbar.html', 'navbar')
-        .then(() => {
+        .then(async () => {
             const navbar = document.querySelector('.navbar > .nav-list')
             const sidebar = document.querySelector('.navbar > .sidebar')
 
-            const session = isLoggedIn()
+            const session = await isLoggedIn()
 
             let navbarContent, sidebarContent
             if (session.object) {

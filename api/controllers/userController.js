@@ -1,9 +1,9 @@
-const isLoggedIn = () => {
+const isLoggedIn = async () => {
     try {
         const user = JSON.parse(localStorage.getItem('pong_session'))
     
         if (!user) return response(404, 'Usuário não está logado.')
-        
+
         return response(200, 'Usuário está logado.', user)
     } catch (err) {
         console.error(err)

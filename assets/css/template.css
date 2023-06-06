@@ -50,6 +50,25 @@ body {
     color: var(--text-first);
 }
 
+/* loading spinner */
+.spinner-wrapper {
+    background-color: rgba(0, 0, 0, .5);
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    display: none;
+    z-index: 10000;
+}
+
+.spinner-wrapper.show { display: block; }
+
+.spinner {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 9999999999999999999 !important;
+}
+
 /* ########## NAVBAR ########## */
 .navbar {
     position: absolute;
@@ -361,7 +380,7 @@ body {
 .btn:hover { opacity: .75 !important; }
 
 .btn {
-    border-radius: 30px !important;
+    border-radius: 10px !important;
     padding: 15px !important;
     border: none !important;
     color: var(--text-first) !important;

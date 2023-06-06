@@ -12,11 +12,14 @@ route = route ? route[1] : '/'
 
 let routeObj = routes.find(r => r.path == route || (Array.isArray(r.path) && r.path.includes(route)))
 
-let loggedIn
-(async () => loggedIn = await isLoggedIn().object)()
+const verificarLogin = async () => {
+    let loggedIn = (await isLoggedIn()).object
+    
+    if (routeObj.requireLogin && !loggedIn)
+        window.location.href = '/pages/login.html'
+    
+    else if ((routeObj.path == '/login' || routeObj.path == '/signup') && loggedIn)
+        window.location.href = '/pages/'
+}
 
-if (routeObj.requireLogin && !loggedIn)
-    window.location.href = '/pages/login.html'
-
-else if ((routeObj.path == '/login' || routeObj.path == '/signup') && loggedIn)
-    window.location.href = '/pages/'
+verificarLogin()

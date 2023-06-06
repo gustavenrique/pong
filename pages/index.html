@@ -1,596 +1,103 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
+  <head>
     <div id="head"></div>
-    
+
     <title>Pong - Home</title>
 
-    <link rel="stylesheet" href="../assets/css/index.css">
-</head>
-<body class="col" id='top'>
+    <link rel="stylesheet" href="../assets/css/index.css" />
+    <link rel="stylesheet" href="../assets/css/slider.css" />
+  </head>
+  <body class="col" id="top">
+    <div class="spinner-wrapper">
+      <i class="fas fa-circle-notch fa-spin fa-3x spinner"></i>
+    </div>
+
     <div id="navbar"></div>
 
     <section class="main-content">
-        <!-- anuncios -->
-        <div class="carousel"> 
-          <section id="section-ad1">
-            <a href="#section-ad3" class="arrow__btn left-arrow">‹</a>
-            
-            <div class="ad">
-              <a>
-                <img src="https://www.amd.com/system/files/2021-05/871550-FarCry6-key-art-1920x600.jpg" alt="Far Cry 6">
-                <h1 class="heading">Far Cry 6</h1>
-              </a>
-            </div>
-            
-            <div class="ad">
-              <!-- este segundo é sempre o da proxima section -->
-              <a>
-                <img src="https://eu.gear.xbox.com/cdn/shop/collections/Redfall_Collection_banner_1400x.png?v=1682524816" alt="Red Fall">
-                <h1 class="heading">Red Fall</h1>
-              </a>
-            </div>
+      <!-- <div id="anuncios"></div> -->
+      <h3 class="text-first p-10">Recomendados</h3>
+      <div id="recomendados"></div>
 
-            <a href="#section-ad2" class="arrow__btn right-arrow">›</a>
-          </section>
-        
-          <section id="section-ad2">
-            <a href="#section-ad1" class="arrow__btn left-arrow">‹</a>
-            
-            <div class="ad">
-              <a>
-                <img src="https://eu.gear.xbox.com/cdn/shop/collections/Redfall_Collection_banner_1400x.png?v=1682524816" alt="Red Fall">
-                <h1 class="heading">Red Fall</h1>
-              </a>
-            </div>
+      <h3 class="text-first p-10" style="margin-top: 2rem;">Lançamentos</h3>
+      <div id="lancamentos"></div>
 
-            <div class="ad">
-              <a>
-                <img src="https://www.starwarsnewsnet.com/wp-content/uploads/2022/12/Jedi_Survivor_new-banner.jpg" alt="Star Wars Jedi Survivor">
-                <h1 class="heading">Star Wars Jedi Survivor</h1>
-              </a>
-            </div>
+      <h3 class="text-first p-10" style="margin-top: 2rem;">Mais Vendidos</h3>
+      <div id="mais-vendidos"></div>
 
-            <a href="#section-ad3" class="arrow__btn right-arrow">›</a>
-          </section>
-        
-          <section id="section-ad3">
-            <a href="#section-ad2" class="arrow__btn left-arrow">‹</a>
-            
-            <div class="ad">
-              <a>
-                <img src="https://www.starwarsnewsnet.com/wp-content/uploads/2022/12/Jedi_Survivor_new-banner.jpg" alt="Star Wars Jedi Survivor">
-                <h1 class="heading">Star Wars Jedi Survivor</h1>
-              </a>
-            </div>
-
-            <div class="ad">
-              <a>
-                <img src="https://www.amd.com/system/files/2021-05/871550-FarCry6-key-art-1920x600.jpg" alt="Far Cry 6">
-                <h1 class="heading">Far Cry 6</h1>
-              </a>
-            </div>
-
-            <a href="#section-ad1" class="arrow__btn right-arrow">›</a>
-          </section>
-        </div>
-
-        <h3 class="text-first p-10">Recomendados</h3>
-        <div class="carousel"> 
-            <section id="section1">
-              <a href="#section3" class="arrow__btn left-arrow">‹</a>
-
-              <div class="item">
-                <a>
-                  <img src="https://images8.alphacoders.com/710/thumbbig-710329.webp" alt="God of War 4">
-        
-                  <h1 class="heading">God of War 4</h1>
-                </a>
-              </div>
-
-              <div class="item">
-                <a>
-                  <img src="https://images5.alphacoders.com/394/thumbbig-394511.webp" alt="The Last of Us">
-                  
-                  <h1 class="heading">The Last of Us</h1>
-                </a>
-              </div>
-              <div class="item">
-                <a>
-                  <img src="https://images7.alphacoders.com/532/thumbbig-532406.webp" alt="Life is Strange">
-
-                  <h1 class="heading">Life is Strange</h1>
-                </a>
-              </div>
-              <div class="item">
-                <a>
-                  <img src="https://images2.alphacoders.com/127/thumbbig-1276415.webp" alt="Fifa 23">
-                  
-                  <h1 class="heading">FIFA 23</h1>
-                </a>
-              </div>
-              <div class="item">
-                <a>
-                  <img src="https://images7.alphacoders.com/439/thumbbig-439636.webp" alt="GTA V">
-                  
-                  <h1 class="heading">GTA V</h1>
-                  </a>
-              </div>
-              <a href="#section2" class="arrow__btn right-arrow">›</a>
-            </section>
-          
-            <section id="section2">
-              <a href="#section1" class="arrow__btn left-arrow">‹</a>
-
-              <div class="item">
-                <a>
-                  <img src="https://images7.alphacoders.com/486/thumbbig-486990.webp" alt="Super Mario 3D Land">
-                  <h1 class="heading">Super Mario 3D Land</h1>
-                </a>
-              </div>
-
-              <div class="item">
-                <a>
-                  <img src="https://images5.alphacoders.com/423/thumbbig-423747.webp" alt="Sonic">
-                  <h1 class="heading">Sonic</h1>
-                </a>
-              </div>
-
-              <div class="item">
-                <a>
-                  <img src="https://images.alphacoders.com/789/thumbbig-789452.webp" alt="Zelda">
-                  <h1 class="heading">Zelda</h1>
-                </a>
-              </div>
-
-              <div class="item">
-                <a>
-                  <img src="https://images3.alphacoders.com/885/thumbbig-885750.webp" alt="Roblox">
-                  <h1 class="heading">Roblox</h1>
-                </a>
-              </div>
-
-              <div class="item">
-                <a>
-                  <img src="https://images.alphacoders.com/109/thumbbig-1091086.webp" alt="Free Fire">
-                  <h1 class="heading">Free Fire</h1>
-                </a>
-              </div>
-
-              <a href="#section3" class="arrow__btn right-arrow">›</a>
-            </section>
-          
-            <section id="section3">
-              <a href="#section2" class="arrow__btn left-arrow">‹</a>
-
-              <div class="item">
-                <a>
-                  <img src="https://i.insider.com/58c17d116e20041b008b5023?width=800&format=jpeg&auto=webp" alt="Halo 2">
-                  <h1 class="heading">Halo 2</h1>
-                </a>
-              </div>
-
-              <div class="item">
-                <a>
-                  <img src="https://i.insider.com/577ebda7dd0895fd028b4af3?width=800&format=jpeg&auto=webp" alt="Read Dead Redemption">
-                  <h1 class="heading">Read Dead Redemption</h1>
-                </a>
-              </div>
-
-              <div class="item">
-                <a>
-                  <img src="https://images7.alphacoders.com/431/thumbbig-431220.webp" alt="Diablo III">
-                  <h1 class="heading">Diablo III</h1>
-                </a>
-              </div>
-
-              <div class="item">
-                <a>
-                  <img src="https://images3.alphacoders.com/663/thumbbig-663756.webp" alt="Gran Turismo">
-                  <h1 class="heading">Gran Turismo</h1>
-                </a>
-              </div>
-
-              <div class="item">
-                <a>
-                  <img src="https://i.stack.imgur.com/dqVlX.png" alt="Minecraft">
-                  <h1 class="heading">Minecraft</h1>
-                </a>
-              </div>
-          
-              <a href="#section1" class="arrow__btn right-arrow">›</a>
-            </section>
-        </div>
-
-        <h3 class="text-first p-10">Lançamentos</h3>
-        <div class="carousel"> 
-          <section id="section4">
-            <a href="#section6" class="arrow__btn left-arrow">‹</a>
-
-            <div class="item">
-              <a>
-                <img src="https://i.insider.com/58c17d116e20041b008b5023?width=800&format=jpeg&auto=webp" alt="Halo 2">
-                <h1 class="heading">Halo 2</h1>
-              </a>
-            </div>
-
-            <div class="item">
-              <a>
-                <img src="https://i.insider.com/577ebda7dd0895fd028b4af3?width=800&format=jpeg&auto=webp" alt="Read Dead Redemption">
-                <h1 class="heading">Read Dead Redemption</h1>
-              </a>
-            </div>
-
-            <div class="item">
-              <a>
-                <img src="https://images7.alphacoders.com/431/thumbbig-431220.webp" alt="Diablo III">
-                <h1 class="heading">Diablo III</h1>
-              </a>
-            </div>
-
-            <div class="item">
-              <a>
-                <img src="https://images3.alphacoders.com/663/thumbbig-663756.webp" alt="Gran Turismo">
-                <h1 class="heading">Gran Turismo</h1>
-              </a>
-            </div>
-
-            <div class="item">
-              <a>
-                <img src="https://i.stack.imgur.com/dqVlX.png" alt="Minecraft">
-                <h1 class="heading">Minecraft</h1>
-              </a>
-            </div>
-            
-            <a href="#section5" class="arrow__btn right-arrow">›</a>
-          </section>
-        
-          <section id="section5">
-            <a href="#section4" class="arrow__btn left-arrow">‹</a>
-
-            <div class="item">
-              <a>
-                <img src="https://images7.alphacoders.com/486/thumbbig-486990.webp" alt="Super Mario 3D Land">
-                <h1 class="heading">Super Mario 3D Land</h1>
-              </a>
-            </div>
-
-            <div class="item">
-              <a>
-                <img src="https://images5.alphacoders.com/423/thumbbig-423747.webp" alt="Sonic">
-                <h1 class="heading">Sonic</h1>
-              </a>
-            </div>
-
-            <div class="item">
-              <a>
-                <img src="https://images.alphacoders.com/789/thumbbig-789452.webp" alt="Zelda">
-                <h1 class="heading">Zelda</h1>
-              </a>
-            </div>
-
-            <div class="item">
-              <a>
-                <img src="https://images3.alphacoders.com/885/thumbbig-885750.webp" alt="Roblox">
-                <h1 class="heading">Roblox</h1>
-              </a>
-            </div>
-
-            <div class="item">
-              <a>
-                <img src="https://images.alphacoders.com/109/thumbbig-1091086.webp" alt="Free Fire">
-                <h1 class="heading">Free Fire</h1>
-              </a>
-            </div>
-
-            <a href="#section6" class="arrow__btn right-arrow">›</a>
-          </section>
-        
-          <section id="section6">
-            <a href="#section5" class="arrow__btn left-arrow">‹</a>
-
-            <div class="item">
-              <a>
-                <img src="https://images8.alphacoders.com/710/thumbbig-710329.webp" alt="God of War 4">
-      
-                <h1 class="heading">God of War 4</h1>
-              </a>
-            </div>
-
-            <div class="item">
-              <a>
-                <img src="https://images5.alphacoders.com/394/thumbbig-394511.webp" alt="The Last of Us">
-                
-                <h1 class="heading">The Last of Us</h1>
-              </a>
-            </div>
-            <div class="item">
-              <a>
-                <img src="https://images7.alphacoders.com/532/thumbbig-532406.webp" alt="Life is Strange">
-
-                <h1 class="heading">Life is Strange</h1>
-              </a>
-            </div>
-            <div class="item">
-              <a>
-                <img src="https://images2.alphacoders.com/127/thumbbig-1276415.webp" alt="Fifa 23">
-                
-                <h1 class="heading">FIFA 23</h1>
-              </a>
-            </div>
-            <div class="item">
-              <a>
-                <img src="https://images7.alphacoders.com/439/thumbbig-439636.webp" alt="GTA V">
-                
-                <h1 class="heading">GTA V</h1>
-                </a>
-            </div>
-        
-            <a href="#section4" class="arrow__btn right-arrow">›</a>
-          </section>
-        </div>
-
-        <h3 class="text-first p-10">Mais Vendidos</h3>
-        <div class="carousel"> 
-          <section id="section7">
-            <a href="#section12" class="arrow__btn left-arrow">‹</a>
-
-            <div class="item">
-              <a>
-                <img src="https://images7.alphacoders.com/486/thumbbig-486990.webp" alt="Super Mario 3D Land">
-                <h1 class="heading">Super Mario 3D Land</h1>
-              </a>
-            </div>
-
-            <div class="item">
-              <a>
-                <img src="https://images5.alphacoders.com/423/thumbbig-423747.webp" alt="Sonic">
-                <h1 class="heading">Sonic</h1>
-              </a>
-            </div>
-
-            <div class="item">
-              <a>
-                <img src="https://images.alphacoders.com/789/thumbbig-789452.webp" alt="Zelda">
-                <h1 class="heading">Zelda</h1>
-              </a>
-            </div>
-
-            <div class="item">
-              <a>
-                <img src="https://images3.alphacoders.com/885/thumbbig-885750.webp" alt="Roblox">
-                <h1 class="heading">Roblox</h1>
-              </a>
-            </div>
-
-            <div class="item">
-              <a>
-                <img src="https://images.alphacoders.com/109/thumbbig-1091086.webp" alt="Free Fire">
-                <h1 class="heading">Free Fire</h1>
-              </a>
-            </div>
-
-            <a href="#section11" class="arrow__btn right-arrow">›</a>
-          </section>
-        
-          <section id="section11">
-            <a href="#section7" class="arrow__btn left-arrow">‹</a>
-
-            <div class="item">
-              <a>
-                <img src="https://images8.alphacoders.com/710/thumbbig-710329.webp" alt="God of War 4">
-      
-                <h1 class="heading">God of War 4</h1>
-              </a>
-            </div>
-
-            <div class="item">
-              <a>
-                <img src="https://images5.alphacoders.com/394/thumbbig-394511.webp" alt="The Last of Us">
-                
-                <h1 class="heading">The Last of Us</h1>
-              </a>
-            </div>
-            <div class="item">
-              <a>
-                <img src="https://images7.alphacoders.com/532/thumbbig-532406.webp" alt="Life is Strange">
-
-                <h1 class="heading">Life is Strange</h1>
-              </a>
-            </div>
-            <div class="item">
-              <a>
-                <img src="https://images2.alphacoders.com/127/thumbbig-1276415.webp" alt="Fifa 23">
-                
-                <h1 class="heading">FIFA 23</h1>
-              </a>
-            </div>
-            <div class="item">
-              <a>
-                <img src="https://images7.alphacoders.com/439/thumbbig-439636.webp" alt="GTA V">
-                
-                <h1 class="heading">GTA V</h1>
-                </a>
-            </div>
-
-            <a href="#section12" class="arrow__btn right-arrow">›</a>
-          </section>
-        
-          <section id="section12">
-            <a href="#section8" class="arrow__btn left-arrow">‹</a>
-
-            <div class="item">
-              <a>
-                <img src="https://i.insider.com/58c17d116e20041b008b5023?width=800&format=jpeg&auto=webp" alt="Halo 2">
-                <h1 class="heading">Halo 2</h1>
-              </a>
-            </div>
-
-            <div class="item">
-              <a>
-                <img src="https://i.insider.com/577ebda7dd0895fd028b4af3?width=800&format=jpeg&auto=webp" alt="Read Dead Redemption">
-                <h1 class="heading">Read Dead Redemption</h1>
-              </a>
-            </div>
-
-            <div class="item">
-              <a>
-                <img src="https://images7.alphacoders.com/431/thumbbig-431220.webp" alt="Diablo III">
-                <h1 class="heading">Diablo III</h1>
-              </a>
-            </div>
-
-            <div class="item">
-              <a>
-                <img src="https://images3.alphacoders.com/663/thumbbig-663756.webp" alt="Gran Turismo">
-                <h1 class="heading">Gran Turismo</h1>
-              </a>
-            </div>
-
-            <div class="item">
-              <a>
-                <img src="https://i.stack.imgur.com/dqVlX.png" alt="Minecraft">
-                <h1 class="heading">Minecraft</h1>
-              </a>
-            </div>
-        
-            <a href="#section7" class="arrow__btn right-arrow">›</a>
-          </section>
-        </div>
-
-        <h3 class="text-first p-10">Mais Populares</h3>
-        <div class="carousel"> 
-          <section id="section10">
-            <a href="#section9" class="arrow__btn left-arrow">‹</a>
-
-            <div class="item">
-              <a>
-                <img src="https://wallpapercave.com/wp/wp12116650.jpg" alt="Have a Nice Death">
-                <h1 class="heading">Have a Nice Death</h1>
-              </a>
-            </div>
-
-            <div class="item">
-              <a>
-                <img src="https://www.esportsportal.com/wp-content/uploads/2019/08/League-of-Legends-1-1024x576.jpg" alt="The League of Legends">
-                <h1 class="heading">The League of Legends</h1>
-              </a>
-            </div>
-
-            <div class="item">
-              <a>
-                <img src="https://image.winudf.com/v2/image1/ZXUuYmx1ZW5ldHdlYi5iZ2ltYWdlX3ZhbG9yYW50X3NjcmVlbl8wXzE1OTY0MDI0MTZfMDc1/screen-0.webp?fakeurl=1&type=.webp" alt="Valorant">
-                <h1 class="heading">Valorant</h1>
-              </a>
-            </div>
-
-            <div class="item">
-              <a>
-                <img src="https://cdn.wallpapersafari.com/46/46/Abg2aV.jpg" alt="Stumble Guys">
-                <h1 class="heading">Stumble Guys</h1>
-              </a>
-            </div>
-
-            <div class="item">
-              <a>
-                <img src="https://wallpapers.com/images/featured/bsz1ur6ls1n3l9tw.jpg" alt="Fall Guys">
-                <h1 class="heading">Fall Guys</h1>
-              </a>
-            </div>
-
-            <a href="#section8" class="arrow__btn right-arrow">›</a>
-          </section>
-        
-          <section id="section8">
-            <a href="#section10" class="arrow__btn left-arrow">‹</a>
-
-            <div class="item">
-              <a>
-                <img src="https://images8.alphacoders.com/710/thumbbig-710329.webp" alt="God of War 4">
-      
-                <h1 class="heading">God of War 4</h1>
-              </a>
-            </div>
-
-            <div class="item">
-              <a>
-                <img src="https://images5.alphacoders.com/394/thumbbig-394511.webp" alt="The Last of Us">
-                
-                <h1 class="heading">The Last of Us</h1>
-              </a>
-            </div>
-            <div class="item">
-              <a>
-                <img src="https://images7.alphacoders.com/532/thumbbig-532406.webp" alt="Life is Strange">
-
-                <h1 class="heading">Life is Strange</h1>
-              </a>
-            </div>
-            <div class="item">
-              <a>
-                <img src="https://images2.alphacoders.com/127/thumbbig-1276415.webp" alt="Fifa 23">
-                
-                <h1 class="heading">FIFA 23</h1>
-              </a>
-            </div>
-            <div class="item">
-              <a>
-                <img src="https://images7.alphacoders.com/439/thumbbig-439636.webp" alt="GTA V">
-                
-                <h1 class="heading">GTA V</h1>
-                </a>
-            </div>
-
-            <a href="#section9" class="arrow__btn right-arrow">›</a>
-          </section>
-        
-          <section id="section9">
-            <a href="#section11" class="arrow__btn left-arrow">‹</a>
-
-            <div class="item">
-              <a>
-                <img src="https://i.insider.com/58c17d116e20041b008b5023?width=800&format=jpeg&auto=webp" alt="Halo 2">
-                <h1 class="heading">Halo 2</h1>
-              </a>
-            </div>
-
-            <div class="item">
-              <a>
-                <img src="https://i.insider.com/577ebda7dd0895fd028b4af3?width=800&format=jpeg&auto=webp" alt="Read Dead Redemption">
-                <h1 class="heading">Read Dead Redemption</h1>
-              </a>
-            </div>
-
-            <div class="item">
-              <a>
-                <img src="https://images7.alphacoders.com/431/thumbbig-431220.webp" alt="Diablo III">
-                <h1 class="heading">Diablo III</h1>
-              </a>
-            </div>
-
-            <div class="item">
-              <a>
-                <img src="https://images3.alphacoders.com/663/thumbbig-663756.webp" alt="Gran Turismo">
-                <h1 class="heading">Gran Turismo</h1>
-              </a>
-            </div>
-
-            <div class="item">
-              <a>
-                <img src="https://i.stack.imgur.com/dqVlX.png" alt="Minecraft">
-                <h1 class="heading">Minecraft</h1>
-              </a>
-            </div>
-        
-            <a href="#section10" class="arrow__btn right-arrow">›</a>
-          </section>
-        </div>
+      <h3 class="text-first p-10" style="margin-top: 2rem;">Mais Populares</h3>
+      <div id="mais-populares"></div>
     </section>
 
     <div id="footer"></div>
-    
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="../api/controllers/cartController.js"></script>
+    <script src="../api/controllers/gameController.js"></script>
     <script src="../api/controllers/userController.js"></script>
     <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/slider.js"></script>
     <script src="../router/router.js"></script>
-</body>
+    <script>
+      const carrinho = async id => {
+        let res = await addToCart(id);
+
+        if (res.status == 500) {
+          showAlert(res.message, 'error')
+          return
+        }
+
+        if (res.status == 400) {
+          showAlert(res.message)
+          return
+        }
+
+        showAlert(res.message, 'success')
+      }
+
+      const gamesToSlide = (games) => {
+        return games.map(game => `
+          <div class="slide">
+              <img class="slide-img" src="${game.image}" alt="${game.label}">
+
+              <div class="slide-info">
+                  <span class="slide-label">${game.label}</span>
+                  
+                  <div class="row" style='justify-content: space-between; align-items: center;'>
+                      <div class="price">R$ ${game.price}</div>
+
+                      <div class="btn btn-first" onclick='carrinho(${game.id})' style='pointer-events: auto;'>
+                          <i class="fas fa-shopping-cart"></i>
+                      </div>
+                  </div>
+              </div>
+          </div>`).join("");
+      };
+
+      const buscarJogos = async () => {
+        loading(true);
+
+        let res = await getGames()
+
+        loading(false)
+
+        if (res.status != 200) {
+          showAlert(res.message, 'error')
+          return
+        }
+
+        const games = res.object
+
+        // IMPLEMENTAR MOSTRA DE ANÚNCIOS
+
+        slider(gamesToSlide(games.slice(0, 8)), "#recomendados");
+        slider(gamesToSlide(games.slice(8, 16)), "#lancamentos");
+        slider(gamesToSlide(games.slice(16, 24)), "#mais-vendidos");
+        slider(gamesToSlide(games.slice(24, 32)), "#mais-populares");
+      }
+
+      buscarJogos()
+    </script>
+  </body>
 </html>
