@@ -17,9 +17,8 @@ body {
 }
 .content-game {
     display: grid;
-    grid-template-columns: 2fr 3fr;
-    grid-template-rows: 6fr;
-    gap: 4%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
     margin: 0 0 2% 0;
 }
 .separator {
@@ -31,14 +30,13 @@ body {
 
 /* ########## INFORMAÇÕES DO JOGO ########## */
 .info-game {
-    margin: 50px 0 0 0;
     display: grid;
     width: 100%;
     height: auto;
 }
 .img-game {
     display: grid;
-    margin: 70px 0 0 0;
+    margin: 10px 0 0 0;
     width: 100%;
 }
 
@@ -162,8 +160,7 @@ body {
 }
 
 .carousel section iframe {
-    max-width: 177.5%;
-    width: 177.5%;
+    width: 83vw;
     height: 100%;
     object-fit: cover;
 }

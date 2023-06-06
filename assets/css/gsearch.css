@@ -134,7 +134,7 @@
     cursor: pointer;
 }
 .dropdown__arrow{
-    margin-left: 0;
+    padding-top: 3%;
     transform: var(--rotate, 0);
     transition: .2s transform;
 }
@@ -241,8 +241,39 @@ input[type=number]::-webkit-outer-spin-button {
     font-size: 0.82rem;
     gap: 4px;
 }
+.span-sort {
+    display: flex;
+}
+.sort-option {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+@media (max-width: 1250px) {
+    .span-sort {
+        display: none;
+    } 
+    .catalog__content {
+        grid-template-columns: 7fr 13fr;
+    }
+    .paginated-games-grid {
+        grid-template-columns: repeat(2, 1fr)!important;
+    }
+}
+
+@media (max-width: 1000px) {
+    .game-tile {
+        max-height: 40vh;
+    }
+}
 .select-sort {
     color: var(--accent);
+}
+
+@media (max-width: 800px) {
+    .paginated-games-grid {
+        grid-template-columns: 1fr!important;
+    }
 }
 
 
@@ -281,10 +312,7 @@ input[type=number]::-webkit-outer-spin-button {
     width: 100%;
     min-height: 140px;
 }
-.game-tile-grid {
-    display: block;
-    cursor: pointer;
-}
+
 .game-tile-grid .game-tile__info {
     align-items: flex-start;
     height: 129px;
@@ -293,7 +321,6 @@ input[type=number]::-webkit-outer-spin-button {
     line-height: 14px;
 }
 .game-tile__info {
-    max-height: 17vh;
     min-height: 17vh;
     background-color: black;/*coloquei preto so pra visualizar, pq n ta juntando img e o game-info*/
     display: flex;
