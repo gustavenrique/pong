@@ -110,7 +110,8 @@
 /* fim carrossel */
 
 .cart-item {
-    height: 150px;
+    height: 200px;
+    width: 400px;
     border: 1px solid var(--first);
     border-radius: 10px;
     margin: 10px;
@@ -119,7 +120,7 @@
 
 .cart-item > * {
     height: 100%;
-    width: 30%;
+    width: auto;
     overflow: hidden;
 }
 
@@ -152,3 +153,16 @@
     width: clamp(200px, 95%, 700px);
     margin: auto;
 }
+
+.organization {
+    display: flex;
+    flex-direction: row;
+    font-size: 30px;
+    text-align: center;
+  }
+
+@media (max-width: 800px) {
+    .organization {
+      flex-direction: column;
+    }
+  }
