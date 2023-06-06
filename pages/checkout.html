@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <div id="header"></div>
+
+    <title>Pong - Cart</title>
+    <link rel="stylesheet" href="../assets/css/template.css">
+    <link rel="stylesheet" href="../assets/css/checkout.css">
+</head>
+<body class="col" id='top'>
+    <div id="navbar"></div>
+
+    <section class="main-content">
+        <main class="page payment-page">
+            <section class="payment-form dark">
+              <div class="container">
+               <br>
+               <br>
+                <form class="form">
+                  <div class="products">
+                    <h3 class="title">Checkout</h3>
+                    <div class="item">
+                      <span class="price"><Ri:a></Ri:a>R$200</span>
+                      <p class="item-name">Hollow Knight</p>
+                      <p class="item-description">Team Cherry</p>
+                    </div>
+                    <div class="item">
+                      <span class="price">R$120</span>
+                      <p class="item-name">Fobia - St Dinfa Hotel</p>
+                      <p class="item-description">Pulsatrix Studios</p>
+                    </div>
+                    <div class="total">Total<span class="price">R$320</span></div>
+                  </div>
+                  <div class="card-details">
+                    <h3 class="title">Detalhes de Pagamento</h3>
+                    <div class="row">
+                      <div class="form-group col-sm-7">
+                        <label for="card-holder">Titular do Cartão</label>
+                        <input id="card-holder" type="text" class="form-control" aria-label="Card Holder" aria-describedby="basic-addon1">
+                      </div>
+                      <div class="form-group col-sm-5">
+                        <label for="">Data de Expiração</label>
+                        <div class="input-group expiration-date">
+                          <input type="text" class="form-control" aria-label="MM" aria-describedby="basic-addon1">
+                          <span class="date-separator">/</span>
+                          <input type="text" class="form-control"  aria-label="YY" aria-describedby="basic-addon1">
+                        </div>
+                      </div>
+                      <div class="form-group col-sm-8">
+                        <label for="card-number">Número do Cartão</label>
+                        <input id="card-number" type="text" class="form-control" aria-label="Card Holder" aria-describedby="basic-addon1">
+                      </div>
+                      <div class="form-group col-sm-4">
+                        <label for="cvc">COD</label>
+                        <input id="cvc" type="text" class="form-control" aria-label="Card Holder" aria-describedby="basic-addon1">
+                      </div>
+                      <div class="form-group col-sm-12">
+                        <button type="button" class="btn btn-primary btn-block btn-next">Prosseguir</button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </section>
+          </main>   
+
+    </section>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="../api/controllers/userController.js"></script>
+    <script src="../router/router.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <div id="footer"></div>
+</body>
+</html>
