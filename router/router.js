@@ -7,17 +7,15 @@ const routes = [
     { path: '/privacy', requireLogin: true },
 ]
 
-const route = (/(\/[^/]+)\.html$/.exec(window.location.pathname))[1]
+let route = (/(\/[^/]+)\.html$/.exec(window.location.pathname))
+route = route ? route[1] : '/'
 
-let requireLogin = routes.find(r => r.path == route || (Array.isArray(r.path) && r.path.includes(route)))
-    .requireLogin
+let routeObj = routes.find(r => r.path == route || (Array.isArray(r.path) && r.path.includes(route)))
 
-if (requireLogin) {
-    let loggedIn = isLoggedIn()
+const loggedIn = isLoggedIn().object
 
-    
+if (routeObj.requireLogin && !loggedIn)
+    window.location.href = '/pages/login.html'
 
-    if (!loggedIn) {
-        // window.location.href = '/pages/login.html'
-    }
-}
+else if ((routeObj.path == '/login' || routeObj.path == '/signup') && loggedIn)
+    window.location.href = '/pages/'

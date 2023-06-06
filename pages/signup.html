@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <div id="head"></div>
+
+  <title>Pong - Cadastro</title>
+
+  <link rel="icon" href="../assets/img/PONG-icon.png">
+  <link rel="stylesheet" href="../assets/css/login.css">
+</head>
+<html>
+<body>
+  <div class="main">
+    <div class="welcome-title">Seja Bem Vindo!</div>
+
+    <div class="login-form-container">
+      <div class="col" style="gap: 15px;">
+        <div class="text-center login-logo" style="top: 3vh;">PONG</div>
+
+        <label class="form-label text-center">CADASTRAR</label>
+
+        <div class="input-wrapper">
+          <input id="username" class="login-input text-first" autocomplete="off" placeholder="Usuário" type="text" maxlength="60" required>
+        </div>
+
+        <div class="input-wrapper">
+          <input id="email" class="login-input text-first" autocomplete="off" placeholder="Email" type="email" maxlength="100" required>
+        </div>
+        
+        <div class="input-wrapper">
+          <input id="password" class="login-input text-first" placeholder='Senha' type="password" maxlength="10" required>
+          <div class="eye-btn-wrapper" onclick="toggleSenha('password')">
+            <i class="fa fa-eye"></i>
+          </div>
+        </div>
+
+        <div class="input-wrapper">
+          <input id="confirm" class="login-input text-first" placeholder='Confirmar Senha' type="password" maxlength="10" required>
+          <div class="eye-btn-wrapper" onclick="toggleSenha('confirm')">
+            <i class="fa fa-eye"></i>
+          </div>
+        </div>
+
+        <div class="row align-items-center" style="margin: 10px 0; gap: 10px;">
+          <input id="accept" type="checkbox">
+          <label>
+            <a href="./privacy.html" class="link">Li e aceito os termos e condições</a>
+          </label>
+        </div>
+
+        <div class="row" style="gap: 10px;">
+          <button class="btn btn-third" style="flex: 1" onclick="window.location.href = './login.html'"> 
+            ENTRAR
+          </button>
+          <button class="btn btn-second" onclick="cadastrar()" style="flex: 1">CADASTRAR</button>
+        </div>
+      </div>               
+    </div>
+  </div>
+
+  <script src="../api/controllers/userController.js"></script>
+  <script src="../router/router.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script>
+    const toggleSenha = id => {
+      let passwordInput = document.getElementById(id)
+
+      const eye = passwordInput.parentNode.querySelector('.eye-btn-wrapper > .fa-eye') || document.querySelector('.fa-eye-slash')
+      eye.classList.toggle('fa-eye')
+      eye.classList.toggle('fa-eye-slash')
+
+      passwordInput.type = passwordInput.type === "password" ? "text" : "password"
+    }
+
+    const cadastrar = async () => {
+      const form = {
+        username: document.querySelector('input#username').value,
+        email: document.querySelector('input#email').value,
+        password: document.querySelector('input#password').value,
+        confirm: document.querySelector('input#confirm').value,
+        accept: document.querySelector('input#accept').checked,
+      }
+
+      if (!form.username || !form.email || !form.password || !form.confirm || !form.accept) {
+        showAlert('Todos os campos do formulário devem estar preenchidos.', 'error')
+        return
+      }
+
+      const resultado = await signup(form)
+
+      if (resultado.status != 200) {
+        showAlert(resultado.message, 'error')
+        return
+      }
+
+      showAlert(resultado.message, 'success')
+
+      setTimeout(() => window.location.href = './login.html', 1000)
+    }
+  </script>
+</body>
+</html>

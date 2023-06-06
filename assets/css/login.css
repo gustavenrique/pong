@@ -1,10 +1,16 @@
 .login-logo {
     position: fixed; 
-    top: 5rem;
-    right: 170px;
+    top: 10%;
+    right: 190px;
     z-index: 2; 
     font-size: 2.5rem !important;
     font-weight: bold;
+    opacity: 0;
+    transition: all .25s;
+}
+
+@media (min-height: 500px) {
+    .login-logo { opacity: 1 }
 }
 
 .welcome-title {
@@ -25,7 +31,7 @@
     }
 }
 
-@media (min-width: 1500px) {
+@media (min-width: 1300px) {
     .welcome-title {
         left: 40%;
         transform: translateX(-40%);
@@ -41,7 +47,7 @@
 }
 
 body {
-    background-image: linear-gradient(to right,rgba(0, 0, 0, 0.5) 0.5%, #2E0C79), url("../img/login_bg_PONG.png");
+    background-image: linear-gradient(to right,rgba(0, 0, 0, 0.5) 0.5%, var(--first)), url("../img/login_bg_PONG.png");
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -58,7 +64,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-image: linear-gradient(var(--first), black);
+    background-image: linear-gradient(var(--second), black);
     clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
 }
 
@@ -93,3 +99,38 @@ body {
     cursor: pointer;
     padding: 10px;
 }
+
+input::selection {
+    background-color: var(--first);
+    color: var(--text-first);
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    outline: none;
+    position: relative; /* Required for the pseudo-element */
+}
+  
+  /* Style the custom checkbox */
+  input[type="checkbox"]::before {
+    content: ""; /* Required for the pseudo-element */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    background-color: var(--accent);
+    border-radius: 2px;
+    display: none; /* Hide the checkmark by default */
+  }
+  
+  input[type="checkbox"]:checked::before {
+    display: block;
+  }

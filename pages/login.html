@@ -1,19 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <div id="head"></div>
 
-    <title>Pong</title>
+  <title>Pong - Login</title>
 
-    <link rel="icon" href="../assets/img/PONG-icon.png">
-    <link rel="stylesheet" href="../assets/css/template.css">
-    <link rel="stylesheet" href="../assets/css/login.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="icon" href="../assets/img/PONG-icon.png">
+  <link rel="stylesheet" href="../assets/css/login.css">
 </head>
 <html>
 <body>
@@ -21,13 +14,13 @@
     <div class="welcome-title">Seja Bem Vindo!</div>
 
     <div class="login-form-container">
-      <form class="col" style="gap: 15px;">
+      <div class="col" style="gap: 15px;">
         <div class="text-center login-logo">PONG</div>
 
         <label class="form-label text-center">INICIAR SESSÃO</label>
 
         <div class="input-wrapper">
-          <input class="login-input text-first" placeholder="Usuário ou Email" type="text" maxlength="60" required>
+          <input id="identifier" class="login-input text-first" autocomplete="off" placeholder="Usuário ou Email" type="text" maxlength="60" required>
         </div>
         
         <div class="input-wrapper">
@@ -38,25 +31,51 @@
         </div>
         <br>
         <div class="row" style="gap: 10px;">
-          <button class="btn btn-second" style="flex: 1"> 
-            <a href="/pages/signup.html" class="link">CADASTRAR</a>
+          <button class="btn btn-third" style="flex: 1" onclick="window.location.href = './signup.html'"> 
+            CADASTRAR
           </button>
-          <button class="btn btn-first" onclick="login()" style="flex: 1">ENTRAR</button>
+          <button class="btn btn-second" onclick="entrar()" style="flex: 1">ENTRAR</button>
         </div>
-      </form>               
+      </div>               
     </div>
   </div>
 
-  <script src="../assets/js/template.js"></script>
+  <script src="../api/controllers/userController.js"></script>
+  <script src="../router/router.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <script src="../assets/js/main.js"></script>
   <script>
-    function toggleSenha() {
-      var passwordInput = document.getElementById("password-input");
+    const toggleSenha = () => {
+      let passwordInput = document.getElementById("password-input");
       
       const eye = document.querySelector('.fa-eye') || document.querySelector('.fa-eye-slash')
       eye.classList.toggle('fa-eye')
       eye.classList.toggle('fa-eye-slash')
 
       passwordInput.type = passwordInput.type === "password" ? "text" : "password"
+    }
+
+    const entrar = async () => {
+      const form = {
+        identifier: document.querySelector('input#identifier').value,
+        password: document.querySelector('input#password-input').value,
+      }
+
+      if (!form.identifier || !form.password) {
+        showAlert('Todos os campos do formulário devem estar preenchidos.', 'error')
+        return
+      }
+
+      const resultado = await login(form)
+
+      if (resultado.status != 200) {
+        showAlert(resultado.message, 'error')
+        return
+      }
+
+      showAlert(resultado.message, 'success')
+
+      setTimeout(() => window.location.href = './', 1000)
     }
   </script>
 </body>

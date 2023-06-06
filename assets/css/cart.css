@@ -50,5 +50,4 @@
     gap: 10px;
     width: clamp(200px, 95%, 700px);
     margin: auto;
-    box-shadow: 10px 0px 10px black;
 }

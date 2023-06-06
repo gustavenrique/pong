@@ -190,7 +190,7 @@ body {
     line-height: 50%;
 }
 
-@media (min-width: 540px) {
+@media (min-width: 550px) {
     .navbar { justify-content: space-between; }
 
     .nav-list {
