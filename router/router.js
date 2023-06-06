@@ -12,7 +12,8 @@ route = route ? route[1] : '/'
 
 let routeObj = routes.find(r => r.path == route || (Array.isArray(r.path) && r.path.includes(route)))
 
-const loggedIn = isLoggedIn().object
+let loggedIn
+(async () => loggedIn = await isLoggedIn().object)()
 
 if (routeObj.requireLogin && !loggedIn)
     window.location.href = '/pages/login.html'
