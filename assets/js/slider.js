@@ -1,4 +1,4 @@
-const slider = (slides, parentSelector) => {
+const slider = (slides, parentSelector, callback = null) => {
     const slider = `
         <div class="slider-container">
             <div class="arrow arrow-left" onclick="sliderArrow('left', '${parentSelector}')">
@@ -15,6 +15,8 @@ const slider = (slides, parentSelector) => {
         </div>`
 
     document.querySelector(parentSelector).innerHTML = slider
+
+    if (callback) callback()
 
     setupSlider(parentSelector)
 }

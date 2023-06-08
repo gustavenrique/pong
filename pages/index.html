@@ -15,8 +15,9 @@
 
     <div id="navbar"></div>
 
-    <section class="main-content">
-      <!-- <div id="anuncios"></div> -->
+    <section class="main-content" style="margin-bottom: 2rem">
+      <div id="anuncios" style="margin-top: 2rem;"></div>
+
       <h3 class="text-first p-10">Recomendados</h3>
       <div id="recomendados"></div>
 
@@ -59,10 +60,10 @@
       const gamesToSlide = (games) => {
         return games.map(game => `
           <div class="slide">
-              <img class="slide-img" src="${game.image}" alt="${game.label}">
+              <img class="slide-img" src="${game.image}" alt="${game.title}">
 
               <div class="slide-info">
-                  <span class="slide-label">${game.label}</span>
+                  <span class="slide-label">${game.title}</span>
                   
                   <div class="row" style='justify-content: space-between; align-items: center;'>
                       <div class="price">R$ ${game.price}</div>
@@ -75,26 +76,56 @@
           </div>`).join("");
       };
 
+      const adsToSlide = (games) => {
+        return games.map(game => `
+          <div class="slide ad">
+              <div class="blur" style="background: url('${game.image}')"></div>
+              <img class="slide-img" src="${game.image}" alt="${game.title}">
+  
+              <div class="ad-info">
+                <div class="ad-info-inner">
+                  <div class='col' style="gap: 15px">
+                    <span class="ad-label">${game.title}</span>
+
+                    <p class="ad-description">${game.description}</p>
+                  </div>
+
+                  <div class='col' style="justify-content: space-between; align-items: center; gap: 15px;">
+                    <div class="price">R$ ${game.price}</div>
+
+                    <div class="btn btn-first" onclick='carrinho(${game.id})' style='pointer-events: auto;'>
+                      <i class="fas fa-shopping-cart"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        `)
+      }
+
       const buscarJogos = async () => {
         loading(true);
 
-        let res = await getGames()
+        let [ responseGames, responseAds ] = await Promise.all([ getGames(), getAds() ])
 
-        loading(false)
-
-        if (res.status != 200) {
-          showAlert(res.message, 'error')
+        if (responseGames.status != 200) {
+          showAlert(responseGames.message, 'error')
           return
         }
 
-        const games = res.object
+        const games = responseGames.object
+        const ads = responseAds.object
 
-        // IMPLEMENTAR MOSTRA DE ANÚNCIOS
+        slider(adsToSlide(ads), "#anuncios", () => {
+          document.querySelector('#anuncios').querySelector('.slider-container').classList.add('ad-container')
+        })
 
-        slider(gamesToSlide(games.slice(0, 8)), "#recomendados");
-        slider(gamesToSlide(games.slice(8, 16)), "#lancamentos");
-        slider(gamesToSlide(games.slice(16, 24)), "#mais-vendidos");
-        slider(gamesToSlide(games.slice(24, 32)), "#mais-populares");
+        slider(gamesToSlide(games.slice(0, 8)), "#recomendados")
+        slider(gamesToSlide(games.slice(8, 16)), "#lancamentos")
+        slider(gamesToSlide(games.slice(16, 24)), "#mais-vendidos")
+        slider(gamesToSlide(games.slice(24, 32)), "#mais-populares")
+
+        loading(false)
       }
 
       buscarJogos()

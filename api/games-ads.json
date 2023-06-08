@@ -1,0 +1,23 @@
+[
+    {
+        "id": 200,
+        "image": "https://www.adrenaline.com.br/wp-content/plugins/seox-image-magick/imagick_convert.php?width=1200&height=545&format=webp&quality=91&imagick=/wp-content/uploads/2022/12/street-fighter-6-3.jpg",
+        "title": "Street Fighter 6",
+        "description": "Aí vem o mais novo desafiante da Capcom! Street Fighter™ 6 será lançado no mundo inteiro em 2 de junho de 2023 e representa a próxima evolução da série Street Fighter™! Street Fighter 6 engloba três modos de jogo distintos, incluindo World Tour, Fighting Ground e Battle Hub.",
+        "price": 219.99
+    },
+    {
+        "id": 201,
+        "image": "https://www.starwarsnewsnet.com/wp-content/uploads/2022/12/Jedi_Survivor_new-banner.jpg",
+        "title": "Star Wars: Jedi Survivor",
+        "description": "A história de Cal Kestis continua em STAR WARS Jedi: Survivor™, uma aventura em terceira pessoa na galáxia.",
+        "price": 275.80
+    },
+    {
+        "id": 202,
+        "image": "https://fyre.cdn.sewest.net/siren/603f664cb763a80019fa90e5/lis-share-image-Utt1Fmw6c.jpg",
+        "title": "Life is Strange: True Colors",
+        "description": "Alex Chen esconde sua maldição: o poder psíquico da Empatia, a habilidade de absorver e manipular emoções. Após a morte de seu irmão em um suposto acidente, Alex precisa lidar com tal poder para descobrir a verdade e revelar segredos do passado.",
+        "price": 299.90
+    }
+]

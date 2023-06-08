@@ -1,3 +1,5 @@
+
+
 // general functions
 const toggleNavList = () => document.querySelector('.sidebar').classList.toggle('sidebar-show')
 

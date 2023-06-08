@@ -2,193 +2,193 @@
     {
         "id": 1,
         "image": "https://images8.alphacoders.com/710/thumbbig-710329.webp",
-        "label": "God of War 4",
+        "title": "God of War 4",
         "price": 159.99
     },
     {
         "id": 2,
         "image": "https://images5.alphacoders.com/394/thumbbig-394511.webp",
-        "label": "The Last of Us",
+        "title": "The Last of Us",
         "price": 159.99
     },
     {
         "id": 3,
         "image": "https://images7.alphacoders.com/532/thumbbig-532406.webp",
-        "label": "Life is Strange",
+        "title": "Life is Strange",
         "price": 159.99
     },
     {
         "id": 4,
         "image": "https://images2.alphacoders.com/127/thumbbig-1276415.webp",
-        "label": "FIFA 23",
+        "title": "FIFA 23",
         "price": 159.99
     },
     {
         "id": 5,
         "image": "https://images7.alphacoders.com/439/thumbbig-439636.webp",
-        "label": "GTA V",
+        "title": "GTA V",
         "price": 159.99
     },
     {
         "id": 6,
         "image": "https://i.insider.com/577ebda7dd0895fd028b4af3?width=800&format=jpeg&auto=webp",
-        "label": "Read Dead Redemption",
+        "title": "Read Dead Redemption",
         "price": 159.99
     },
     {
         "id": 7,
         "image": "https://images7.alphacoders.com/431/thumbbig-431220.webp",
-        "label": "Diablo III",
+        "title": "Diablo III",
         "price": 159.99
     },
     {
         "id": 8,
         "image": "https://images3.alphacoders.com/663/thumbbig-663756.webp",
-        "label": "Gran Turismo",
+        "title": "Gran Turismo",
         "price": 159.99
     },
     {
         "id": 9,
         "image": "https://i.stack.imgur.com/dqVlX.png",
-        "label": "Minecraft",
+        "title": "Minecraft",
         "price": 159.99
     },
     {
         "id": 10,
         "image": "https://www.amd.com/system/files/2021-05/871550-FarCry6-key-art-1920x600.jpg",
-        "label": "Far Cry 6",
+        "title": "Far Cry 6",
         "price": 159.99
     },
     {
         "id": 11,
         "image": "https://i.insider.com/577ebda7dd0895fd028b4af3?width=800&format=jpeg&auto=webp",
-        "label": "Read Dead Redemption",
+        "title": "Read Dead Redemption",
         "price": 159.99
     },
     {
         "id": 12,
         "image": "https://i.insider.com/58c17d116e20041b008b5023?width=800&format=jpeg&auto=webp",
-        "label": "Halo 2",
+        "title": "Halo 2",
         "price": 159.99
     },
     {
         "id": 13,
         "image": "https://images7.alphacoders.com/439/thumbbig-439636.webp",
-        "label": "GTA V",
+        "title": "GTA V",
         "price": 159.99
     },
     {
         "id": 14,
         "image": "https://images2.alphacoders.com/127/thumbbig-1276415.webp",
-        "label": "FIFA 23",
+        "title": "FIFA 23",
         "price": 159.99
     },
     {
         "id": 15,
         "image": "https://images7.alphacoders.com/532/thumbbig-532406.webp",
-        "label": "Life is Strange",
+        "title": "Life is Strange",
         "price": 159.99
     },
     {
         "id": 16,
         "image": "https://wallpapers.com/images/featured/bsz1ur6ls1n3l9tw.jpg",
-        "label": "Fall Guys",
+        "title": "Fall Guys",
         "price": 159.99
     },
     {
         "id": 17,
         "image": "https://cdn.wallpapersafari.com/46/46/Abg2aV.jpg",
-        "label": "Stumble Guys",
+        "title": "Stumble Guys",
         "price": 0
     },
     {
         "id": 18,
         "image": "https://image.winudf.com/v2/image1/ZXUuYmx1ZW5ldHdlYi5iZ2ltYWdlX3ZhbG9yYW50X3NjcmVlbl8wXzE1OTY0MDI0MTZfMDc1/screen-0.webp?fakeurl=1&type=.webp",
-        "label": "Valorant",
+        "title": "Valorant",
         "price": 159.99
     },
     {
         "id": 19,
         "image": "https://www.esportsportal.com/wp-content/uploads/2019/08/League-of-Legends-1-1024x576.jpg",
-        "label": "The League of Legends",
+        "title": "The League of Legends",
         "price": 0
     },
     {
         "id": 20,
         "image": "https://wallpapercave.com/wp/wp12116650.jpg",
-        "label": "Have a Nice Death",
+        "title": "Have a Nice Death",
         "price": 159.99
     },
     {
         "id": 21,
         "image": "https://images.alphacoders.com/789/thumbbig-789452.webp",
-        "label": "Zelda",
+        "title": "Zelda",
         "price": 159.99
     },
     {
         "id": 22,
         "image": "https://images5.alphacoders.com/423/thumbbig-423747.webp",
-        "label": "Sonic",
+        "title": "Sonic",
         "price": 159.99
     },
     {
         "id": 23,
         "image": "https://images7.alphacoders.com/486/thumbbig-486990.webp",
-        "label": "Super Mario 3D Land",
+        "title": "Super Mario 3D Land",
         "price": 159.99
     },
     {
         "id": 24,
         "image": "https://images.alphacoders.com/109/thumbbig-1091086.webp",
-        "label": "Free Fire",
+        "title": "Free Fire",
         "price": 0
     },
     {
         "id": 25,
         "image": "https://images5.alphacoders.com/816/816719.jpg",
-        "label": "PUBG",
+        "title": "PUBG",
         "price": 0
     },
     {
         "id": 26,
         "image": "https://s2-ge.glbimg.com/LoeYZbeKccSuS-1sacaXh12xmoE=/1200x/smart/filters:cover():strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2019/s/W/rPsLN6SyAp4q7AcIBYTQ/1541419312747-tr-2-wallpaper.png",
-        "label": "CS-GO",
+        "title": "CS-GO",
         "price": 0
     },
     {
         "id": 27,
         "image": "https://www.gameuidatabase.com/uploads/Orcs-Must-Die-308012021-113407-55435.jpg",
-        "label": "Orcs Must Die!3",
+        "title": "Orcs Must Die!3",
         "price": 25
     },
     {
         "id": 28,
         "image": "https://www.oficinadanet.com.br/imagens/post/17068/capa-no-mans-sky.jpg",
-        "label": "No Man's Sky",
+        "title": "No Man's Sky",
         "price": 81
     },
     {
         "id": 29,
         "image": "https://meups.com.br/wp-content/uploads/2021/02/LITTLE-NIGHTMARES-DESTACADA.jpg",
-        "label": "Little Nightmares 2",
+        "title": "Little Nightmares 2",
         "price": 42
     },
     {
         "id": 30,
         "image": "https://assets.nuuvem.com/image/upload/v1/products/628a60ee48479300174bcd23/sharing_images/o9h0euhbbnctdbsvkhtt.jpg",
-        "label": "Dayz",
+        "title": "Dayz",
         "price": 72
     },
     {
         "id": 31,
         "image": "https://cdn1.epicgames.com/angelonia/offer/WD2-STD-Capsule-1920x1080-2a2ed8c8265ab31156be8ab48a93dc212d5c7095.jpg",
-        "label": "Wacth Dogs 2",
+        "title": "Wacth Dogs 2",
         "price": 22
     },
     {
         "id": 32,
         "image": "https://lordsofgaming.net/wp-content/uploads/2020/07/watch-dog-legions-featured-image.jpg",
-        "label": "Wacth Dogs - Legion",
+        "title": "Wacth Dogs - Legion",
         "price": 38
     }
 ]
