@@ -1,24 +1,24 @@
-
+import { isLoggedIn } from '../../api/controllers/userController.js'
 
 // general functions
-const toggleNavList = () => document.querySelector('.sidebar').classList.toggle('sidebar-show')
+export const toggleNavList = () => document.querySelector('.sidebar').classList.toggle('sidebar-show')
 
-const loading = isLoading => {
+export const loading = isLoading => {
     document.querySelector(".spinner-wrapper").classList[isLoading ? "add" : "remove"]("show")
 }
 
-const logOut = async () => {
+export const logOut = async () => {
     let res = await signout()
 
     if (res.object)
         window.location.href = './'
 }
 
-const renderComponent = async (componentUrl, elementId) => {
+export const renderComponent = async (componentUrl, selector) => {
     try {
         let componentHtml = await (await fetch(componentUrl)).text()
 
-        document.getElementById(elementId).innerHTML = componentHtml
+        document.querySelector(selector).insertAdjacentHTML('beforeend', componentHtml)
 
         return new Promise(resolve => resolve())
     } catch (err) {
@@ -29,23 +29,27 @@ const renderComponent = async (componentUrl, elementId) => {
     }
 }
 
-const showAlert = (message, type, duration = 3000) =>
-    Toastify({
-        text: message || 'Ocorreu um erro não identificado.',
-        duration: duration,
-        stopOnFocus: true, // Prevents dismissing of toast on hover
-        style: {
-            background: type == 'error' ? "#f44336" : type == 'success' ? '#4CAF50' : 'var(--first)',
-            boxShadow: '0 0 5px var(--third)'
-        }
-    }).showToast()
+const setup = async () => {
+    try {
+        let [ headHtml, scriptsHtml ] = await Promise.all([
+            await (await fetch('../components/head.html')).text(),
+            await (await fetch('../components/scripts.html')).text()
+        ])
+    
+        document.head.insertAdjacentHTML('beforeend', headHtml)
+        document.body.insertAdjacentHTML('beforeend', scriptsHtml)
+    } catch (err) {
+        console.error(err)
+        showAlert('Ops! Ocorreu um erro no carregamento de componentes.', 'error')
+    }
+}
+
 
 // dynamic rendering of generic components
-if (document.querySelector('#head'))
-    renderComponent('../components/head.html', 'head')
+setup()
 
 if (document.querySelector('body > #navbar'))
-    renderComponent('../components/navbar.html', 'navbar')
+    renderComponent('../components/navbar.html', '#navbar')
         .then(async () => {
             const navbar = document.querySelector('.navbar > .nav-list')
             const sidebar = document.querySelector('.navbar > .sidebar')
@@ -76,4 +80,4 @@ if (document.querySelector('body > #navbar'))
         })
 
 if (document.querySelector('body > #footer'))
-    renderComponent('../components/footer.html', 'footer')
+    renderComponent('../components/footer.html', '#footer')

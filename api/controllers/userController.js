@@ -1,4 +1,7 @@
-const isLoggedIn = async () => {
+import { response } from '../utils.js'
+import { User } from '../models/user.js'
+
+export const isLoggedIn = async () => {
     try {
         const user = JSON.parse(localStorage.getItem('pong_session'))
     
@@ -11,7 +14,7 @@ const isLoggedIn = async () => {
     }
 }
 
-const login = async req => {
+export const login = async req => {
     try {
         if (!req.identifier || !req.password)
             return response(400, 'Todos os campos do formulário devem estar preenchidos.')
@@ -38,7 +41,7 @@ const login = async req => {
     }
 }
 
-const signup = async req => {
+export const signup = async req => {
     try {
         if (!req.username || !req.email || !req.password || !req.confirm)
             return response(400, 'Todos os campos do formulário devem estar preenchidos.')
@@ -73,7 +76,7 @@ const signup = async req => {
     }
 }
 
-const signout = () => {
+export const signout = () => {
     try {
         localStorage.removeItem('pong_session')
     
@@ -85,22 +88,9 @@ const signout = () => {
 }
 
 // 'private' methods
-const response = (status, msg, obj = null) => ({ object: obj, status, message: msg })
-
 const hashPassword = async password => {
     const buffer = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(password));
     const hashArray = Array.from(new Uint8Array(buffer));
 
     return hashArray.map(byte => byte.toString(16).padStart(2, '0')).join('');
-}
-
-// classes
-class User {
-    constructor(id, username, email, password, createdAt) {
-        this.id = id
-        this.username = username
-        this.email = email
-        this.password = password
-        this.createdAt = createdAt
-    }
 }

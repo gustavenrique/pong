@@ -1,3 +1,5 @@
+import { isLoggedIn } from '../api/controllers/userController.js'
+
 const routes = [
     { path: '/login', requireLogin: false },
     { path: '/signup', requireLogin: false },

@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../assets/css/slider.css" />
   </head>
   <body class="col" id="top">
-    <div class="spinner-wrapper">
+    <div class="spinner-wrapper show">
       <i class="fas fa-circle-notch fa-spin fa-3x spinner"></i>
     </div>
 
@@ -32,16 +32,17 @@
     </section>
 
     <div id="footer"></div>
-
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-    <script src="../api/controllers/cartController.js"></script>
-    <script src="../api/controllers/gameController.js"></script>
-    <script src="../api/controllers/userController.js"></script>
-    <script src="../assets/js/main.js"></script>
+   
     <script src="../assets/js/slider.js"></script>
-    <script src="../router/router.js"></script>
     <script>
-      const carrinho = async id => {
+      let carrinho;
+    </script>
+    <script type="module">
+      import { getGames, getAds } from '../api/controllers/gameController.js'
+      import { addToCart } from '../api/controllers/cartController.js'
+      import { loading } from '../assets/js/main.js' 
+
+      carrinho = async id => {
         let res = await addToCart(id);
 
         if (res.status == 500) {
@@ -104,7 +105,7 @@
       }
 
       const buscarJogos = async () => {
-        loading(true);
+        loading(true)
 
         let [ responseGames, responseAds ] = await Promise.all([ getGames(), getAds() ])
 

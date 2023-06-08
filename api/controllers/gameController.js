@@ -1,4 +1,6 @@
-const getGames = async () => {
+import { response } from '../utils.js'
+
+export const getGames = async () => {
     try {
         const games = await (await fetch("../api/games.json")).json()
 
@@ -9,7 +11,7 @@ const getGames = async () => {
     }
 }
 
-const getAds = async () => {
+export const getAds = async () => {
     try {
         const games = await (await fetch("../api/games-ads.json")).json()
 

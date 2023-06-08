@@ -1,0 +1,1 @@
+export const response = (status, msg, obj = null) => ({ object: obj, status, message: msg })

@@ -1,4 +1,7 @@
-const addToCart = async gameId => {
+import { response } from '../utils.js'
+import { isLoggedIn } from './userController.js'
+
+export const addToCart = async gameId => {
     try {
         const userSession = (await isLoggedIn()).object
 
