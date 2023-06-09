@@ -1,4 +1,5 @@
 import { isLoggedIn } from '../../api/controllers/userController.js'
+import Toastify from '../../components/toastify/toastify.js'
 
 // general functions
 export const toggleNavList = () => document.querySelector('.sidebar').classList.toggle('sidebar-show')
@@ -29,6 +30,19 @@ export const renderComponent = async (componentUrl, selector) => {
     }
 }
 
+export const showAlert = (message, type, duration = 3000) => {
+    Toastify({
+        text: message || 'Ocorreu um erro não identificado.',
+        duration: duration,
+        stopOnFocus: true, // Prevents dismissing of toast on hover
+        position: 'right',
+        style: {
+            background: type == 'error' ? "#f44336" : type == 'success' ? '#4CAF50' : 'var(--first)',
+            boxShadow: '0 0 5px var(--third)'
+        }
+    }).showToast()
+}
+
 const setup = async () => {
     try {
         let [ headHtml, scriptsHtml ] = await Promise.all([
@@ -37,7 +51,7 @@ const setup = async () => {
         ])
     
         document.head.insertAdjacentHTML('beforeend', headHtml)
-        document.body.insertAdjacentHTML('beforeend', scriptsHtml)
+        document.body.insertAdjacentHTML('afterbegin', scriptsHtml)
     } catch (err) {
         console.error(err)
         showAlert('Ops! Ocorreu um erro no carregamento de componentes.', 'error')

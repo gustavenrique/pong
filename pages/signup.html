@@ -58,12 +58,14 @@
     </div>
   </div>
 
-  <script src="../api/controllers/userController.js"></script>
-  <script src="../router/router.js"></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-  <script src="../assets/js/main.js"></script>
   <script>
-    const toggleSenha = id => {
+    let toggleSenha, cadastrar
+  </script>
+  <script type="module">
+    import { showAlert, loading } from '../assets/js/main.js'
+    import { signup } from '../api/controllers/userController.js'
+
+    toggleSenha = id => {
       let passwordInput = document.getElementById(id)
 
       const eye = passwordInput.parentNode.querySelector('.eye-btn-wrapper > .fa-eye') || document.querySelector('.fa-eye-slash')
@@ -73,7 +75,7 @@
       passwordInput.type = passwordInput.type === "password" ? "text" : "password"
     }
 
-    const cadastrar = async () => {
+    cadastrar = async () => {
       const form = {
         username: document.querySelector('input#username').value,
         email: document.querySelector('input#email').value,
@@ -95,6 +97,8 @@
       }
 
       showAlert(resultado.message, 'success')
+
+      loading(true)
 
       setTimeout(() => window.location.href = './login.html', 1000)
     }

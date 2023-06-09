@@ -23,12 +23,11 @@
         position: absolute;
         background-size: cover;
         background-position: center;
-        filter: blur(10px) brightness(70%);
+        filter: blur(8px) brightness(70%);
     }
 
     .ad > .slide-img {
         width: clamp(300px, 100%, 1200px) !important;
-        z-index: 2;
         position: relative;
     }
 }

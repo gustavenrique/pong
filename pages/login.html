@@ -40,12 +40,14 @@
     </div>
   </div>
 
-  <script src="../api/controllers/userController.js"></script>
-  <script src="../router/router.js"></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-  <script src="../assets/js/main.js"></script>
   <script>
-    const toggleSenha = () => {
+    let toggleSenha, entrar
+  </script>
+  <script type="module">
+    import { login } from '../api/controllers/userController.js'
+    import { showAlert } from '../assets/js/main.js'
+
+    toggleSenha = () => {
       let passwordInput = document.getElementById("password-input");
       
       const eye = document.querySelector('.fa-eye') || document.querySelector('.fa-eye-slash')
@@ -55,7 +57,7 @@
       passwordInput.type = passwordInput.type === "password" ? "text" : "password"
     }
 
-    const entrar = async () => {
+    entrar = async () => {
       const form = {
         identifier: document.querySelector('input#identifier').value,
         password: document.querySelector('input#password-input').value,

@@ -32,15 +32,15 @@
     </section>
 
     <div id="footer"></div>
-   
+
     <script src="../assets/js/slider.js"></script>
     <script>
-      let carrinho;
+      let carrinho
     </script>
     <script type="module">
       import { getGames, getAds } from '../api/controllers/gameController.js'
       import { addToCart } from '../api/controllers/cartController.js'
-      import { loading } from '../assets/js/main.js' 
+      import { loading, showAlert, logOut } from '../assets/js/main.js' // ALL PAGES MUST HAVE ACCESS to logOut
 
       carrinho = async id => {
         let res = await addToCart(id);
