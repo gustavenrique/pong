@@ -1,8 +1,8 @@
-import { response } from '../utils.js'
+import { response } from '/api/utils.js'
 
 export const getGames = async () => {
     try {
-        const games = await (await fetch("../api/games.json")).json()
+        const games = await (await fetch("/api/games.json")).json()
 
         return response(200, 'Games buscados com sucesso!', games)
     } catch (err) {
@@ -13,7 +13,7 @@ export const getGames = async () => {
 
 export const getAds = async () => {
     try {
-        const games = await (await fetch("../api/games-ads.json")).json()
+        const games = await (await fetch("/api/games-ads.json")).json()
 
         return response(200, 'Games para anúncios buscados com sucesso!', games)
     } catch (err) {

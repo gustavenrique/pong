@@ -1,5 +1,5 @@
-import { response } from '../utils.js'
-import { isLoggedIn } from './userController.js'
+import { response } from '/api/utils.js'
+import { isLoggedIn } from '/api/controllers/userController.js'
 
 export const addToCart = async gameId => {
     try {
@@ -13,12 +13,11 @@ export const addToCart = async gameId => {
         let user = users.find(u => u.id == userSession.id)
 
         if (user) {
-            let userCart = user.cart
-
-            if (userCart && userCart.length) {
+            if (user.cart && user.cart.length) {
                 let alreadyAdded = user.cart.find(id => id == gameId)
-                
-                if (!alreadyAdded) user.cart = [ ...user.cart ]
+
+                if (!alreadyAdded) 
+                    user.cart = [ ...user.cart, gameId ]
                 else 
                     return response(400, 'O jogo já está no carrinho.')
             } else

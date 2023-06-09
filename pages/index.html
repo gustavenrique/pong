@@ -5,42 +5,43 @@
 
     <title>Pong - Home</title>
 
-    <link rel="stylesheet" href="../assets/css/index.css" />
-    <link rel="stylesheet" href="../assets/css/slider.css" />
+    <link rel="stylesheet" href="/assets/css/index.css" />
+    <link rel="stylesheet" href="/components/slider/slider.css" />
+    <link rel="stylesheet" href="/assets/css/pong.css">  
   </head>
   <body class="col" id="top">
-    <div class="spinner-wrapper show">
-      <i class="fas fa-circle-notch fa-spin fa-3x spinner"></i>
-    </div>
-
     <div id="navbar"></div>
 
-    <section class="main-content" style="margin-bottom: 2rem">
-      <div id="anuncios" style="margin-top: 2rem;"></div>
-
-      <h3 class="text-first p-10">Recomendados</h3>
-      <div id="recomendados"></div>
-
-      <h3 class="text-first p-10" style="margin-top: 2rem;">Lançamentos</h3>
-      <div id="lancamentos"></div>
-
-      <h3 class="text-first p-10" style="margin-top: 2rem;">Mais Vendidos</h3>
-      <div id="mais-vendidos"></div>
-
-      <h3 class="text-first p-10" style="margin-top: 2rem;">Mais Populares</h3>
-      <div id="mais-populares"></div>
+    <section class="main-content">
+      <div class="home">
+        <div id="anuncios" style="margin-top: 1rem;"></div>
+  
+        <h3 class="text-first p-10">Recomendados</h3>
+        <div id="recomendados"></div>
+  
+        <h3 class="text-first p-10" style="margin-top: 2rem;">Lançamentos</h3>
+        <div id="lancamentos"></div>
+  
+        <h3 class="text-first p-10" style="margin-top: 2rem;">Mais Vendidos</h3>
+        <div id="mais-vendidos"></div>
+  
+        <h3 class="text-first p-10" style="margin-top: 2rem;">Mais Populares</h3>
+        <div id="mais-populares"></div>
+      </div>
     </section>
 
     <div id="footer"></div>
 
-    <script src="../assets/js/slider.js"></script>
+    <script src="/components/slider/slider.js"></script>
     <script>
-      let carrinho
+      let carrinho, logOut
     </script>
     <script type="module">
-      import { getGames, getAds } from '../api/controllers/gameController.js'
-      import { addToCart } from '../api/controllers/cartController.js'
-      import { loading, showAlert, logOut } from '../assets/js/main.js' // ALL PAGES MUST HAVE ACCESS to logOut
+      import { getGames, getAds } from '/api/controllers/gameController.js'
+      import { addToCart } from '/api/controllers/cartController.js'
+      import { loading, showAlert, logOut as signOut } from '/assets/js/main.js'
+
+      logOut = signOut
 
       carrinho = async id => {
         let res = await addToCart(id);
@@ -75,7 +76,7 @@
                   </div>
               </div>
           </div>`).join("");
-      };
+      }
 
       const adsToSlide = (games) => {
         return games.map(game => `
@@ -101,11 +102,11 @@
                 </div>
               </div>
           </div>
-        `)
+        `).join('')
       }
 
       const buscarJogos = async () => {
-        loading(true)
+        loading(true, 'section.main-content > .home')
 
         let [ responseGames, responseAds ] = await Promise.all([ getGames(), getAds() ])
 
@@ -117,16 +118,16 @@
         const games = responseGames.object
         const ads = responseAds.object
 
-        slider(adsToSlide(ads), "#anuncios", () => {
+        Slider(adsToSlide(ads), "#anuncios", () => {
           document.querySelector('#anuncios').querySelector('.slider-container').classList.add('ad-container')
         })
 
-        slider(gamesToSlide(games.slice(0, 8)), "#recomendados")
-        slider(gamesToSlide(games.slice(8, 16)), "#lancamentos")
-        slider(gamesToSlide(games.slice(16, 24)), "#mais-vendidos")
-        slider(gamesToSlide(games.slice(24, 32)), "#mais-populares")
+        Slider(gamesToSlide(games.slice(0, 8)), "#recomendados")
+        Slider(gamesToSlide(games.slice(8, 16)), "#lancamentos")
+        Slider(gamesToSlide(games.slice(16, 24)), "#mais-vendidos")
+        Slider(gamesToSlide(games.slice(24, 32)), "#mais-populares")
 
-        loading(false)
+        loading(false, 'section.main-content > .home')
       }
 
       buscarJogos()

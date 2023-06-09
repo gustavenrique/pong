@@ -1,25 +1,39 @@
-import { isLoggedIn } from '../../api/controllers/userController.js'
-import Toastify from '../../components/toastify/toastify.js'
+import { isLoggedIn, signout } from '/api/controllers/userController.js'
+import Toastify from '/components/toastify/toastify.js'
 
 // general functions
 export const toggleNavList = () => document.querySelector('.sidebar').classList.toggle('sidebar-show')
 
-export const loading = isLoading => {
-    document.querySelector(".spinner-wrapper").classList[isLoading ? "add" : "remove"]("show")
+export const loading = async (isLoading, hideElement = '') => {
+    let spinner = document.querySelector(".spinner-wrapper")
+
+    if (!spinner) {
+        await renderComponent("/components/spinner.html", 'body', 'afterbegin')
+
+        spinner = document.querySelector('.spinner-wrapper')
+    }
+        
+    spinner.classList[isLoading ? "add" : "remove"]("show")
+
+    if (hideElement) {
+        let el = document.querySelector(hideElement)
+
+        if (el) el.classList[isLoading ? "add" : "remove"]("d-none")
+    }
 }
 
 export const logOut = async () => {
     let res = await signout()
 
     if (res.object)
-        window.location.href = './'
+        window.location.href = '/pages/'
 }
 
-export const renderComponent = async (componentUrl, selector) => {
+export const renderComponent = async (componentUrl, selector, position = 'beforeend') => {
     try {
         let componentHtml = await (await fetch(componentUrl)).text()
 
-        document.querySelector(selector).insertAdjacentHTML('beforeend', componentHtml)
+        document.querySelector(selector).insertAdjacentHTML(position, componentHtml)
 
         return new Promise(resolve => resolve())
     } catch (err) {
@@ -43,27 +57,11 @@ export const showAlert = (message, type, duration = 3000) => {
     }).showToast()
 }
 
-const setup = async () => {
-    try {
-        let [ headHtml, scriptsHtml ] = await Promise.all([
-            await (await fetch('../components/head.html')).text(),
-            await (await fetch('../components/scripts.html')).text()
-        ])
-    
-        document.head.insertAdjacentHTML('beforeend', headHtml)
-        document.body.insertAdjacentHTML('afterbegin', scriptsHtml)
-    } catch (err) {
-        console.error(err)
-        showAlert('Ops! Ocorreu um erro no carregamento de componentes.', 'error')
-    }
-}
-
 
 // dynamic rendering of generic components
-setup()
 
 if (document.querySelector('body > #navbar'))
-    renderComponent('../components/navbar.html', '#navbar')
+    renderComponent('/components/navbar.html', '#navbar')
         .then(async () => {
             const navbar = document.querySelector('.navbar > .nav-list')
             const sidebar = document.querySelector('.navbar > .sidebar')
@@ -94,4 +92,7 @@ if (document.querySelector('body > #navbar'))
         })
 
 if (document.querySelector('body > #footer'))
-    renderComponent('../components/footer.html', '#footer')
+    renderComponent('/components/footer.html', '#footer')
+
+
+renderComponent('/components/head.html', 'head', 'afterbegin')

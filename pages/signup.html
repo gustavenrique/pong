@@ -89,16 +89,17 @@
         return
       }
 
+      loading(true)
+
       const resultado = await signup(form)
 
       if (resultado.status != 200) {
         showAlert(resultado.message, 'error')
         return
       }
+      loading(false)
 
       showAlert(resultado.message, 'success')
-
-      loading(true)
 
       setTimeout(() => window.location.href = './login.html', 1000)
     }

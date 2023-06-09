@@ -1,5 +1,5 @@
-import { response } from '../utils.js'
-import { User } from '../models/user.js'
+import { response } from '/api/utils.js'
+import { User } from '/api/models/user.js'
 
 export const isLoggedIn = async () => {
     try {

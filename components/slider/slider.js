@@ -1,4 +1,4 @@
-const slider = (slides, parentSelector, callback = null) => {
+const Slider = (slides, parentSelector, callback = null) => {
     const slider = `
         <div class="slider-container">
             <div class="arrow arrow-left" onclick="sliderArrow('left', '${parentSelector}')">
