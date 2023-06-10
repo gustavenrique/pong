@@ -1,27 +1,45 @@
 import { isLoggedIn } from '/api/controllers/userController.js'
 
 const routes = [
-    { path: '/login', requireLogin: false },
-    { path: '/signup', requireLogin: false },
-    { path: ['/index', '/', '/home'], requireLogin: false },
-    { path: '/cart', requireLogin: true },
-    { path: '/wish-list', requireLogin: true },
-    { path: '/privacy', requireLogin: true },
+    { 
+        path: '/login',
+        require_logout: true 
+    },
+    { 
+        path: '/signup', 
+        require_logout: true 
+    },
+    { 
+        path: ['/index', '/', '/home'], 
+        require_login: false 
+    },
+    { 
+        path: '/cart', 
+        require_login: true 
+    },
+    { 
+        path: '/wish-list', 
+        require_login: true 
+    },
+    { 
+        path: '/terms', 
+        require_login: true 
+    },
 ]
 
-let route = (/(\/[^/]+)\.html$/.exec(window.location.pathname))
-route = route ? route[1] : '/'
+let route = window.location.pathname.match(/\/pages\/([^/]+)/)
+route = route ? '/' + route[1] : '/'
 
 let routeObj = routes.find(r => r.path == route || (Array.isArray(r.path) && r.path.includes(route)))
 
 const verificarLogin = async () => {
     let loggedIn = (await isLoggedIn()).object
     
-    if (routeObj.requireLogin && !loggedIn)
-        window.location.href = '/pages/login.html'
-    
-    else if ((routeObj.path == '/login' || routeObj.path == '/signup') && loggedIn)
-        window.location.href = '/pages/'
+    if (routeObj.require_login && !loggedIn)
+        window.location.href = '/pages/login'
+
+    else if (routeObj.require_logout && loggedIn)
+        window.location.href = '/pages/home'
 }
 
 verificarLogin()
