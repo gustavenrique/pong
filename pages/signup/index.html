@@ -6,6 +6,8 @@
 
   <link rel="stylesheet" href="/pages/login/login.css">
   <link rel="stylesheet" href="/assets/css/pong.css">
+  <link rel="stylesheet" href="/pages/login/login.css">
+  <link rel="stylesheet" href="/assets/css/pong.css">
 </head>
 <html>
 <body>
@@ -58,10 +60,13 @@
   </div>
 
   <script type='module' src='/router/router.js'></script>
+  <script type='module' src='/router/router.js'></script>
   <script>
     let toggleSenha, cadastrar
   </script>
   <script type="module">
+    import { showAlert, loading } from '/assets/js/main.js'
+    import { signup } from '/api/controllers/userController.js'
     import { showAlert, loading } from '/assets/js/main.js'
     import { signup } from '/api/controllers/userController.js'
 

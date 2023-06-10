@@ -44,6 +44,11 @@ const verificarLogin = async () => {
 
     else if (routeObj.require_logout && loggedIn)
         window.location.href = '/pages/home'
+    if (routeObj.require_login && !loggedIn)
+        window.location.href = '/pages/login'
+
+    else if (routeObj.require_logout && loggedIn)
+        window.location.href = '/pages/home'
 }
 
 verificarLogin()
