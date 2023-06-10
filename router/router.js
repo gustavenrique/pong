@@ -2,6 +2,10 @@ import { isLoggedIn } from '/api/controllers/userController.js'
 
 const routes = [
     { 
+        path: '/not-found', 
+        require_login: false
+    },
+    { 
         path: '/login',
         require_logout: true 
     },
@@ -23,7 +27,7 @@ const routes = [
     },
     { 
         path: '/terms', 
-        require_login: true 
+        require_login: false 
     },
 ]
 

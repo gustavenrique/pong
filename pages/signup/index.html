@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <div id="head"></div>
-
+  <meta charset="UTF-8">
   <title>Pong - Cadastro</title>
 
   <link rel="stylesheet" href="/pages/login/login.css">
@@ -44,12 +43,12 @@
         <div class="row align-items-center" style="margin: 10px 0; gap: 10px;">
           <input id="accept" type="checkbox">
           <label>
-            <a href="/pages/terms.html" class="link">Li e aceito os termos e condições</a>
+            <a href="/pages/terms" class="link">Li e aceito os termos e condições</a>
           </label>
         </div>
 
         <div class="row" style="gap: 10px;">
-          <button class="btn btn-third" style="flex: 1" onclick="window.location.href = '/pages/login.html'"> 
+          <button class="btn btn-third" style="flex: 1" onclick="window.location.href = '/pages/login'"> 
             ENTRAR
           </button>
           <button class="btn btn-second" onclick="cadastrar()" style="flex: 1">CADASTRAR</button>
@@ -102,7 +101,7 @@
 
       showAlert(resultado.message, 'success')
 
-      setTimeout(() => window.location.href = '/pages/login.html', 1000)
+      setTimeout(() => window.location.href = '/pages/login', 1000)
     }
   </script>
 </body>
