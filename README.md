@@ -122,7 +122,7 @@ De maneira geral, os principais componentes – como buttons, inputs, divs e tex
 ## Color system
 ### CSS Variables
 
-As variáveis citadas nesta seção são encontradas no './assets/css/pong.css'
+As variáveis citadas nesta seção são encontradas no '/assets/css/pong.css'
 
 ㅤA organização das variáveis de cores foi feita de modo a flexibilizar uma eventual implementação da feature de dark/light mode switch. Desse modo, segue a explicação do funcionamento delas:
 

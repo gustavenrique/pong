@@ -5,8 +5,8 @@
 
   <title>Pong - Cadastro</title>
 
-  <link rel="icon" href="../assets/img/PONG-icon.png">
-  <link rel="stylesheet" href="../assets/css/login.css">
+  <link rel="stylesheet" href="/pages/login/login.css">
+  <link rel="stylesheet" href="/assets/css/pong.css">
 </head>
 <html>
 <body>
@@ -44,12 +44,12 @@
         <div class="row align-items-center" style="margin: 10px 0; gap: 10px;">
           <input id="accept" type="checkbox">
           <label>
-            <a href="./privacy.html" class="link">Li e aceito os termos e condições</a>
+            <a href="/pages/terms.html" class="link">Li e aceito os termos e condições</a>
           </label>
         </div>
 
         <div class="row" style="gap: 10px;">
-          <button class="btn btn-third" style="flex: 1" onclick="window.location.href = './login.html'"> 
+          <button class="btn btn-third" style="flex: 1" onclick="window.location.href = '/pages/login.html'"> 
             ENTRAR
           </button>
           <button class="btn btn-second" onclick="cadastrar()" style="flex: 1">CADASTRAR</button>
@@ -58,12 +58,13 @@
     </div>
   </div>
 
+  <script type='module' src='/router/router.js'></script>
   <script>
     let toggleSenha, cadastrar
   </script>
   <script type="module">
-    import { showAlert, loading } from '../assets/js/main.js'
-    import { signup } from '../api/controllers/userController.js'
+    import { showAlert, loading } from '/assets/js/main.js'
+    import { signup } from '/api/controllers/userController.js'
 
     toggleSenha = id => {
       let passwordInput = document.getElementById(id)
@@ -101,7 +102,7 @@
 
       showAlert(resultado.message, 'success')
 
-      setTimeout(() => window.location.href = './login.html', 1000)
+      setTimeout(() => window.location.href = '/pages/login.html', 1000)
     }
   </script>
 </body>

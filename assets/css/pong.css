@@ -71,13 +71,14 @@ body {
 
 /* ########## NAVBAR ########## */
 .navbar {
-    position: absolute;
+    position: fixed;
     top: 0;
     width: 100%;
     background-color: var(--third);
     padding: 1rem !important;
     display: flex;
     align-items: center;
+    z-index: 1000;
 }
 
 .logo:hover { transform: translateX(5px); }

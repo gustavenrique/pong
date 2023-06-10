@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <div id="head"></div>
+
+    <title>Pong - Home</title>
+
+    <link rel="stylesheet" href="/pages/home/home.css" />
+    <link rel="stylesheet" href="/components/slider/slider.css" />
+    <link rel="stylesheet" href="/assets/css/pong.css">  
+  </head>
+  <body class="col" id="top">
+    <div id="navbar"></div>
+
+    <section class="main-content">
+      <div class="home">
+        <div id="anuncios" style="margin-top: 1rem;"></div>
+  
+        <h3 class="text-first p-10">Recomendados</h3>
+        <div id="recomendados"></div>
+  
+        <h3 class="text-first p-10" style="margin-top: 2rem;">Lançamentos</h3>
+        <div id="lancamentos"></div>
+  
+        <h3 class="text-first p-10" style="margin-top: 2rem;">Mais Vendidos</h3>
+        <div id="mais-vendidos"></div>
+  
+        <h3 class="text-first p-10" style="margin-top: 2rem;">Mais Populares</h3>
+        <div id="mais-populares"></div>
+      </div>
+    </section>
+
+    <div id="footer"></div>
+
+    <script type="module" src="/router/router.js"></script>
+    <script type="module" src="/assets/js/main.js"></script>
+    <script src="/components/slider/slider.js"></script>
+    <script>
+      let carrinho
+    </script>
+    <script type="module">
+      import { getGames, getAds } from '/api/controllers/gameController.js'
+      import { addToCart } from '/api/controllers/cartController.js'
+      import { loading, showAlert } from '/assets/js/main.js'
+
+      carrinho = async id => {
+        let res = await addToCart(id);
+
+        if (res.status == 500) {
+          showAlert(res.message, 'error')
+          return
+        }
+
+        if (res.status == 400) {
+          showAlert(res.message)
+          return
+        }
+
+        showAlert(res.message, 'success')
+      }
+
+      const gamesToSlide = (games) => {
+        return games.map(game => `
+          <div class="slide">
+              <img class="slide-img" src="${game.image}" alt="${game.title}">
+
+              <div class="slide-info">
+                  <span class="slide-label">${game.title}</span>
+                  
+                  <div class="row" style='justify-content: space-between; align-items: center;'>
+                      <div class="price">R$ ${game.price}</div>
+
+                      <div class="btn btn-first" onclick='carrinho(${game.id})' style='pointer-events: auto;'>
+                          <i class="fas fa-shopping-cart"></i>
+                      </div>
+                  </div>
+              </div>
+          </div>`).join("");
+      }
+
+      const adsToSlide = (games) => {
+        return games.map(game => `
+          <div class="slide ad">
+              <div class="blur" style="background: url('${game.image}')"></div>
+              <img class="slide-img" src="${game.image}" alt="${game.title}">
+  
+              <div class="ad-info">
+                <div class="ad-info-inner">
+                  <div class='col' style="gap: 15px">
+                    <span class="ad-label">${game.title}</span>
+
+                    <p class="ad-description">${game.description}</p>
+                  </div>
+
+                  <div class='col' style="justify-content: space-between; align-items: center; gap: 15px;">
+                    <div class="price">R$ ${game.price}</div>
+
+                    <div class="btn btn-first" onclick='carrinho(${game.id})' style='pointer-events: auto;'>
+                      <i class="fas fa-shopping-cart"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        `).join('')
+      }
+
+      const buscarJogos = async () => {
+        loading(true, 'section.main-content > .home')
+
+        let [ responseGames, responseAds ] = await Promise.all([ getGames(), getAds() ])
+
+        if (responseGames.status != 200) {
+          showAlert(responseGames.message, 'error')
+          return
+        }
+
+        const games = responseGames.object
+        const ads = responseAds.object
+
+        Slider(adsToSlide(ads), "#anuncios", () => {
+          document.querySelector('#anuncios').querySelector('.slider-container').classList.add('ad-container')
+        })
+
+        Slider(gamesToSlide(games.slice(0, 8)), "#recomendados")
+        Slider(gamesToSlide(games.slice(8, 16)), "#lancamentos")
+        Slider(gamesToSlide(games.slice(16, 24)), "#mais-vendidos")
+        Slider(gamesToSlide(games.slice(24, 32)), "#mais-populares")
+
+        loading(false, 'section.main-content > .home')
+      }
+
+      buscarJogos()
+    </script>
+  </body>
+</html>

@@ -6,7 +6,7 @@ export const addToCart = async gameId => {
         const userSession = (await isLoggedIn()).object
 
         if (!userSession)
-            window.location.href = './login.html'
+            window.location.href = '/pages/login.html'
 
         let users = await JSON.parse(localStorage.getItem('pong_user'))
 
