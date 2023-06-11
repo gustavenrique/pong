@@ -15,6 +15,14 @@
     text-align: center;
     font-size: 2.5rem;
     animation: up-and-down 1.25s linear infinite;
+    transition: all .5s;
+    opacity: .5;
+    cursor: pointer;
+}
+
+.go-down:hover {
+    opacity: 1;
+    font-size: 3rem !important;
 }
 
 @keyframes up-and-down {

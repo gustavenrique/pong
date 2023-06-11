@@ -5,7 +5,7 @@
     <title>PongCoin</title>
 
     <link rel="stylesheet" href="/assets/css/pong.css" />
-    <link rel="stylesheet" href="./pong-coin.css" />
+    <link rel="stylesheet" href="/pages/pong-coin/pong-coin.css" />
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r126/three.min.js"
       integrity="sha512-n8IpKWzDnBOcBhRlHirMZOUvEq2bLRMuJGjuVqbzUJwtTsgwOgK5aS0c1JA647XWYfqvXve8k3PtZdzpipFjgg=="
@@ -24,13 +24,13 @@
         <div class='three-info'>
             <div class="title">Pong-Coin</div>
     
-            <div class="go-down">
+            <a class="go-down" href="#pong-coin-info">
               <i class="fas fa-arrow-down"></i>
-            </div>
+            </a>
         </div>
       </div>
 
-      <div class="pong-coin-info">
+      <div class="pong-coin-info" id="pong-coin-info">
         <h3>Apresentando PongCoin: Desbloqueie o Poder das Recompensas!</h3>
         <p>
           Você está pronto para levar sua experiência de jogo para o próximo
@@ -145,6 +145,6 @@
 
     <script type="module" src="/assets/js/main.js"></script>
     <script type="module" src="/router/router.js"></script>
-    <script type="module" src="./pong-coin.js"></script>
+    <script type="module" src="/pages/pong-coin/pong-coin.js"></script>
   </body>
 </html>
