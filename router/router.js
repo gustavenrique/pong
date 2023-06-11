@@ -30,7 +30,7 @@ const routes = [
         require_login: false 
     },
     { 
-        path: '/pongcoin', 
+        path: '/pong-coin', 
         require_login: false 
     }
 ]

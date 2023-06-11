@@ -1,0 +1,44 @@
+.three-container > .three-info {
+    position: absolute;
+    width: 100%;
+    color: var(--text-first);
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.three { position: relative; }
+
+.go-down {
+    color: var(--text-first);
+    text-align: center;
+    font-size: 2.5rem;
+    animation: up-and-down 1.25s linear infinite;
+}
+
+@keyframes up-and-down {
+    0%, 100% { transform: translateY(0) }
+    50% { transform: translateY(-40px) }
+}
+
+.title {
+    color: var(--text-first);
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.pong-coin-info {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 20px;
+    padding: 25px;
+    max-width: 800px;
+    margin: auto;
+    text-align: justify;
+}
+
+hr { opacity: .1; }
