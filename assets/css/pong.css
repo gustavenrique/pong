@@ -150,32 +150,24 @@ body {
     height: 100vh;
     box-shadow: 0px 10px 1px black;
     width: 0px;
-    transition: width .75s ease;
+    transition: width .5s ease;
     z-index: 2 !important;
 }
 
 .sidebar-show::before {
     content: '';
-    display: relative;
-    z-index: 1;
     height: 100vh;
-    position: fixed;
+    width: 100vw;
+    position: absolute;
     top: 0;
-    left: 0;
+    right: 100%;
     background-color: black;
-    animation: sidebar-overlay-shrink .75s forwards;
+    animation: sidebar-overlay-shrink .5s forwards;
 }
 
 @keyframes sidebar-overlay-shrink {
-    0% {
-        width: 100%;
-        opacity: 0;
-    }
-
-    100% {
-        opacity: .5;
-        width: calc(100vw - 250px);
-    }
+    0% { opacity: 0; }
+    100% { opacity: .5; }
 }
 
 .sidebar-show { width: 250px !important; }

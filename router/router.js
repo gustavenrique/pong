@@ -29,6 +29,10 @@ const routes = [
         path: '/terms', 
         require_login: false 
     },
+    { 
+        path: '/pong-coin', 
+        require_login: false 
+    }
 ]
 
 let route = window.location.pathname.match(/\/pages\/([^/]+)/)
@@ -39,11 +43,6 @@ let routeObj = routes.find(r => r.path == route || (Array.isArray(r.path) && r.p
 const verificarLogin = async () => {
     let loggedIn = (await isLoggedIn()).object
     
-    if (routeObj.require_login && !loggedIn)
-        window.location.href = '/pages/login'
-
-    else if (routeObj.require_logout && loggedIn)
-        window.location.href = '/pages/home'
     if (routeObj.require_login && !loggedIn)
         window.location.href = '/pages/login'
 
