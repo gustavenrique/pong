@@ -9,7 +9,7 @@ canvas.addEventListener('mousedown', () => canvas.style.cursor = 'grabbing')
 canvas.addEventListener('mouseup', () => canvas.style.cursor = 'grab')
 
 const scene = new THREE.Scene()
-scene.background = new THREE.Color(0x1a2935)
+scene.background = new THREE.Color(0x222c34)
 
 // lights
 const spotLight = new THREE.SpotLight(0xffffff, 4)

@@ -1,0 +1,47 @@
+{
+    "trailingSlash": "always",
+    "routes": [
+        {
+            "route": "/",
+            "rewrite": "/pages/home"
+        },
+        {
+            "route": "/pages/",
+            "rewrite": "/pages/home"
+        },
+        {
+            "route": "/home*",
+            "rewrite": "/pages/home"
+        },
+        {
+            "route": "/cart*",
+            "rewrite": "/pages/cart"
+        },
+        {
+            "route": "/login*",
+            "rewrite": "/pages/login"
+        },
+        {
+            "route": "/pong*coin*",
+            "rewrite": "/pages/pong-coin"
+        },
+        {
+            "route": "/signup*",
+            "rewrite": "/pages/signup"
+        },
+        {
+            "route": "/terms*",
+            "rewrite": "/pages/terms"
+        },
+        {
+            "route": "/wish-list*",
+            "rewrite": "/pages/wish-list"
+        }
+    ],
+    "responseOverrides": {
+        "404": {
+            "rewrite": "/pages/not-found/",
+            "statusCode": 404
+        }
+    }
+}

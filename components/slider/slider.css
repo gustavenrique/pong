@@ -1,30 +1,35 @@
 .arrow {
     position: absolute;
+    top: 50%;
     padding: 10px;
-    color: white;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
+    color: var(--text-first);
+    background-color: var(--second);
+    border-radius: 100px;
+    text-align: center;
+    height: 44px;
+    width: 44px;
     transition: all .25s;
-    opacity: .75;
-    font-size: 1.5rem !important;
+    opacity: .9;
+    z-index: 100 !important;
 }
 
-.arrow:hover { 
-    transform: scale(1.25);
+.arrow:hover {
     opacity: 1;
+    cursor: pointer;
+
+    &:hover {
+        transform: translateY(-50%) scale(1.2);
+    }
 }
 
-.arrow.arrow-left { 
-    z-index: 10;
-    left: 0; 
-    background: linear-gradient(90deg, black, transparent);
+.arrow-left {
+    left: 0;
+    transform: translate(-10px, -50%);
 }
 
-.arrow.arrow-right { 
-    right: 0; 
-    background: linear-gradient(90deg,transparent, black);
+.arrow-right {
+    right: 0;
+    transform: translate(10px, -50%);
 }
 
 .slider-container {
@@ -71,7 +76,7 @@
     left: 0;
     top: 100%;
     width: 100%;
-    background-color: #263238;
+    background-color: var(--third);
     color: white;
     display: flex;
     flex-direction: column;
@@ -86,7 +91,7 @@
     height: auto;
     opacity: 1;
     padding: 15px;
-    z-index: 100;
+    z-index: 99;
 }
 
 .slide:hover .slide-img {

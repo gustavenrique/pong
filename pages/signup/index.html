@@ -6,8 +6,6 @@
 
   <link rel="stylesheet" href="/pages/login/login.css">
   <link rel="stylesheet" href="/assets/css/pong.css">
-  <link rel="stylesheet" href="/pages/login/login.css">
-  <link rel="stylesheet" href="/assets/css/pong.css">
 </head>
 <html>
 <body>
@@ -50,10 +48,10 @@
         </div>
 
         <div class="row" style="gap: 10px;">
-          <button class="btn btn-third" style="flex: 1" onclick="window.location.href = '/pages/login'"> 
+          <button class="btn btn-second" style="flex: 1" onclick="window.location.href = '/pages/login'"> 
             ENTRAR
           </button>
-          <button class="btn btn-second" onclick="cadastrar()" style="flex: 1">CADASTRAR</button>
+          <button class="btn btn-first" onclick="cadastrar()" style="flex: 1">CADASTRAR</button>
         </div>
       </div>               
     </div>
@@ -65,8 +63,6 @@
     let toggleSenha, cadastrar
   </script>
   <script type="module">
-    import { showAlert, loading } from '/assets/js/main.js'
-    import { signup } from '/api/controllers/userController.js'
     import { showAlert, loading } from '/assets/js/main.js'
     import { signup } from '/api/controllers/userController.js'
 
@@ -94,15 +90,12 @@
         return
       }
 
-      loading(true)
-
       const resultado = await signup(form)
 
       if (resultado.status != 200) {
         showAlert(resultado.message, 'error')
         return
       }
-      loading(false)
 
       showAlert(resultado.message, 'success')
 

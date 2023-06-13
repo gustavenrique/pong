@@ -15,9 +15,9 @@
     --text-second: var(--text-second-dark);
 
     /* components background */
-    --accent-dark: #E1E2E1;
-    --first-dark: #4f5b62;
-    --second-dark: #374349;
+    --accent-dark: #b1aebb;
+    --first-dark: #8f7ac9;
+    --second-dark: #49416b;
     --third-dark: #111b23;
 
     --accent-light: #2a475e;
@@ -37,7 +37,7 @@
     margin: 0;
 }
 
-*:not(i) { font-family: 'Poppins', sans-serif; }
+*:not(i) { font-family: 'Prompt', sans-serif; }
 
 html, body { 
     min-height: 100vh; 
