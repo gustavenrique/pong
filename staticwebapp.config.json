@@ -6,36 +6,66 @@
             "rewrite": "/pages/home"
         },
         {
-            "route": "/pages/",
-            "rewrite": "/pages/home"
-        },
-        {
             "route": "/home*",
             "rewrite": "/pages/home"
         },
+        {
+            "route": "/pages/home*",
+            "redirect": "/home"
+        },
+
         {
             "route": "/cart*",
             "rewrite": "/pages/cart"
         },
         {
+            "route": "/pages/cart*",
+            "redirect": "/cart"
+        },
+
+        {
             "route": "/login*",
             "rewrite": "/pages/login"
         },
+        {
+            "route": "/pages/login*",
+            "redirect": "/login"
+        },
+
         {
             "route": "/pong-coin*",
             "rewrite": "/pages/pong-coin"
         },
         {
+            "route": "/pages/pong-coin*",
+            "redirect": "/pong-coin"
+        },
+
+        {
             "route": "/signup*",
             "rewrite": "/pages/signup"
         },
+        {
+            "route": "/pages/signup*",
+            "redirect": "/signup"
+        },
+
         {
             "route": "/terms*",
             "rewrite": "/pages/terms"
         },
         {
+            "route": "/pages/terms*",
+            "redirect": "/terms"
+        },
+
+        {
             "route": "/wish-list*",
             "rewrite": "/pages/wish-list"
+        },
+        {
+            "route": "/pages/wish-list*",
+            "redirect": "/wish-list"
         }
     ],
     "responseOverrides": {
