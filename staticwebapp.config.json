@@ -10,7 +10,7 @@
             "rewrite": "/pages/home"
         },
         {
-            "route": "/pages/home*",
+            "route": "/pages/home*.html",
             "redirect": "/home"
         },
 
@@ -19,7 +19,7 @@
             "rewrite": "/pages/cart"
         },
         {
-            "route": "/pages/cart*",
+            "route": "/pages/cart*.html",
             "redirect": "/cart"
         },
 
@@ -28,7 +28,7 @@
             "rewrite": "/pages/login"
         },
         {
-            "route": "/pages/login*",
+            "route": "/pages/login*.html",
             "redirect": "/login"
         },
 
@@ -37,7 +37,7 @@
             "rewrite": "/pages/pong-coin"
         },
         {
-            "route": "/pages/pong-coin*",
+            "route": "/pages/pong-coin*.html",
             "redirect": "/pong-coin"
         },
 
@@ -46,7 +46,7 @@
             "rewrite": "/pages/signup"
         },
         {
-            "route": "/pages/signup*",
+            "route": "/pages/signup*.html",
             "redirect": "/signup"
         },
 
@@ -55,7 +55,7 @@
             "rewrite": "/pages/terms"
         },
         {
-            "route": "/pages/terms*",
+            "route": "/pages/terms*.html",
             "redirect": "/terms"
         },
 
@@ -64,7 +64,7 @@
             "rewrite": "/pages/wish-list"
         },
         {
-            "route": "/pages/wish-list*",
+            "route": "/pages/wish-list*.html",
             "redirect": "/wish-list"
         }
     ],
