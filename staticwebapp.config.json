@@ -22,7 +22,7 @@
             "rewrite": "/pages/login"
         },
         {
-            "route": "/pong*coin*",
+            "route": "/pong-coin*",
             "rewrite": "/pages/pong-coin"
         },
         {
